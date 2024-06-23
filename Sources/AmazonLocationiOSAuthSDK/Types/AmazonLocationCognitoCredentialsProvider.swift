@@ -1,4 +1,6 @@
 import Foundation
+import AWSClientRuntime
+import SmithyIdentityAPI
 
 public class AmazonLocationCognitoCredentialsProvider {
     internal var identityPoolId: String?
@@ -19,6 +21,14 @@ public class AmazonLocationCognitoCredentialsProvider {
             return self.cognitoCredentials
         }
         return self.cognitoCredentials
+    }
+    
+    public func getStaticCredentialsResolver() throws -> StaticAWSCredentialIdentityResolver? {
+        if let credentials = getCognitoCredentials() {
+            let resolver:AWSClientRuntime.StaticAWSCredentialIdentityResolver? = try StaticAWSCredentialIdentityResolver(AWSCredentialIdentity(accessKey: credentials.accessKeyId, secret: credentials.secretKey, expiration: credentials.expiration, sessionToken: credentials.sessionToken))
+            return resolver
+        }
+        return nil
     }
     
     public func refreshCognitoCredentialsIfExpired() async throws {
