@@ -1,5 +1,6 @@
 import Foundation
 import AWSClientRuntime
+import SmithyIdentity
 import SmithyIdentityAPI
 
 public class AmazonLocationCognitoCredentialsProvider {
@@ -25,7 +26,7 @@ public class AmazonLocationCognitoCredentialsProvider {
     
     public func getStaticCredentialsResolver() throws -> StaticAWSCredentialIdentityResolver? {
         if let credentials = getCognitoCredentials() {
-            let resolver:AWSClientRuntime.StaticAWSCredentialIdentityResolver? = try StaticAWSCredentialIdentityResolver(AWSCredentialIdentity(accessKey: credentials.accessKeyId, secret: credentials.secretKey, expiration: credentials.expiration, sessionToken: credentials.sessionToken))
+            let resolver: StaticAWSCredentialIdentityResolver? = try StaticAWSCredentialIdentityResolver(AWSCredentialIdentity(accessKey: credentials.accessKeyId, secret: credentials.secretKey, expiration: credentials.expiration, sessionToken: credentials.sessionToken))
             return resolver
         }
         return nil
