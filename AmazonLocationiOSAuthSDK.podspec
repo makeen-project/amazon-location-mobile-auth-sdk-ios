@@ -23,4 +23,5 @@ Pod::Spec.new do |s|
    s.spm_dependency "aws-sdk-swift/AWSLocation"
    s.spm_dependency "aws-sdk-swift/AWSCognitoIdentity"
    s.spm_dependency "aws-sdk-swift/AWSClientRuntime"
+   s.spm_dependency "aws-sdk-swift/AwsCommonRuntimeKit"
 end
