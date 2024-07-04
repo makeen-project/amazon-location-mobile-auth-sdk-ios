@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/aws-geospatial/amazon-location-mobile-auth-sdk-ios'
   s.license = { :type => 'Apache License, Version 2.0', :text => 'https://www.apache.org/licenses/LICENSE-2.0' }
   s.author       = { 'Oleg Filimonov' => 'oleg@makeen.io' }
-  s.source       = { :git => 'https://github.com/makeen-project/amazon-location-mobile-auth-sdk-ios.git', :branch => 'ALMS-204_CocoaPods_Support' }
+  s.source       = { :git => 'https://github.com/makeen-project/amazon-location-mobile-auth-sdk-ios.git', :tag => '0.2.2' }
 
   s.ios.deployment_target = '13.0'
 
