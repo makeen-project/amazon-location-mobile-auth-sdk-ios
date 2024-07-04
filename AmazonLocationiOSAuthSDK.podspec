@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   # Dependencies
    s.dependency 'KeychainSwift', '~> 20.0.0'
-   s.spm_dependency "aws-sdk-swift/AWSLocation", '0.46.0'
-   s.spm_dependency "aws-sdk-swift/AWSCognitoIdentity", '0.46.0'
-   s.spm_dependency "aws-sdk-swift/AWSClientRuntime", '0.46.0'
+   s.spm_dependency "aws-sdk-swift/AWSLocation"
+   s.spm_dependency "aws-sdk-swift/AWSCognitoIdentity"
+   s.spm_dependency "aws-sdk-swift/AWSClientRuntime"
 end
