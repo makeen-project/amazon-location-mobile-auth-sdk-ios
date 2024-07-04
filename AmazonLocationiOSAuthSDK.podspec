@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.platform = :ios, "13.0"
-  s.name  = "AmazonLocationiOSAuthSDK-Test"
+  s.name  = "AmazonLocationiOSAuthSDK"
 
-  s.version      = '0.0.1'
+  s.version      = '0.2.2'
   s.summary      = 'These utilities help you authenticate when when making Amazon Location Service API calls.'
   s.description  = <<-DESC
                       These utilities help you authenticate when when making Amazon Location Service API calls from their iOS applications. This specifically helps when using Amazon Cognito or API keys as the authentication method.
