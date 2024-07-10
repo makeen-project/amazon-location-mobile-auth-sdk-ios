@@ -1,0 +1,7 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/zeeshansheikh/Documents/GitHub/amazon-location-mobile-auth-sdk-ios/build/Build/Intermediates.noindex/ArchiveIntermediates/AmazonLocationiOSAuthFramework/InstallationBuildProductsLocation/Library/Frameworks/AmazonLocationiOSAuthFramework.framework/AmazonLocationiOSAuthFramework'
+relocations:
+  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _AmazonLocationiOSAuthFrameworkVersionString, symObjAddr: 0x0, symBinAddr: 0x3FA0, symSize: 0x0 }
+  - { offsetInCU: 0x67, offset: 0x67, size: 0x8, addend: 0x0, symName: _AmazonLocationiOSAuthFrameworkVersionNumber, symObjAddr: 0x58, symBinAddr: 0x3FF8, symSize: 0x0 }
+...

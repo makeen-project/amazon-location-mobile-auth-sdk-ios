@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>placeIndex</key>
+	<string>location.aws.com.demo.places.HERE.PlaceIndex</string>
+	<key>region</key>
+	<string>us-east-1</string>
+	<key>apiKey</key>
+	<string></string>
+	<key>identityPoolID</key>
+	<string>us-east-1:e473f570-6a48-449e-b712-8c3d314fe038</string>
+</dict>
+</plist>
