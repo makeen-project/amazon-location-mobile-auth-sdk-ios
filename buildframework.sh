@@ -2,6 +2,8 @@
 
 PROJECT_NAME="AmazonLocationiOSAuthFramework"
 PRODUCT_NAME="AmazonLocationiOSAuthSDK"
+SCHEME="AmazonLocationiOSAuthFramework"
+WORKSPACE="AmazonLocationiOSAuthWorkspace.xcworkspace"
 PROJECT_DIR="./Packages/${PROJECT_NAME}" # Relative path to the directory containing the `Package.swift` file
 BUILD_FOLDER="./build"
 OUTPUT_DIR="${PROJECT_DIR}/Output"
@@ -61,8 +63,8 @@ for PLATFORM in "iOS Simulator"; do
 
     echo "# Step 2"
     xcodebuild archive \
-      -workspace AmazonLocationiOSAuthWorkspace.xcworkspace \
-      -scheme AmazonLocationiOSAuthFramework \
+      -workspace $WORKSPACE \
+      -scheme $SCHEME \
       -configuration Release \
       -destination="generic/platform=${PLATFORM}" \
       -archivePath $ARCHIVE \

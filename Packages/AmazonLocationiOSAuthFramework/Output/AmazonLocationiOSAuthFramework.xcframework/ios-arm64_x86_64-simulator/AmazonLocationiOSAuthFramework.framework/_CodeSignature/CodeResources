@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AmazonLocationiOSAuthFramework.h</key>
 		<data>
-		6WskuvniNqqcCmjti7bHHp3K9Zo=
+		SZTW1JzXGTbCsEnWHp8D4OjOUGk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		+xX1hve+vEOglY9fB49UPxnBVuM=
+		aykU1EvOOiXWehbcufCm3CIKffU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -23,14 +23,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			An/orea7TzxApD0pCDAzWdSJiYUeCth7e/bYVhnGf7k=
+			V+tMRlvjzR+IH9YujeA03lk1z/lHbJ5Sk3/dKmiQwug=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wSXHFdBCqx9nVO3ysJIoIsJ6YlakbAsaQiD6z/N5xyo=
+			nXRVB/eCuT15BNRkAcwHLMkzcCjqVF4aBLVAE6TAPM0=
 			</data>
 		</dict>
 	</dict>
