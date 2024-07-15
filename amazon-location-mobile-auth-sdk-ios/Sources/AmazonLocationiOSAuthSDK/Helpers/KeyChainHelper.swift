@@ -1,4 +1,4 @@
-import KeychainSwift
+//import KeychainSwift
 
 enum KeyChainType: String {
     case AmazonLocationAPIKey
@@ -7,13 +7,13 @@ enum KeyChainType: String {
 }
 
 final class KeyChainHelper {
-    static let keychain = KeychainSwift()
+    //static let keychain = KeychainSwift()
     
     static func save(value:String, key: KeyChainType) {
-        keychain.set(value, forKey: key.rawValue)
+        //keychain.set(value, forKey: key.rawValue)
     }
     
     static func get(key: KeyChainType) -> String? {
-        return keychain.get(key.rawValue)
+        return nil //keychain.get(key.rawValue)
     }
 }

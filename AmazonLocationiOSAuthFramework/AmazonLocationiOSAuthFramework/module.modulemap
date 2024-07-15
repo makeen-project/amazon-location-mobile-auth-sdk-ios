@@ -10,7 +10,9 @@ framework module AmazonLocationiOSAuthFramework {
   export *
   module * { export * }
   
-  // Explicitly import the module for AmazonLocationiOSAuthSDK
+  module
+  
+//   Explicitly import the module for AmazonLocationiOSAuthSDK
 //  explicit module AmazonLocationiOSAuthSDK {
 //    header "<AmazonLocationiOSAuthSDK/AmazonLocationiOSAuthSDK.h>"
 //    export *

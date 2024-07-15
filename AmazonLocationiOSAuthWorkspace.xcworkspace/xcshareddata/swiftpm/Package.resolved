@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awslabs/aws-crt-swift",
       "state" : {
-        "revision" : "b6380f683b31072d77b601c88674461c11bcad5a",
-        "version" : "0.30.0"
+        "branch" : "0.30.0",
+        "revision" : "b6380f683b31072d77b601c88674461c11bcad5a"
       }
     },
     {
@@ -16,15 +16,6 @@
       "state" : {
         "branch" : "0.46.0",
         "revision" : "3c20e0be8c8246de8b8e04372404ef1f90be71b6"
-      }
-    },
-    {
-      "identity" : "keychain-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/evgenyneu/keychain-swift.git",
-      "state" : {
-        "revision" : "d108a1fa6189e661f91560548ef48651ed8d93b9",
-        "version" : "20.0.0"
       }
     },
     {

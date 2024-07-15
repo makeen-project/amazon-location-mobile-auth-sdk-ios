@@ -4,9 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/AmazonLocationiOSAuthSDK</key>
+		<data>
+		RM8YadkUqQMneexrNiEp7JqKD0Y=
+		</data>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/Info.plist</key>
+		<data>
+		VtoGoYfMljn//t7EHri+9YuClKE=
+		</data>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/_CodeSignature/CodeResources</key>
+		<data>
+		35EWGDafVW/oXEDiny11wUVusHo=
+		</data>
 		<key>Headers/AmazonLocationiOSAuthFramework.h</key>
 		<data>
-		SZTW1JzXGTbCsEnWHp8D4OjOUGk=
+		GeLFYNWvzh3HVbXWjA9OuSpRFGU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,23 +26,44 @@
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		aykU1EvOOiXWehbcufCm3CIKffU=
+		+xX1hve+vEOglY9fB49UPxnBVuM=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/AmazonLocationiOSAuthSDK</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			D2qb/Ej5UgHV0mT9pZapbUIvWi6VInWL4pne0izQUAw=
+			</data>
+		</dict>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ACV4pIzpa+i9aK/C0IvCw2p3VlGCo6aKSC/yxFhKds0=
+			</data>
+		</dict>
+		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V8CCcRXdT3iACgaf17W11ZFDIXOxf0YBW5fkDUUuA+8=
+			</data>
+		</dict>
 		<key>Headers/AmazonLocationiOSAuthFramework.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V+tMRlvjzR+IH9YujeA03lk1z/lHbJ5Sk3/dKmiQwug=
+			SXVsSC1iiwA/F25NBNKOGZUazzFHwmJUP/smCrBwnHs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXRVB/eCuT15BNRkAcwHLMkzcCjqVF4aBLVAE6TAPM0=
+			wSXHFdBCqx9nVO3ysJIoIsJ6YlakbAsaQiD6z/N5xyo=
 			</data>
 		</dict>
 	</dict>

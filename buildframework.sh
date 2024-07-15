@@ -90,8 +90,18 @@ for PLATFORM in "iOS Simulator"; do
     echo "FRAMEWORK_PATH"
     echo $FRAMEWORK_PATH
 
+for module in AwsCAuth AwsCCal AwsCChecksums AwsCCommon AwsCEventStream AwsCHttp AwsCIo AwsCSdkUtils AwsCommonRuntimeKit; do
+        SWIFT_MODULE_PATH="${RELEASE_PATH}/${module}.swiftmodule"
+        if [ -d $SWIFT_MODULE_PATH ]; then
+            echo "Copying $module swift module..."
+            cp -r $SWIFT_MODULE_PATH $MODULES_PATH
+        else
+            echo "Swift module directory for $module does not exist. Skipping."
+        fi
+    done
+
     # Copy swiftmodule directories
-    copy_swiftmodule $RELEASE_PATH $MODULES_PATH
+    # copy_swiftmodule $RELEASE_PATH $MODULES_PATH
 
     # if [ -d $SWIFT_MODULE_PATH ]; then
     #   echo "copying..."
@@ -100,17 +110,27 @@ for PLATFORM in "iOS Simulator"; do
     #   echo "Swift module directory does not exist. Skipping header copy."
     # fi
 
+        # Copy Swift modules
+    if [ -d $SWIFT_MODULE_PATH ] 
+    then
+        cp -r $SWIFT_MODULE_PATH $MODULES_PATH
+    else
+        # In case there are no modules, assume C/ObjC library and create module map
+        echo "module $NAME { export * }" > $MODULES_PATH/module.modulemap
+        # TODO: Copy headers
+    fi
+
     echo "# Step 4"
     echo "RESOURCES_BUNDLE_PATH"
     echo $RESOURCES_BUNDLE_PATH 
     echo "FRAMEWORK_PATH"
     echo $FRAMEWORK_PATH 
 
-    echo "# Step 4.1"
-    if [ -e $RESOURCES_BUNDLE_PATH ]; then
-      echo "# Step 4.2"
-      cp -r $RESOURCES_BUNDLE_PATH $FRAMEWORK_PATH
-    fi
+    # echo "# Step 4.1"
+    # if [ -e $RESOURCES_BUNDLE_PATH ]; then
+    #   echo "# Step 4.2"
+    #   cp -r $RESOURCES_BUNDLE_PATH $FRAMEWORK_PATH
+    # fi
 
 
 

@@ -24,7 +24,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F18A25FD2C3C206C0076099A"
+               BlueprintIdentifier = "F1AA4BC52C41348A0029DCDA"
                BuildableName = "AmazonLocationiOSAuthFramework.framework"
                BlueprintName = "AmazonLocationiOSAuthFramework"
                ReferencedContainer = "container:AmazonLocationiOSAuthFramework/AmazonLocationiOSAuthFramework.xcodeproj">
@@ -72,7 +72,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F18A25FD2C3C206C0076099A"
+            BlueprintIdentifier = "F1AA4BC52C41348A0029DCDA"
             BuildableName = "AmazonLocationiOSAuthFramework.framework"
             BlueprintName = "AmazonLocationiOSAuthFramework"
             ReferencedContainer = "container:AmazonLocationiOSAuthFramework/AmazonLocationiOSAuthFramework.xcodeproj">
