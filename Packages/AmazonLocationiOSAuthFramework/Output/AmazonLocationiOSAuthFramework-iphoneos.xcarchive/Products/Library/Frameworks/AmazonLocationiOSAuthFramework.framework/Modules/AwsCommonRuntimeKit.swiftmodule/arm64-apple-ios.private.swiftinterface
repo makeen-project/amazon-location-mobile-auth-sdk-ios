@@ -1,0 +1,903 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AwsCommonRuntimeKit
+import AwsCAuth
+import AwsCCal
+import AwsCChecksums
+import AwsCCommon
+import AwsCEventStream
+import AwsCHttp
+import AwsCIo
+import AwsCSdkUtils
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.Data*/
+import Foundation/*.Date*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.TimeInterval*/
+import Foundation/*.URL*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct CommonRuntimeKit {
+  public static func initialize()
+  public static func cleanUp()
+}
+@_hasMissingDesignatedInitializers final public class Credentials {
+  public init(accessKey: Swift.String, secret: Swift.String, sessionToken: Swift.String? = nil, expiration: Foundation.Date? = nil) throws
+  final public func getAccessKey() -> Swift.String?
+  final public func getSecret() -> Swift.String?
+  final public func getSessionToken() -> Swift.String?
+  final public func getExpiration() -> Foundation.Date?
+  @objc deinit
+}
+public protocol CredentialsProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  func getCredentials() async throws -> AwsCommonRuntimeKit.Credentials
+  #endif
+}
+@_hasMissingDesignatedInitializers public class CredentialsProvider : AwsCommonRuntimeKit.CredentialsProviding {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getCredentials() async throws -> AwsCommonRuntimeKit.Credentials
+  #endif
+  @objc deinit
+}
+extension AwsCommonRuntimeKit.CredentialsProvider {
+  public struct Source {
+  }
+  convenience public init(source: AwsCommonRuntimeKit.CredentialsProvider.Source) throws
+  convenience public init(provider: any AwsCommonRuntimeKit.CredentialsProviding, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws
+}
+extension AwsCommonRuntimeKit.CredentialsProvider.Source {
+  public static func `static`(accessKey: Swift.String, secret: Swift.String, sessionToken: Swift.String? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func environment(shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func profile(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, fileBasedConfiguration: AwsCommonRuntimeKit.FileBasedConfiguration, profileFileNameOverride: Swift.String? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func process(fileBasedConfiguration: AwsCommonRuntimeKit.FileBasedConfiguration, profileFileNameOverride: Swift.String? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func imds(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func cached(source: AwsCommonRuntimeKit.CredentialsProvider, refreshTime: Foundation.TimeInterval = 0, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func defaultChain(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, fileBasedConfiguration: AwsCommonRuntimeKit.FileBasedConfiguration, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func x509(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, tlsConnectionOptions: AwsCommonRuntimeKit.TLSConnectionOptions, thingName: Swift.String, roleAlias: Swift.String, endpoint: Swift.String, proxyOptions: AwsCommonRuntimeKit.HTTPProxyOptions? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func stsWebIdentity(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, tlsContext: AwsCommonRuntimeKit.TLSContext, fileBasedConfiguration: AwsCommonRuntimeKit.FileBasedConfiguration, region: Swift.String? = nil, roleArn: Swift.String? = nil, roleSessionName: Swift.String? = nil, tokenFilePath: Swift.String? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func sso(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, tlsContext: AwsCommonRuntimeKit.TLSContext, fileBasedConfiguration: AwsCommonRuntimeKit.FileBasedConfiguration, profileFileNameOverride: Swift.String? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func sts(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, tlsContext: AwsCommonRuntimeKit.TLSContext, credentialsProvider: AwsCommonRuntimeKit.CredentialsProvider, roleArn: Swift.String, sessionName: Swift.String, duration: Foundation.TimeInterval, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+  public static func ecs(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, tlsContext: AwsCommonRuntimeKit.TLSContext? = nil, authToken: Swift.String? = nil, pathAndQuery: Swift.String, host: Swift.String, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) -> AwsCommonRuntimeKit.CredentialsProvider.Source
+}
+public struct IAMProfile {
+  public let lastUpdated: Foundation.Date
+  public let profileArn: Swift.String
+  public let profileId: Swift.String
+}
+public class IMDSClient {
+  public init(bootstrap: AwsCommonRuntimeKit.ClientBootstrap, retryStrategy: AwsCommonRuntimeKit.RetryStrategy, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getResource(resourcePath: Swift.String) async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAmiId() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAmiLaunchIndex() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAmiManifestPath() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getInstanceAction() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getInstanceId() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getInstanceType() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMacAddress() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getPrivateIpAddress() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAvailabilityZone() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getProductCodes() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getPublicKey() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getRamDiskId() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getReservationId() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAttachedIAMRole() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getUserData() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getInstanceSignature() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getAncestorAmiIDs() async throws -> [Swift.String]?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getSecurityGroups() async throws -> [Swift.String]?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getBlockDeviceMapping() async throws -> [Swift.String]?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getCredentials(iamRoleName: Swift.String) async throws -> AwsCommonRuntimeKit.Credentials
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getIAMProfile() async throws -> AwsCommonRuntimeKit.IAMProfile
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getInstanceInfo() async throws -> AwsCommonRuntimeKit.IMDSInstanceInfo
+  #endif
+  @objc deinit
+}
+public struct IMDSInstanceInfo {
+  public let marketPlaceProductCodes: [Swift.String]
+  public let availabilityZone: Swift.String
+  public let privateIp: Swift.String
+  public let version: Swift.String
+  public let instanceId: Swift.String
+  public let billingProducts: [Swift.String]
+  public let instanceType: Swift.String
+  public let accountId: Swift.String
+  public let imageId: Swift.String
+  public let pendingTime: Foundation.Date
+  public let architecture: Swift.String
+  public let kernelId: Swift.String
+  public let ramDiskId: Swift.String
+  public let region: Swift.String
+}
+@_hasMissingDesignatedInitializers public class Signer {
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signRequest(request: AwsCommonRuntimeKit.HTTPRequestBase, config: AwsCommonRuntimeKit.SigningConfig) async throws -> AwsCommonRuntimeKit.HTTPRequestBase
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signChunk(chunk: Foundation.Data, previousSignature: Swift.String, config: AwsCommonRuntimeKit.SigningConfig) async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signEvent(event: Foundation.Data, previousSignature: Swift.String, config: AwsCommonRuntimeKit.SigningConfig) async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signTrailerHeaders(headers: [AwsCommonRuntimeKit.HTTPHeader], previousSignature: Swift.String, config: AwsCommonRuntimeKit.SigningConfig) async throws -> Swift.String
+  #endif
+  @objc deinit
+}
+public struct SigningConfig {
+  public var algorithm: AwsCommonRuntimeKit.SigningAlgorithmType
+  public var signatureType: AwsCommonRuntimeKit.SignatureType
+  public var service: Swift.String
+  public var region: Swift.String
+  public var date: Foundation.Date
+  public var credentials: AwsCommonRuntimeKit.Credentials?
+  public var credentialsProvider: AwsCommonRuntimeKit.CredentialsProvider?
+  public var expiration: Foundation.TimeInterval?
+  public var signedBodyHeader: AwsCommonRuntimeKit.SignedBodyHeaderType
+  public var signedBodyValue: AwsCommonRuntimeKit.SignedBodyValue
+  public var shouldSignHeader: ((Swift.String) -> Swift.Bool)?
+  public var useDoubleURIEncode: Swift.Bool
+  public var shouldNormalizeURIPath: Swift.Bool
+  public var omitSessionToken: Swift.Bool
+  public init(algorithm: AwsCommonRuntimeKit.SigningAlgorithmType, signatureType: AwsCommonRuntimeKit.SignatureType, service: Swift.String, region: Swift.String, date: Foundation.Date = Date(), credentials: AwsCommonRuntimeKit.Credentials? = nil, credentialsProvider: AwsCommonRuntimeKit.CredentialsProvider? = nil, expiration: Foundation.TimeInterval? = nil, signedBodyHeader: AwsCommonRuntimeKit.SignedBodyHeaderType = .none, signedBodyValue: AwsCommonRuntimeKit.SignedBodyValue = SignedBodyValue.empty, shouldSignHeader: ((Swift.String) -> Swift.Bool)? = nil, useDoubleURIEncode: Swift.Bool = true, shouldNormalizeURIPath: Swift.Bool = true, omitSessionToken: Swift.Bool = false)
+}
+public enum SignatureType {
+  case requestHeaders
+  case requestQueryParams
+  case requestChunk
+  case requestTrailingHeaders
+  case requestEvent
+  public static func == (a: AwsCommonRuntimeKit.SignatureType, b: AwsCommonRuntimeKit.SignatureType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SignedBodyHeaderType {
+  case none
+  case contentSha256
+  public static func == (a: AwsCommonRuntimeKit.SignedBodyHeaderType, b: AwsCommonRuntimeKit.SignedBodyHeaderType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SignedBodyValue : Swift.String {
+  case empty
+  case emptySha256
+  case unsignedPayload
+  case streamingSha256Payload
+  case streamingSha256PayloadTrailer
+  case streamingECDSA_P256Sha256Payload
+  case streamingECDSA_P256Sha256PayloadTrailer
+  case streamingSha256Events
+  case streamingUnSignedPayloadTrailer
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SigningAlgorithmType {
+  case signingV4
+  case signingV4Asymmetric
+  public static func == (a: AwsCommonRuntimeKit.SigningAlgorithmType, b: AwsCommonRuntimeKit.SigningAlgorithmType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.UnsafeMutablePointer where Pointee == AwsCCommon.aws_allocator {
+  @inlinable internal var rawValue: Swift.UnsafeMutablePointer<AwsCCommon.aws_allocator> {
+    get { return self }
+  }
+}
+final public class ByteBuffer {
+  public init(size: Swift.Int)
+  public init(bytes: [Swift.UInt8])
+  public init(data: Foundation.Data)
+  public init(bufferPointer: Swift.UnsafeMutablePointer<Swift.UInt8>, length: Swift.Int, capacity: Swift.Int)
+  final public func getData() -> Foundation.Data
+  @objc deinit
+}
+extension AwsCommonRuntimeKit.ByteBuffer : AwsCommonRuntimeKit.IStreamable {
+  final public func length() -> Swift.UInt64
+  final public func seek(offset: Swift.Int64, streamSeekType: AwsCommonRuntimeKit.StreamSeekType) throws
+  final public func read(buffer: Swift.UnsafeMutableBufferPointer<Swift.UInt8>) -> Swift.Int?
+}
+extension Foundation.Data {
+  public func computeCRC32(previousCrc32: Swift.UInt32 = 0) -> Swift.UInt32
+  public func computeCRC32C(previousCrc32c: Swift.UInt32 = 0) -> Swift.UInt32
+}
+public enum CommonRunTimeError : Swift.Error {
+  case crtError(AwsCommonRuntimeKit.CRTError)
+}
+public struct CRTError : Swift.Equatable {
+  public let code: Swift.Int32
+  public let message: Swift.String
+  public let name: Swift.String
+  public init<T>(code: T) where T : Swift.BinaryInteger
+  public static func makeFromLastError() -> AwsCommonRuntimeKit.CRTError
+  public static func == (a: AwsCommonRuntimeKit.CRTError, b: AwsCommonRuntimeKit.CRTError) -> Swift.Bool
+}
+public enum HashAlgorithm {
+  case SHA1
+  case SHA256
+  case MD5
+  public static func == (a: AwsCommonRuntimeKit.HashAlgorithm, b: AwsCommonRuntimeKit.HashAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class Hash {
+  public init(algorithm: AwsCommonRuntimeKit.HashAlgorithm)
+  public func update(data: Foundation.Data) throws
+  public func finalize(truncateTo: Swift.Int = 0) throws -> Foundation.Data
+  @objc deinit
+}
+extension Foundation.Data {
+  public func computeMD5(truncateTo: Swift.Int = 0) throws -> Foundation.Data
+  public func computeSHA256(truncateTo: Swift.Int = 0) throws -> Foundation.Data
+  public func computeSHA1(truncateTo: Swift.Int = 0) throws -> Foundation.Data
+}
+public struct Logger {
+  public static func initialize(pipe: Swift.UnsafeMutablePointer<Darwin.FILE>?, level: AwsCommonRuntimeKit.LogLevel)
+  public static func initilize(filePath: Swift.String, level: AwsCommonRuntimeKit.LogLevel)
+}
+public enum LogLevel {
+  case none
+  case fatal
+  case error
+  case warn
+  case info
+  case debug
+  case trace
+  public static func == (a: AwsCommonRuntimeKit.LogLevel, b: AwsCommonRuntimeKit.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AwsCommonRuntimeKit.LogLevel {
+  public static func fromString(string: Swift.String) -> AwsCommonRuntimeKit.LogLevel
+}
+public typealias ShutdownCallback = () -> Swift.Void
+extension Foundation.Data {
+  public func encodeToHexString() -> Swift.String
+}
+public struct EventStreamHeader {
+  public static let maxNameLength: Swift.Int32
+  public static let maxValueLength: Swift.Int16
+  public var name: Swift.String
+  public var value: AwsCommonRuntimeKit.EventStreamHeaderValue
+  public init(name: Swift.String, value: AwsCommonRuntimeKit.EventStreamHeaderValue)
+}
+public enum EventStreamHeaderValue : Swift.Equatable {
+  case bool(value: Swift.Bool)
+  case byte(value: Swift.Int8)
+  case int16(value: Swift.Int16)
+  case int32(value: Swift.Int32)
+  case int64(value: Swift.Int64)
+  case byteBuf(value: Foundation.Data)
+  case string(value: Swift.String)
+  case timestamp(value: Foundation.Date)
+  case uuid(value: Foundation.UUID)
+  public static func == (a: AwsCommonRuntimeKit.EventStreamHeaderValue, b: AwsCommonRuntimeKit.EventStreamHeaderValue) -> Swift.Bool
+}
+extension AwsCommonRuntimeKit.EventStreamHeader : Swift.Equatable {
+  public static func == (lhs: AwsCommonRuntimeKit.EventStreamHeader, rhs: AwsCommonRuntimeKit.EventStreamHeader) -> Swift.Bool
+}
+public struct EventStreamMessage {
+  public init(headers: [AwsCommonRuntimeKit.EventStreamHeader] = [EventStreamHeader](), payload: Foundation.Data = Data())
+  public func getEncoded() throws -> Foundation.Data
+}
+public typealias OnPayloadSegment = (_ payload: Foundation.Data, _ finalSegment: Swift.Bool) -> Swift.Void
+public typealias OnPreludeReceived = (_ totalLength: Swift.UInt32, _ headersLength: Swift.UInt32) -> Swift.Void
+public typealias OnHeaderReceived = (AwsCommonRuntimeKit.EventStreamHeader) -> Swift.Void
+public typealias OnComplete = () -> Swift.Void
+public typealias OnError = (_ code: Swift.Int32, _ message: Swift.String) -> Swift.Void
+public class EventStreamMessageDecoder {
+  public init(onPayloadSegment: @escaping AwsCommonRuntimeKit.OnPayloadSegment, onPreludeReceived: @escaping AwsCommonRuntimeKit.OnPreludeReceived, onHeaderReceived: @escaping AwsCommonRuntimeKit.OnHeaderReceived, onComplete: @escaping AwsCommonRuntimeKit.OnComplete, onError: @escaping AwsCommonRuntimeKit.OnError)
+  public func decode(data: Foundation.Data) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HTTP1Stream : AwsCommonRuntimeKit.HTTPStream {
+  #if compiler(>=5.3) && $AsyncAwait
+  override public func writeChunk(chunk: Foundation.Data, endOfStream: Swift.Bool) async throws
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HTTP2ClientConnection : AwsCommonRuntimeKit.HTTPClientConnection {
+  override public func makeRequest(requestOptions: AwsCommonRuntimeKit.HTTPRequestOptions) throws -> AwsCommonRuntimeKit.HTTPStream
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateSetting(setting: AwsCommonRuntimeKit.HTTP2Settings) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func sendPing(data: Foundation.Data = Data()) async throws -> Swift.UInt64
+  #endif
+  public func sendGoAway(error: AwsCommonRuntimeKit.HTTP2Error, allowMoreStreams: Swift.Bool, debugData: Foundation.Data = Data())
+  @objc deinit
+}
+public enum HTTP2Error : Swift.UInt32 {
+  case protocolError
+  case internalError
+  case flowControlError
+  case settingsTimeout
+  case streamClosed
+  case frameSizeError
+  case refusedStream
+  case cancel
+  case compressionError
+  case connectError
+  case enhanceYourCalm
+  case inadequateSecurity
+  case HTTP_1_1_Required
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+public struct HTTP2Settings {
+  public var headerTableSize: Swift.UInt32?
+  public var enablePush: Swift.Bool?
+  public var maxConcurrentStreams: Swift.UInt32?
+  public var initialWindowSize: Swift.UInt32?
+  public var maxFrameSize: Swift.UInt32?
+  public var maxHeaderListSize: Swift.UInt32?
+  public init(headerTableSize: Swift.UInt32? = nil, enablePush: Swift.Bool? = nil, maxConcurrentStreams: Swift.UInt32? = nil, initialWindowSize: Swift.UInt32? = nil, maxFrameSize: Swift.UInt32? = nil, maxHeaderListSize: Swift.UInt32? = nil)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HTTP2Stream : AwsCommonRuntimeKit.HTTPStream {
+  public func resetStream(error: AwsCommonRuntimeKit.HTTP2Error) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  override public func writeChunk(chunk: Foundation.Data, endOfStream: Swift.Bool) async throws
+  #endif
+  @objc deinit
+}
+public class HTTP2StreamManager {
+  public init(options: AwsCommonRuntimeKit.HTTP2StreamManagerOptions) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func acquireStream(requestOptions: AwsCommonRuntimeKit.HTTPRequestOptions) async throws -> AwsCommonRuntimeKit.HTTP2Stream
+  #endif
+  @objc deinit
+}
+public struct HTTP2StreamManagerOptions {
+  public var clientBootstrap: AwsCommonRuntimeKit.ClientBootstrap
+  public var hostName: Swift.String
+  public var port: Swift.UInt32
+  public var proxyOptions: AwsCommonRuntimeKit.HTTPProxyOptions?
+  public var proxyEnvSettings: AwsCommonRuntimeKit.HTTPProxyEnvSettings?
+  public var socketOptions: AwsCommonRuntimeKit.SocketOptions
+  public var tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions?
+  public var enableStreamManualWindowManagement: Swift.Bool
+  public var maxConnections: Swift.Int
+  public var shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback?
+  public var monitoringOptions: AwsCommonRuntimeKit.HTTPMonitoringOptions?
+  public var priorKnowledge: Swift.Bool
+  public var initialSettings: AwsCommonRuntimeKit.HTTP2Settings?
+  public var maxClosedStreams: Swift.Int?
+  public var enableConnectionManualWindowManagement: Swift.Bool
+  public var closeConnectionOnServerError: Swift.Bool
+  public var connectionPingPeriodMs: Swift.Int?
+  public var connectionPingTimeoutMs: Swift.Int?
+  public var idealConcurrentStreamsPerConnection: Swift.Int?
+  public var maxConcurrentStreamsPerConnection: Swift.Int?
+  public init(clientBootstrap: AwsCommonRuntimeKit.ClientBootstrap, hostName: Swift.String, port: Swift.UInt32, maxConnections: Swift.Int, proxyOptions: AwsCommonRuntimeKit.HTTPProxyOptions? = nil, proxyEnvSettings: AwsCommonRuntimeKit.HTTPProxyEnvSettings? = nil, socketOptions: AwsCommonRuntimeKit.SocketOptions = SocketOptions(), tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions? = nil, monitoringOptions: AwsCommonRuntimeKit.HTTPMonitoringOptions? = nil, enableStreamManualWindowManagement: Swift.Bool = false, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil, priorKnowledge: Swift.Bool = false, initialSettings: AwsCommonRuntimeKit.HTTP2Settings? = nil, maxClosedStreams: Swift.Int? = nil, enableConnectionManualWindowManagement: Swift.Bool = false, closeConnectionOnServerError: Swift.Bool = false, connectionPingPeriodMs: Swift.Int? = nil, connectionPingTimeoutMs: Swift.Int? = nil, idealConcurrentStreamsPerConnection: Swift.Int? = nil, maxConcurrentStreamsPerConnection: Swift.Int? = nil)
+}
+@_hasMissingDesignatedInitializers public class HTTPClientConnection {
+  public var isOpen: Swift.Bool {
+    get
+  }
+  public var httpVersion: AwsCommonRuntimeKit.HTTPVersion {
+    get
+  }
+  public func close()
+  public func makeRequest(requestOptions: AwsCommonRuntimeKit.HTTPRequestOptions) throws -> AwsCommonRuntimeKit.HTTPStream
+  @objc deinit
+}
+public class HTTPClientConnectionManager {
+  public init(options: AwsCommonRuntimeKit.HTTPClientConnectionOptions) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func acquireConnection() async throws -> AwsCommonRuntimeKit.HTTPClientConnection
+  #endif
+  @objc deinit
+}
+public struct HTTPClientConnectionOptions {
+  public var clientBootstrap: AwsCommonRuntimeKit.ClientBootstrap
+  public var hostName: Swift.String
+  public var initialWindowSize: Swift.Int
+  public var port: Swift.UInt32
+  public var proxyOptions: AwsCommonRuntimeKit.HTTPProxyOptions?
+  public var proxyEnvSettings: AwsCommonRuntimeKit.HTTPProxyEnvSettings?
+  public var socketOptions: AwsCommonRuntimeKit.SocketOptions
+  public var tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions?
+  public var enableManualWindowManagement: Swift.Bool
+  public var maxConnections: Swift.Int
+  public var shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback?
+  public var maxConnectionIdleMs: Swift.UInt64
+  public var monitoringOptions: AwsCommonRuntimeKit.HTTPMonitoringOptions?
+  public init(clientBootstrap: AwsCommonRuntimeKit.ClientBootstrap, hostName: Swift.String, initialWindowSize: Swift.Int = Int.max, port: Swift.UInt32, proxyOptions: AwsCommonRuntimeKit.HTTPProxyOptions? = nil, proxyEnvSettings: AwsCommonRuntimeKit.HTTPProxyEnvSettings? = nil, socketOptions: AwsCommonRuntimeKit.SocketOptions = SocketOptions(), tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions? = nil, monitoringOptions: AwsCommonRuntimeKit.HTTPMonitoringOptions? = nil, maxConnections: Swift.Int = 2, enableManualWindowManagement: Swift.Bool = false, maxConnectionIdleMs: Swift.UInt64 = 0, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil)
+}
+@_hasMissingDesignatedInitializers public class HTTPHeader {
+  final public let name: Swift.String
+  final public let value: Swift.String
+  public init(name: Swift.String, value: Swift.String)
+  @objc deinit
+}
+public struct HTTPMonitoringOptions {
+  public var minThroughputBytesPerSecond: Swift.UInt64
+  public var allowableThroughputFailureInterval: Swift.UInt32
+  public init(minThroughputBytesPerSecond: Swift.UInt64, allowableThroughputFailureInterval: Swift.UInt32)
+}
+public enum HTTPProxyAuthenticationType {
+  case none
+  case basic
+  public static func == (a: AwsCommonRuntimeKit.HTTPProxyAuthenticationType, b: AwsCommonRuntimeKit.HTTPProxyAuthenticationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum HTTPProxyConnectionType {
+  case legacy
+  case forward
+  case tunnel
+  public static func == (a: AwsCommonRuntimeKit.HTTPProxyConnectionType, b: AwsCommonRuntimeKit.HTTPProxyConnectionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HTTPProxyEnvSettings {
+  public var envVarType: AwsCommonRuntimeKit.HTTPProxyEnvType
+  public var proxyConnectionType: AwsCommonRuntimeKit.HTTPProxyConnectionType
+  public var tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions?
+  public init(envVarType: AwsCommonRuntimeKit.HTTPProxyEnvType = .disable, proxyConnectionType: AwsCommonRuntimeKit.HTTPProxyConnectionType = .forward, tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions? = nil)
+}
+public enum HTTPProxyEnvType {
+  case disable
+  case enable
+  public static func == (a: AwsCommonRuntimeKit.HTTPProxyEnvType, b: AwsCommonRuntimeKit.HTTPProxyEnvType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HTTPProxyOptions {
+  public var authType: AwsCommonRuntimeKit.HTTPProxyAuthenticationType
+  public var connectionType: AwsCommonRuntimeKit.HTTPProxyConnectionType
+  public var basicAuthUsername: Swift.String?
+  public var basicAuthPassword: Swift.String?
+  public var hostName: Swift.String
+  public var port: Swift.UInt32
+  public var tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions?
+  public init(hostName: Swift.String, port: Swift.UInt32, authType: AwsCommonRuntimeKit.HTTPProxyAuthenticationType = .none, basicAuthUsername: Swift.String? = nil, basicAuthPassword: Swift.String? = nil, tlsOptions: AwsCommonRuntimeKit.TLSConnectionOptions? = nil, connectionType: AwsCommonRuntimeKit.HTTPProxyConnectionType = .legacy)
+}
+@_hasMissingDesignatedInitializers public class HTTPRequest : AwsCommonRuntimeKit.HTTPRequestBase {
+  public var method: Swift.String {
+    get
+    set
+  }
+  public var path: Swift.String {
+    get
+    set
+  }
+  public init(method: Swift.String = "GET", path: Swift.String = "/", headers: [AwsCommonRuntimeKit.HTTPHeader] = [HTTPHeader](), body: (any AwsCommonRuntimeKit.IStreamable)? = nil) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HTTP2Request : AwsCommonRuntimeKit.HTTPRequestBase {
+  public init(headers: [AwsCommonRuntimeKit.HTTPHeader] = [HTTPHeader](), body: (any AwsCommonRuntimeKit.IStreamable)? = nil) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HTTPRequestBase {
+  public var body: (any AwsCommonRuntimeKit.IStreamable)? {
+    get
+    set
+  }
+  @objc deinit
+}
+extension AwsCommonRuntimeKit.HTTPRequestBase {
+  public var headerCount: Swift.Int {
+    get
+  }
+  public func addHeader(header: AwsCommonRuntimeKit.HTTPHeader)
+  public func addHeader(name: Swift.String, value: Swift.String)
+  public func addHeaders(headers: [AwsCommonRuntimeKit.HTTPHeader])
+  public func removeHeader(name: Swift.String)
+  public func setHeader(name: Swift.String, value: Swift.String)
+  public func getHeaderValue(name: Swift.String) -> Swift.String?
+  public func getHeaders() -> [AwsCommonRuntimeKit.HTTPHeader]
+  public func clearHeaders()
+}
+public struct HTTPRequestOptions {
+  public typealias OnInterimResponse = (_ statusCode: Swift.UInt32, _ headers: [AwsCommonRuntimeKit.HTTPHeader]) -> Swift.Void
+  public typealias OnResponse = (_ statusCode: Swift.UInt32, _ headers: [AwsCommonRuntimeKit.HTTPHeader]) -> Swift.Void
+  public typealias OnIncomingBody = (_ bodyChunk: Foundation.Data) -> Swift.Void
+  public typealias OnTrailer = (_ headers: [AwsCommonRuntimeKit.HTTPHeader]) -> Swift.Void
+  public typealias OnStreamComplete = (_ result: Swift.Result<Swift.UInt32, AwsCommonRuntimeKit.CommonRunTimeError>) -> Swift.Void
+  public let onInterimResponse: AwsCommonRuntimeKit.HTTPRequestOptions.OnInterimResponse?
+  public let onResponse: AwsCommonRuntimeKit.HTTPRequestOptions.OnResponse
+  public let onIncomingBody: AwsCommonRuntimeKit.HTTPRequestOptions.OnIncomingBody
+  public let onTrailer: AwsCommonRuntimeKit.HTTPRequestOptions.OnTrailer?
+  public let onStreamComplete: AwsCommonRuntimeKit.HTTPRequestOptions.OnStreamComplete
+  public var http2ManualDataWrites: Swift.Bool
+  public init(request: AwsCommonRuntimeKit.HTTPRequestBase, onInterimResponse: AwsCommonRuntimeKit.HTTPRequestOptions.OnInterimResponse? = nil, onResponse: @escaping AwsCommonRuntimeKit.HTTPRequestOptions.OnResponse, onIncomingBody: @escaping AwsCommonRuntimeKit.HTTPRequestOptions.OnIncomingBody, onTrailer: AwsCommonRuntimeKit.HTTPRequestOptions.OnTrailer? = nil, onStreamComplete: @escaping AwsCommonRuntimeKit.HTTPRequestOptions.OnStreamComplete, http2ManualDataWrites: Swift.Bool = false)
+}
+@_hasMissingDesignatedInitializers public class HTTPStream {
+  public func updateWindow(incrementBy: Swift.Int)
+  public func statusCode() throws -> Swift.Int
+  public func activate() throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func writeChunk(chunk: Foundation.Data, endOfStream: Swift.Bool) async throws
+  #endif
+  @objc deinit
+}
+public enum HTTPVersion {
+  case unknown
+  case version_1_1
+  case version_2
+  public static func == (a: AwsCommonRuntimeKit.HTTPVersion, b: AwsCommonRuntimeKit.HTTPVersion) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AwsCommonRuntimeKit.HTTPVersion : Swift.CaseIterable {
+  public typealias AllCases = [AwsCommonRuntimeKit.HTTPVersion]
+  public static var allCases: [AwsCommonRuntimeKit.HTTPVersion] {
+    get
+  }
+}
+public class ClientBootstrap {
+  public init(eventLoopGroup elg: AwsCommonRuntimeKit.EventLoopGroup, hostResolver: AwsCommonRuntimeKit.HostResolver, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws
+  @objc deinit
+}
+final public class EventLoopGroup {
+  public init(threadCount: Swift.UInt16 = 0, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws
+  @objc deinit
+}
+public struct HostAddress {
+  public let addressType: AwsCommonRuntimeKit.HostAddressType
+  public let address: Swift.String
+  public let hostName: Swift.String
+  public let service: Swift.String?
+}
+public struct HostResolverArguments {
+  public var hostName: Swift.String
+  public var service: Swift.String?
+  public init(hostName: Swift.String, service: Swift.String? = nil)
+}
+public enum HostAddressType {
+  case A
+  case AAAA
+  public static func == (a: AwsCommonRuntimeKit.HostAddressType, b: AwsCommonRuntimeKit.HostAddressType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension AwsCommonRuntimeKit.HostAddressType : Swift.CaseIterable {
+  public typealias AllCases = [AwsCommonRuntimeKit.HostAddressType]
+  public static var allCases: [AwsCommonRuntimeKit.HostAddressType] {
+    get
+  }
+}
+public protocol HostResolverProtocol {
+  #if compiler(>=5.3) && $AsyncAwait
+  func resolveAddress(args: AwsCommonRuntimeKit.HostResolverArguments) async throws -> [AwsCommonRuntimeKit.HostAddress]
+  #endif
+  func reportFailureOnAddress(address: AwsCommonRuntimeKit.HostAddress)
+  #if compiler(>=5.3) && $AsyncAwait
+  func purgeCache(args: AwsCommonRuntimeKit.HostResolverArguments) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func purgeCache() async
+  #endif
+}
+@_hasMissingDesignatedInitializers public class HostResolver : AwsCommonRuntimeKit.HostResolverProtocol {
+  public static func makeDefault(eventLoopGroup: AwsCommonRuntimeKit.EventLoopGroup, maxHosts: Swift.Int = 16, maxTTL: Swift.Int = 30, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws -> AwsCommonRuntimeKit.HostResolver
+  #if compiler(>=5.3) && $AsyncAwait
+  public func resolveAddress(args: AwsCommonRuntimeKit.HostResolverArguments) async throws -> [AwsCommonRuntimeKit.HostAddress]
+  #endif
+  public func reportFailureOnAddress(address: AwsCommonRuntimeKit.HostAddress)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func purgeCache(args: AwsCommonRuntimeKit.HostResolverArguments) async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func purgeCache() async
+  #endif
+  @objc deinit
+}
+public enum SocketDomain {
+  case ipv4
+  case ipv6
+  case local
+  public static func == (a: AwsCommonRuntimeKit.SocketDomain, b: AwsCommonRuntimeKit.SocketDomain) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SocketOptions {
+  public var socketType: AwsCommonRuntimeKit.SocketType
+  public var socketDomain: AwsCommonRuntimeKit.SocketDomain
+  public var connectTimeoutMs: Swift.UInt32
+  public var keepaliveIntervalSec: Swift.UInt16
+  public var keepaliveMaxFailedProbes: Swift.UInt16
+  public var keepaliveTimeoutSec: Swift.UInt16
+  public var keepAlive: Swift.Bool
+  public init(socketType: AwsCommonRuntimeKit.SocketType = .stream, socketDomain: AwsCommonRuntimeKit.SocketDomain = SocketDomain.ipv4, connectTimeoutMs: Swift.UInt32 = 3_000, keepaliveIntervalSec: Swift.UInt16 = 0, keepaliveMaxFailedProbes: Swift.UInt16 = 0, keepaliveTimeoutSec: Swift.UInt16 = 0, keepAlive: Swift.Bool = false)
+}
+public enum SocketType {
+  case stream
+  case datagram
+  public static func == (a: AwsCommonRuntimeKit.SocketType, b: AwsCommonRuntimeKit.SocketType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol IStreamable {
+  func length() throws -> Swift.UInt64
+  func seek(offset: Swift.Int64, streamSeekType: AwsCommonRuntimeKit.StreamSeekType) throws
+  func read(buffer: Swift.UnsafeMutableBufferPointer<Swift.UInt8>) throws -> Swift.Int?
+}
+extension AwsCommonRuntimeKit.IStreamable {
+  public func seek(offset: Swift.UInt64, streamSeekType: AwsCommonRuntimeKit.StreamSeekType) throws
+  public func length() throws -> Swift.UInt64
+}
+public enum StreamSeekType : Swift.UInt32 {
+  case begin
+  case end
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+extension Foundation.FileHandle : AwsCommonRuntimeKit.IStreamable {
+  public func length() throws -> Swift.UInt64
+  public func seek(offset: Swift.Int64, streamSeekType: AwsCommonRuntimeKit.StreamSeekType) throws
+  public func read(buffer: Swift.UnsafeMutableBufferPointer<Swift.UInt8>) throws -> Swift.Int?
+}
+public struct TLSConnectionOptions {
+  public var context: AwsCommonRuntimeKit.TLSContext
+  public var alpnList: [Swift.String]?
+  public var serverName: Swift.String?
+  public init(context: AwsCommonRuntimeKit.TLSContext, alpnList: [Swift.String]? = nil, serverName: Swift.String? = nil)
+}
+public class TLSContext {
+  public init(options: AwsCommonRuntimeKit.TLSContextOptions, mode: AwsCommonRuntimeKit.TLSMode) throws
+  @objc deinit
+}
+public enum TLSMode {
+  case client
+  case server
+  public static func == (a: AwsCommonRuntimeKit.TLSMode, b: AwsCommonRuntimeKit.TLSMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class TLSContextOptions {
+  public static func makeDefault() -> AwsCommonRuntimeKit.TLSContextOptions
+  public static func makeMTLS(pkcs12Path: Swift.String, password: Swift.String) throws -> AwsCommonRuntimeKit.TLSContextOptions
+  public static func isAlpnSupported() -> Swift.Bool
+  public func overrideDefaultTrustStore(caPath: Swift.String, caFile: Swift.String) throws
+  public func setAlpnList(_ alpnList: [Swift.String])
+  public func setVerifyPeer(_ verifyPeer: Swift.Bool)
+  public func setMinimumTLSVersion(_ tlsVersion: AwsCommonRuntimeKit.TLSVersion)
+  @objc deinit
+}
+public enum TLSVersion : Swift.UInt32 {
+  case SSLv3
+  case TLSv1
+  case TLSv1_1
+  case TLSv1_2
+  case TLSv1_3
+  case systemDefault
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+public enum ExponentialBackoffJitterMode {
+  case `default`
+  case none
+  case full
+  case decorrelated
+  public static func == (a: AwsCommonRuntimeKit.ExponentialBackoffJitterMode, b: AwsCommonRuntimeKit.ExponentialBackoffJitterMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum RetryError {
+  case transient
+  case throttling
+  case serverError
+  case clientError
+  public static func == (a: AwsCommonRuntimeKit.RetryError, b: AwsCommonRuntimeKit.RetryError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias GenerateRandomFn = () -> Swift.UInt64
+public class RetryStrategy {
+  public init(eventLoopGroup: AwsCommonRuntimeKit.EventLoopGroup, initialBucketCapacity: Swift.Int = 500, maxRetries: Swift.Int = 10, backOffScaleFactor: Foundation.TimeInterval = 0.025, jitterMode: AwsCommonRuntimeKit.ExponentialBackoffJitterMode = .default, generateRandom: AwsCommonRuntimeKit.GenerateRandomFn? = nil, shutdownCallback: AwsCommonRuntimeKit.ShutdownCallback? = nil) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func acquireToken(partitionId: Swift.String?) async throws -> AwsCommonRuntimeKit.RetryToken
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func scheduleRetry(token: AwsCommonRuntimeKit.RetryToken, errorType: AwsCommonRuntimeKit.RetryError) async throws -> AwsCommonRuntimeKit.RetryToken
+  #endif
+  public func recordSuccess(token: AwsCommonRuntimeKit.RetryToken)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RetryToken {
+  @objc deinit
+}
+public class FileBasedConfiguration {
+  public static var defaultProfileName: Swift.String {
+    get
+  }
+  public init(configFilePath: Swift.String? = nil, credentialsFilePath: Swift.String? = nil) throws
+  public static func resolveConfigPath(sourceType: AwsCommonRuntimeKit.FileBasedConfiguration.SourceType, overridePath: Swift.String? = nil) throws -> Swift.String
+  public func getSection(name: Swift.String, sectionType: AwsCommonRuntimeKit.FileBasedConfiguration.SectionType) -> AwsCommonRuntimeKit.FileBasedConfiguration.Section?
+  @objc deinit
+}
+extension AwsCommonRuntimeKit.FileBasedConfiguration {
+  public enum SectionType {
+    case profile
+    case ssoSession
+    public static func == (a: AwsCommonRuntimeKit.FileBasedConfiguration.SectionType, b: AwsCommonRuntimeKit.FileBasedConfiguration.SectionType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum SourceType {
+    case config
+    case credentials
+    public static func == (a: AwsCommonRuntimeKit.FileBasedConfiguration.SourceType, b: AwsCommonRuntimeKit.FileBasedConfiguration.SourceType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers public class Section {
+    public var name: Swift.String {
+      get
+    }
+    public func getProperty(name: Swift.String) -> AwsCommonRuntimeKit.FileBasedConfiguration.Section.Property?
+    public var propertyCount: Swift.Int {
+      get
+    }
+    @objc deinit
+  }
+}
+extension AwsCommonRuntimeKit.FileBasedConfiguration.Section {
+  @_hasMissingDesignatedInitializers public class Property {
+    public var value: Swift.String {
+      get
+    }
+    public func getSubProperty(name: Swift.String) -> Swift.String?
+    public var subPropertyCount: Swift.Int {
+      get
+    }
+    @objc deinit
+  }
+}
+public class EndpointsRequestContext {
+  public init() throws
+  public func add(name: Swift.String, value: Swift.String?) throws
+  public func add(name: Swift.String, value: Swift.Bool?) throws
+  @objc deinit
+}
+public class EndpointsRuleEngine {
+  public init(partitions: Swift.String, ruleSet: Swift.String) throws
+  public func resolve(context: AwsCommonRuntimeKit.EndpointsRequestContext) throws -> AwsCommonRuntimeKit.ResolvedEndpoint
+  public func getHeaders(rawValue: Swift.OpaquePointer) throws -> [Swift.String : [Swift.String]]
+  @objc deinit
+}
+public enum ResolvedEndpoint {
+  case endpoint(url: Swift.String, headers: [Swift.String : [Swift.String]], properties: [Swift.String : Swift.AnyHashable])
+  case error(message: Swift.String)
+}
+extension AwsCommonRuntimeKit.SignatureType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SignatureType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.SignedBodyHeaderType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SignedBodyHeaderType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.SignedBodyValue : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SignedBodyValue : Swift.Hashable {}
+extension AwsCommonRuntimeKit.SignedBodyValue : Swift.RawRepresentable {}
+extension AwsCommonRuntimeKit.SigningAlgorithmType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SigningAlgorithmType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HashAlgorithm : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HashAlgorithm : Swift.Hashable {}
+extension AwsCommonRuntimeKit.LogLevel : Swift.Equatable {}
+extension AwsCommonRuntimeKit.LogLevel : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HTTP2Error : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HTTP2Error : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HTTP2Error : Swift.RawRepresentable {}
+extension AwsCommonRuntimeKit.HTTPProxyAuthenticationType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HTTPProxyAuthenticationType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HTTPProxyConnectionType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HTTPProxyConnectionType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HTTPProxyEnvType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HTTPProxyEnvType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HTTPVersion : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HTTPVersion : Swift.Hashable {}
+extension AwsCommonRuntimeKit.HostAddressType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.HostAddressType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.SocketDomain : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SocketDomain : Swift.Hashable {}
+extension AwsCommonRuntimeKit.SocketType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.SocketType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.StreamSeekType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.StreamSeekType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.StreamSeekType : Swift.RawRepresentable {}
+extension AwsCommonRuntimeKit.TLSMode : Swift.Equatable {}
+extension AwsCommonRuntimeKit.TLSMode : Swift.Hashable {}
+extension AwsCommonRuntimeKit.TLSVersion : Swift.Equatable {}
+extension AwsCommonRuntimeKit.TLSVersion : Swift.Hashable {}
+extension AwsCommonRuntimeKit.TLSVersion : Swift.RawRepresentable {}
+extension AwsCommonRuntimeKit.ExponentialBackoffJitterMode : Swift.Equatable {}
+extension AwsCommonRuntimeKit.ExponentialBackoffJitterMode : Swift.Hashable {}
+extension AwsCommonRuntimeKit.RetryError : Swift.Equatable {}
+extension AwsCommonRuntimeKit.RetryError : Swift.Hashable {}
+extension AwsCommonRuntimeKit.FileBasedConfiguration.SectionType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.FileBasedConfiguration.SectionType : Swift.Hashable {}
+extension AwsCommonRuntimeKit.FileBasedConfiguration.SourceType : Swift.Equatable {}
+extension AwsCommonRuntimeKit.FileBasedConfiguration.SourceType : Swift.Hashable {}

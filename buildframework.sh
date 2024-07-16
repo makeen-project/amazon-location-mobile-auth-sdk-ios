@@ -47,7 +47,7 @@ echo $DST_FRAMEWORK_PATH
 }
 
 echo "# 2 iterations: 1 for device arch and another for simulator arch"
-for PLATFORM in "iOS Simulator"; do
+for PLATFORM in "iOS" "iOS Simulator"; do
     case $PLATFORM in
       "iOS")
         ARCHIVE=$DEVICE_ARCHIVE
