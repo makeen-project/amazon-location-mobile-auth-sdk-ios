@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/AmazonLocationiOSAuthSDK</key>
 		<data>
-		RM8YadkUqQMneexrNiEp7JqKD0Y=
+		NGk06dYeLliz+trwG+m4A+o8e8s=
 		</data>
 		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/AmazonLocationiOSAuthFramework.h</key>
 		<data>
-		GeLFYNWvzh3HVbXWjA9OuSpRFGU=
+		SEPfCOcygFzSg3LQoZqV5sCdWMk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -35,7 +35,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D2qb/Ej5UgHV0mT9pZapbUIvWi6VInWL4pne0izQUAw=
+			MZ+ZWCuNhYghhltfmrBOpxLVq0I05KhU+ayuT5k/7cA=
 			</data>
 		</dict>
 		<key>Frameworks/AmazonLocationiOSAuthSDK.framework/Info.plist</key>
@@ -56,7 +56,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SXVsSC1iiwA/F25NBNKOGZUazzFHwmJUP/smCrBwnHs=
+			n4DNaPXS9Km/SponcfZ3GjxdbQZgpdFcxdMGdLHej9I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

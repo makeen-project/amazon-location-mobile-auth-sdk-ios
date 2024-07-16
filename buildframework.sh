@@ -71,7 +71,8 @@ for PLATFORM in "iOS Simulator"; do
       -sdk $SDK \
       -derivedDataPath $BUILD_FOLDER \
       SKIP_INSTALL=NO \
-      BUILD_LIBRARY_FOR_DISTRIBUTION=NO
+      BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+      OTHER_SWIFT_FLAGS="-no-verify-emitted-module-interface"
 
     FRAMEWORK_PATH="${ARCHIVE}/Products/Library/Frameworks/${PROJECT_NAME}.framework"
     MODULES_PATH="$FRAMEWORK_PATH/Modules"
@@ -111,14 +112,14 @@ for module in AwsCAuth AwsCCal AwsCChecksums AwsCCommon AwsCEventStream AwsCHttp
     # fi
 
         # Copy Swift modules
-    if [ -d $SWIFT_MODULE_PATH ] 
-    then
-        cp -r $SWIFT_MODULE_PATH $MODULES_PATH
-    else
-        # In case there are no modules, assume C/ObjC library and create module map
-        echo "module $NAME { export * }" > $MODULES_PATH/module.modulemap
-        # TODO: Copy headers
-    fi
+    # if [ -d $SWIFT_MODULE_PATH ] 
+    # then
+    #     cp -r $SWIFT_MODULE_PATH $MODULES_PATH
+    # else
+    #     # In case there are no modules, assume C/ObjC library and create module map
+    #     echo "module $NAME { export * }" > $MODULES_PATH/module.modulemap
+    #     # TODO: Copy headers
+    # fi
 
     echo "# Step 4"
     echo "RESOURCES_BUNDLE_PATH"
@@ -126,11 +127,11 @@ for module in AwsCAuth AwsCCal AwsCChecksums AwsCCommon AwsCEventStream AwsCHttp
     echo "FRAMEWORK_PATH"
     echo $FRAMEWORK_PATH 
 
-    # echo "# Step 4.1"
-    # if [ -e $RESOURCES_BUNDLE_PATH ]; then
-    #   echo "# Step 4.2"
-    #   cp -r $RESOURCES_BUNDLE_PATH $FRAMEWORK_PATH
-    # fi
+    echo "# Step 4.1"
+    if [ -e $RESOURCES_BUNDLE_PATH ]; then
+      echo "# Step 4.2"
+      cp -r $RESOURCES_BUNDLE_PATH $FRAMEWORK_PATH
+    fi
 
 
 

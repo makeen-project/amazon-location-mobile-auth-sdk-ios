@@ -8,5 +8,4 @@ FOUNDATION_EXPORT const unsigned char AmazonLocationiOSAuthFrameworkVersionStrin
 
 // In this header, you should import all the public headers of your framework using statements like #import <AmazonLocationiOSAuthFramework/PublicHeader.h>
 
-
 #import <AmazonLocationiOSAuthSDK/AmazonLocationiOSAuthSDK.h>
