@@ -1,0 +1,2987 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventStreamError",
+        "printedName": "EventStreamError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "decoding",
+            "printedName": "decoding",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.EventStreamError.Type) -> (Swift.String) -> SmithyEventStreamsAPI.EventStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> SmithyEventStreamsAPI.EventStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventStreamError",
+                        "printedName": "SmithyEventStreamsAPI.EventStreamError",
+                        "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.EventStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventStreamError",
+                        "printedName": "SmithyEventStreamsAPI.EventStreamError",
+                        "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO8decodingyACSScACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI0B11StreamErrorO8decodingyACSScACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidMessage",
+            "printedName": "invalidMessage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.EventStreamError.Type) -> (Swift.String) -> SmithyEventStreamsAPI.EventStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> SmithyEventStreamsAPI.EventStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventStreamError",
+                        "printedName": "SmithyEventStreamsAPI.EventStreamError",
+                        "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.EventStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventStreamError",
+                        "printedName": "SmithyEventStreamsAPI.EventStreamError",
+                        "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO14invalidMessageyACSScACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI0B11StreamErrorO14invalidMessageyACSScACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21SmithyEventStreamsAPI0B11StreamErrorO",
+        "mangledName": "$s21SmithyEventStreamsAPI0B11StreamErrorO",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Header",
+        "printedName": "Header",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SmithyEventStreamsAPI6HeaderV4nameSSvp",
+            "mangledName": "$s21SmithyEventStreamsAPI6HeaderV4nameSSvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SmithyEventStreamsAPI6HeaderV4nameSSvg",
+                "mangledName": "$s21SmithyEventStreamsAPI6HeaderV4nameSSvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderValue",
+                "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SmithyEventStreamsAPI6HeaderV5valueAA0E5ValueOvp",
+            "mangledName": "$s21SmithyEventStreamsAPI6HeaderV5valueAA0E5ValueOvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderValue",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                    "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SmithyEventStreamsAPI6HeaderV5valueAA0E5ValueOvg",
+                "mangledName": "$s21SmithyEventStreamsAPI6HeaderV5valueAA0E5ValueOvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Header",
+                "printedName": "SmithyEventStreamsAPI.Header",
+                "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderValue",
+                "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21SmithyEventStreamsAPI6HeaderV4name5valueACSS_AA0E5ValueOtcfc",
+            "mangledName": "$s21SmithyEventStreamsAPI6HeaderV4name5valueACSS_AA0E5ValueOtcfc",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Header",
+                "printedName": "SmithyEventStreamsAPI.Header",
+                "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Header",
+                "printedName": "SmithyEventStreamsAPI.Header",
+                "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI6HeaderV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s21SmithyEventStreamsAPI6HeaderV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyEventStreamsAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21SmithyEventStreamsAPI6HeaderV",
+        "mangledName": "$s21SmithyEventStreamsAPI6HeaderV",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeaderValue",
+        "printedName": "HeaderValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "bool",
+            "printedName": "bool",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.Bool) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO4boolyACSbcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO4boolyACSbcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "byte",
+            "printedName": "byte",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.Int8) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int8) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int8",
+                        "printedName": "Swift.Int8",
+                        "usr": "s:s4Int8V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO4byteyACs4Int8VcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO4byteyACs4Int8VcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "int16",
+            "printedName": "int16",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.Int16) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int16) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int16",
+                        "printedName": "Swift.Int16",
+                        "usr": "s:s5Int16V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO5int16yACs5Int16VcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO5int16yACs5Int16VcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "int32",
+            "printedName": "int32",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.Int32) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO5int32yACs5Int32VcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO5int32yACs5Int32VcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "int64",
+            "printedName": "int64",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.Int64) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int64) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int64",
+                        "printedName": "Swift.Int64",
+                        "usr": "s:s5Int64V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO5int64yACs5Int64VcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO5int64yACs5Int64VcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "byteArray",
+            "printedName": "byteArray",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Foundation.Data) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Data) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO9byteArrayyAC10Foundation4DataVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO9byteArrayyAC10Foundation4DataVcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Swift.String) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO6stringyACSScACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO6stringyACSScACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Foundation.Date) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Date) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO9timestampyAC10Foundation4DateVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO9timestampyAC10Foundation4DateVcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "uuid",
+            "printedName": "uuid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.HeaderValue.Type) -> (Foundation.UUID) -> SmithyEventStreamsAPI.HeaderValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.UUID) -> SmithyEventStreamsAPI.HeaderValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UUID",
+                        "printedName": "Foundation.UUID",
+                        "usr": "s:10Foundation4UUIDV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HeaderValue",
+                        "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO4uuidyAC10Foundation4UUIDVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO4uuidyAC10Foundation4UUIDVcACmF",
+            "moduleName": "SmithyEventStreamsAPI"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderValue",
+                "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderValue",
+                "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI11HeaderValueO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyEventStreamsAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21SmithyEventStreamsAPI11HeaderValueO",
+        "mangledName": "$s21SmithyEventStreamsAPI11HeaderValueO",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Message",
+        "printedName": "Message",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "headers",
+            "printedName": "headers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyEventStreamsAPI.Header]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Header",
+                    "printedName": "SmithyEventStreamsAPI.Header",
+                    "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SmithyEventStreamsAPI7MessageV7headersSayAA6HeaderVGvp",
+            "mangledName": "$s21SmithyEventStreamsAPI7MessageV7headersSayAA6HeaderVGvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyEventStreamsAPI.Header]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Header",
+                        "printedName": "SmithyEventStreamsAPI.Header",
+                        "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV7headersSayAA6HeaderVGvg",
+                "mangledName": "$s21SmithyEventStreamsAPI7MessageV7headersSayAA6HeaderVGvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "payload",
+            "printedName": "payload",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SmithyEventStreamsAPI7MessageV7payload10Foundation4DataVvp",
+            "mangledName": "$s21SmithyEventStreamsAPI7MessageV7payload10Foundation4DataVvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV7payload10Foundation4DataVvg",
+                "mangledName": "$s21SmithyEventStreamsAPI7MessageV7payload10Foundation4DataVvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(headers:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyEventStreamsAPI.Header]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Header",
+                    "printedName": "SmithyEventStreamsAPI.Header",
+                    "usr": "s:21SmithyEventStreamsAPI6HeaderV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "hasDefaultArg": true,
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21SmithyEventStreamsAPI7MessageV7headers7payloadACSayAA6HeaderVG_10Foundation4DataVtcfc",
+            "mangledName": "$s21SmithyEventStreamsAPI7MessageV7headers7payloadACSayAA6HeaderVG_10Foundation4DataVtcfc",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI7MessageV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s21SmithyEventStreamsAPI7MessageV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyEventStreamsAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SmithyEventStreamsAPI7MessageV16debugDescriptionSSvp",
+            "mangledName": "$s21SmithyEventStreamsAPI7MessageV16debugDescriptionSSvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV16debugDescriptionSSvg",
+                "mangledName": "$s21SmithyEventStreamsAPI7MessageV16debugDescriptionSSvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21SmithyEventStreamsAPI7MessageV",
+        "mangledName": "$s21SmithyEventStreamsAPI7MessageV",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageDecoder",
+        "printedName": "MessageDecoder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "feed",
+            "printedName": "feed(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI14MessageDecoderP4feed4datay10Foundation4DataV_tKF",
+            "mangledName": "$s21SmithyEventStreamsAPI14MessageDecoderP4feed4datay10Foundation4DataV_tKF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAPI.MessageDecoder>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAPI.MessageDecoder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "endOfStream",
+            "printedName": "endOfStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI14MessageDecoderP11endOfStreamyyKF",
+            "mangledName": "$s21SmithyEventStreamsAPI14MessageDecoderP11endOfStreamyyKF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAPI.MessageDecoder>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAPI.MessageDecoder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "message",
+            "printedName": "message()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyEventStreamsAPI.Message?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "SmithyEventStreamsAPI.Message",
+                    "usr": "s:21SmithyEventStreamsAPI7MessageV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI14MessageDecoderP7messageAA0E0VSgyKF",
+            "mangledName": "$s21SmithyEventStreamsAPI14MessageDecoderP7messageAA0E0VSgyKF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAPI.MessageDecoder>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAPI.MessageDecoder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21SmithyEventStreamsAPI14MessageDecoderP",
+        "mangledName": "$s21SmithyEventStreamsAPI14MessageDecoderP",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageEncoder",
+        "printedName": "MessageEncoder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP6encode7message10Foundation4DataVAA0E0V_tKF",
+            "mangledName": "$s21SmithyEventStreamsAPI14MessageEncoderP6encode7message10Foundation4DataVAA0E0V_tKF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAPI.MessageEncoder>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAPI.MessageEncoder>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP",
+        "mangledName": "$s21SmithyEventStreamsAPI14MessageEncoderP",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageType",
+        "printedName": "MessageType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "event",
+            "printedName": "event",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.MessageType.Type) -> (SmithyEventStreamsAPI.MessageType.EventParams) -> SmithyEventStreamsAPI.MessageType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyEventStreamsAPI.MessageType.EventParams) -> SmithyEventStreamsAPI.MessageType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventParams",
+                        "printedName": "SmithyEventStreamsAPI.MessageType.EventParams",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO5eventyA2C0B6ParamsVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO5eventyA2C0B6ParamsVcACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "exception",
+            "printedName": "exception",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.MessageType.Type) -> (SmithyEventStreamsAPI.MessageType.ExceptionParams) -> SmithyEventStreamsAPI.MessageType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyEventStreamsAPI.MessageType.ExceptionParams) -> SmithyEventStreamsAPI.MessageType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExceptionParams",
+                        "printedName": "SmithyEventStreamsAPI.MessageType.ExceptionParams",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO9exceptionyA2C15ExceptionParamsVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO9exceptionyA2C15ExceptionParamsVcACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.MessageType.Type) -> (SmithyEventStreamsAPI.MessageType.ErrorParams) -> SmithyEventStreamsAPI.MessageType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyEventStreamsAPI.MessageType.ErrorParams) -> SmithyEventStreamsAPI.MessageType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorParams",
+                        "printedName": "SmithyEventStreamsAPI.MessageType.ErrorParams",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO5erroryA2C11ErrorParamsVcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO5erroryA2C11ErrorParamsVcACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyEventStreamsAPI.MessageType.Type) -> (Swift.String) -> SmithyEventStreamsAPI.MessageType",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> SmithyEventStreamsAPI.MessageType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(messageType: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageType",
+                        "printedName": "SmithyEventStreamsAPI.MessageType",
+                        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO7unknownyACSS_tcACmF",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO7unknownyACSS_tcACmF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "EventParams",
+            "printedName": "EventParams",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "eventType",
+                "printedName": "eventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF0SSvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF0SSvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF0SSvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF0SSvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "contentType",
+                "printedName": "contentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV07contentF0SSSgvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV07contentF0SSSgvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV07contentF0SSSgvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV07contentF0SSSgvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(eventType:contentType:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventParams",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.EventParams",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF007contentF0AESS_SSSgtcfc",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV05eventF007contentF0AESS_SSSgtcfc",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO0B6ParamsV",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ExceptionParams",
+            "printedName": "ExceptionParams",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "exceptionType",
+                "printedName": "exceptionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF0SSvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF0SSvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF0SSvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF0SSvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "contentType",
+                "printedName": "contentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV07contentF0SSSgvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV07contentF0SSSgvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV07contentF0SSSgvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV07contentF0SSSgvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(exceptionType:contentType:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExceptionParams",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.ExceptionParams",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF007contentF0AESS_SSSgtcfc",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV09exceptionF007contentF0AESS_SSSgtcfc",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO15ExceptionParamsV",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ErrorParams",
+            "printedName": "ErrorParams",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "errorCode",
+                "printedName": "errorCode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCodeSSvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCodeSSvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCodeSSvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCodeSSvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "message",
+                "printedName": "message",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV7messageSSSgvp",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV7messageSSSgvp",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV7messageSSSgvg",
+                    "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV7messageSSSgvg",
+                    "moduleName": "SmithyEventStreamsAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(errorCode:message:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ErrorParams",
+                    "printedName": "SmithyEventStreamsAPI.MessageType.ErrorParams",
+                    "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCode7messageAESS_SSSgtcfc",
+                "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV9errorCode7messageAESS_SSSgtcfc",
+                "moduleName": "SmithyEventStreamsAPI",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV",
+            "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO11ErrorParamsV",
+            "moduleName": "SmithyEventStreamsAPI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21SmithyEventStreamsAPI11MessageTypeO",
+        "mangledName": "$s21SmithyEventStreamsAPI11MessageTypeO",
+        "moduleName": "SmithyEventStreamsAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Context",
+        "printedName": "Context",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "messageEncoder",
+            "printedName": "messageEncoder",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyEventStreamsAPI.MessageEncoder)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageEncoder",
+                    "printedName": "any SmithyEventStreamsAPI.MessageEncoder",
+                    "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvp",
+            "mangledName": "$s6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvp",
+            "moduleName": "SmithyEventStreamsAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyEventStreamsAPI.MessageEncoder)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageEncoder",
+                        "printedName": "any SmithyEventStreamsAPI.MessageEncoder",
+                        "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvg",
+                "mangledName": "$s6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvg",
+                "moduleName": "SmithyEventStreamsAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyEventStreamsAPI.MessageEncoder)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageEncoder",
+                        "printedName": "any SmithyEventStreamsAPI.MessageEncoder",
+                        "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvs",
+                "mangledName": "$s6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvs",
+                "moduleName": "SmithyEventStreamsAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvM",
+                "mangledName": "$s6Smithy7ContextC0A15EventStreamsAPIE14messageEncoderAD07MessageG0_pSgvM",
+                "moduleName": "SmithyEventStreamsAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Smithy7ContextC",
+        "mangledName": "$s6Smithy7ContextC",
+        "moduleName": "Smithy",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "HasAttributes",
+            "printedName": "HasAttributes",
+            "usr": "s:6Smithy13HasAttributesP",
+            "mangledName": "$s6Smithy13HasAttributesP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AsyncThrowingStream",
+        "printedName": "AsyncThrowingStream",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:Scs"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Scs21SmithyEventStreamsAPISQRzrlE2eeoiySbScsyxq_G_ACtFZ",
+            "mangledName": "$sScs21SmithyEventStreamsAPISQRzrlE2eeoiySbScsyxq_G_ACtFZ",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Equatable, τ_0_1 : Swift.Error>",
+            "sugared_genericSig": "<Element, Failure where Element : Swift.Equatable, Failure : Swift.Error>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:Scs",
+        "mangledName": "$sScs",
+        "moduleName": "_Concurrency",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : Swift.Error>",
+        "sugared_genericSig": "<Element, Failure where Failure : Swift.Error>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AsyncIterator",
+                "printedName": "AsyncIterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Iterator",
+                    "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0, τ_0_1>.Iterator",
+                    "usr": "s:Scs8IteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Array",
+        "printedName": "Array",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyEventStreamsAPI.HeaderValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderValue",
+                    "printedName": "SmithyEventStreamsAPI.HeaderValue",
+                    "usr": "s:21SmithyEventStreamsAPI11HeaderValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:Sa21SmithyEventStreamsAPIAA6HeaderVRszlE5value4nameAA0E5ValueOSgSS_tF",
+            "mangledName": "$sSa21SmithyEventStreamsAPIAA6HeaderVRszlE5value4nameAA0E5ValueOSgSS_tF",
+            "moduleName": "SmithyEventStreamsAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 == SmithyEventStreamsAPI.Header>",
+            "sugared_genericSig": "<Element where Element == SmithyEventStreamsAPI.Header>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:Sa",
+        "mangledName": "$sSa",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Element>",
+        "declAttributes": [
+          "EagerMove",
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_DestructorSafeContainer",
+            "printedName": "_DestructorSafeContainer",
+            "usr": "s:s24_DestructorSafeContainerP",
+            "mangledName": "$ss24_DestructorSafeContainerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ArrayProtocol",
+            "printedName": "_ArrayProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Buffer",
+                "printedName": "_Buffer",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_ArrayBuffer",
+                    "printedName": "Swift._ArrayBuffer<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s12_ArrayBufferV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s14_ArrayProtocolP",
+            "mangledName": "$ss14_ArrayProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RandomAccessCollection",
+            "printedName": "RandomAccessCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Range",
+                    "printedName": "Swift.Range<Swift.Int>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sn"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sk",
+            "mangledName": "$sSk"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MutableCollection",
+            "printedName": "MutableCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SM",
+            "mangledName": "$sSM"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BidirectionalCollection",
+            "printedName": "BidirectionalCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Range",
+                    "printedName": "Swift.Range<Swift.Int>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sn"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SK",
+            "mangledName": "$sSK"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Collection",
+            "printedName": "Collection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Index",
+                "printedName": "Index",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IndexingIterator",
+                    "printedName": "Swift.IndexingIterator<[τ_0_0]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[τ_0_0]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s16IndexingIteratorV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Indices",
+                "printedName": "Indices",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Range",
+                    "printedName": "Swift.Range<Swift.Int>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sn"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sl",
+            "mangledName": "$sSl"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sequence",
+            "printedName": "Sequence",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Element",
+                "printedName": "Element",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IndexingIterator",
+                    "printedName": "Swift.IndexingIterator<[τ_0_0]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[τ_0_0]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s16IndexingIteratorV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:ST",
+            "mangledName": "$sST"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RangeReplaceableCollection",
+            "printedName": "RangeReplaceableCollection",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SubSequence",
+                "printedName": "SubSequence",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sm",
+            "mangledName": "$sSm"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasContiguousBytes",
+            "printedName": "_HasContiguousBytes",
+            "usr": "s:s19_HasContiguousBytesP",
+            "mangledName": "$ss19_HasContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContiguousBytes",
+            "printedName": "ContiguousBytes",
+            "usr": "s:10Foundation15ContiguousBytesP",
+            "mangledName": "$s10Foundation15ContiguousBytesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "EncodableWithConfiguration",
+            "printedName": "EncodableWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EncodingConfiguration",
+                "printedName": "EncodingConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.EncodingConfiguration"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation26EncodableWithConfigurationP",
+            "mangledName": "$s10Foundation26EncodableWithConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DecodableWithConfiguration",
+            "printedName": "DecodableWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DecodingConfiguration",
+                "printedName": "DecodingConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.DecodingConfiguration"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation26DecodableWithConfigurationP",
+            "mangledName": "$s10Foundation26DecodableWithConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Regions",
+                "printedName": "Regions",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyEventStreamsAPI\/Context+EventStreamsAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 457,
+      "length": 19,
+      "value": "\"MessageEncoderKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyEventStreamsAPI\/Message.swift",
+      "kind": "Array",
+      "offset": 627,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

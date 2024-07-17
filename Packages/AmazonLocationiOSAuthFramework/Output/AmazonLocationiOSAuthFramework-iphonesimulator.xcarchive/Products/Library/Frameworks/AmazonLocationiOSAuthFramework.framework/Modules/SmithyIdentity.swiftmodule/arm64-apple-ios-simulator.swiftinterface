@@ -1,0 +1,51 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyIdentity
+import AwsCommonRuntimeKit
+import AwsCommonRuntimeKit/*.Credentials*/
+import AwsCommonRuntimeKit/*.CredentialsProvider*/
+import AwsCommonRuntimeKit/*.CredentialsProviding*/
+import Foundation/*.Date*/
+import Smithy/*.Attributes*/
+import Smithy/*.ClientError*/
+import SmithyIdentityAPI/*.Identity*/
+import SmithyIdentityAPI/*.IdentityResolver*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AWSCredentialIdentity : SmithyIdentityAPI.Identity {
+  public let accessKey: Swift.String
+  public let secret: Swift.String
+  public let sessionToken: Swift.String?
+  public let expiration: Foundation.Date?
+  public init(accessKey: Swift.String, secret: Swift.String, expiration: Foundation.Date? = nil, sessionToken: Swift.String? = nil)
+}
+public protocol AWSCredentialIdentityResolver : SmithyIdentityAPI.IdentityResolver where Self.IdentityT == SmithyIdentity.AWSCredentialIdentity {
+}
+extension SmithyIdentity.AWSCredentialIdentityResolver {
+  public func getCRTAWSCredentialIdentityResolver() throws -> AwsCommonRuntimeKit.CredentialsProvider
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getIdentity(identityProperties: Smithy.Attributes? = nil) async throws -> SmithyIdentity.AWSCredentialIdentity
+  #endif
+}
+public struct CustomAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(_ identityResolver: any SmithyIdentity.AWSCredentialIdentityResolver) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct StaticAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(_ credentials: SmithyIdentity.AWSCredentialIdentity) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public protocol AWSCredentialIdentityResolvedByCRT : SmithyIdentity.AWSCredentialIdentityResolver {
+  var crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider { get }
+}
+extension SmithyIdentity.AWSCredentialIdentity {
+  public init(crtAWSCredentialIdentity: SmithyIdentity.CRTAWSCredentialIdentity) throws
+}
+extension AwsCommonRuntimeKit.Credentials {
+  convenience public init(awsCredentialIdentity: SmithyIdentity.AWSCredentialIdentity) throws
+}
+public typealias CRTAWSCredentialIdentity = AwsCommonRuntimeKit.Credentials

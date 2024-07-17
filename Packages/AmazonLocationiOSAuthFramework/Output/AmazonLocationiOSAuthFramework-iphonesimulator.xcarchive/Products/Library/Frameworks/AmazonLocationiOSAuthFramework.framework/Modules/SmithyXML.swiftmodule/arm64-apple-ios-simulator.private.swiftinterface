@@ -1,0 +1,120 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyXML
+import Foundation/*.Data*/
+import Foundation/*.Date*/
+import SmithyReadWrite/*.Document*/
+import SmithyReadWrite/*.ReadingClosure*/
+import SmithyReadWrite/*.SmithyReader*/
+import SmithyReadWrite/*.SmithyWriter*/
+import SmithyReadWrite/*.WritingClosure*/
+import SmithyTimestamps/*.TimestampFormat*/
+import SmithyTimestamps/*.TimestampFormatter*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import libxml2
+public struct NodeInfo : Swift.Equatable {
+  public enum Location {
+    case element
+    case attribute
+    public static func == (a: SmithyXML.NodeInfo.Location, b: SmithyXML.NodeInfo.Location) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Namespace : Swift.Equatable {
+    public init(prefix: Swift.String, uri: Swift.String)
+    public static func == (a: SmithyXML.NodeInfo.Namespace, b: SmithyXML.NodeInfo.Namespace) -> Swift.Bool
+  }
+  public var prefix: Swift.String? {
+    get
+  }
+  public let name: Swift.String
+  public let location: SmithyXML.NodeInfo.Location
+  public let namespaceDef: SmithyXML.NodeInfo.Namespace?
+  public let namespace: SmithyXML.NodeInfo.Namespace?
+  public init(_ name: Swift.String, location: SmithyXML.NodeInfo.Location = .element, namespaceDef: SmithyXML.NodeInfo.Namespace? = nil, namespace: SmithyXML.NodeInfo.Namespace? = nil)
+  public static func == (a: SmithyXML.NodeInfo, b: SmithyXML.NodeInfo) -> Swift.Bool
+}
+extension SmithyXML.NodeInfo : Swift.ExpressibleByStringLiteral {
+  public typealias StringLiteralType = Swift.String
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = SmithyXML.NodeInfo.StringLiteralType
+  public typealias UnicodeScalarLiteralType = SmithyXML.NodeInfo.StringLiteralType
+}
+extension SmithyXML.Reader {
+  public static func from(data: Foundation.Data) throws -> SmithyXML.Reader
+}
+@_hasMissingDesignatedInitializers final public class Reader : SmithyReadWrite.SmithyReader {
+  public typealias ReaderNodeInfo = SmithyXML.NodeInfo
+  final public var children: [SmithyXML.Reader] {
+    get
+  }
+  weak final public var parent: SmithyXML.Reader? {
+    get
+  }
+  final public let nodeInfo: SmithyXML.NodeInfo
+  final public var nodeInfoPath: [SmithyXML.NodeInfo] {
+    get
+  }
+  final public var hasContent: Swift.Bool {
+    get
+  }
+  final public subscript(nodeInfo: SmithyXML.NodeInfo) -> SmithyXML.Reader {
+    get
+  }
+  final public func detach()
+  final public func unwrap() -> SmithyXML.Reader
+  final public func readIfPresent() throws -> Swift.String?
+  final public func readIfPresent() throws -> Swift.Int8?
+  final public func readIfPresent() throws -> Swift.Int16?
+  final public func readIfPresent() throws -> Swift.Int?
+  final public func readIfPresent() throws -> Swift.Float?
+  final public func readIfPresent() throws -> Swift.Double?
+  final public func readIfPresent() throws -> Swift.Bool?
+  final public func readIfPresent() throws -> Foundation.Data?
+  final public func readIfPresent() throws -> SmithyReadWrite.Document?
+  final public func readTimestampIfPresent(format: SmithyTimestamps.TimestampFormat) throws -> Foundation.Date?
+  final public func readIfPresent<T>() throws -> T? where T : Swift.RawRepresentable, T.RawValue == Swift.Int
+  final public func readIfPresent<T>() throws -> T? where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  final public func readMapIfPresent<T>(valueReadingClosure: (SmithyXML.Reader) throws -> T, keyNodeInfo: SmithyXML.NodeInfo, valueNodeInfo: SmithyXML.NodeInfo, isFlattened: Swift.Bool) throws -> [Swift.String : T]?
+  final public func readListIfPresent<Member>(memberReadingClosure: (SmithyXML.Reader) throws -> Member, memberNodeInfo: SmithyXML.NodeInfo, isFlattened: Swift.Bool) throws -> [Member]?
+  final public func readNullIfPresent() throws -> Swift.Bool?
+  public typealias NodeInfo = SmithyXML.NodeInfo
+  @objc deinit
+}
+extension SmithyXML.Writer {
+  final public func data() throws -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers final public class Writer : SmithyReadWrite.SmithyWriter {
+  final public var nodeInfoPath: [SmithyXML.NodeInfo] {
+    get
+  }
+  public init(nodeInfo: SmithyXML.NodeInfo)
+  final public subscript(nodeInfo: SmithyXML.NodeInfo) -> SmithyXML.Writer {
+    get
+  }
+  final public func write(_ value: Swift.Bool?) throws
+  final public func write(_ value: Swift.String?) throws
+  final public func write(_ value: Swift.Double?) throws
+  final public func write(_ value: Swift.Float?) throws
+  final public func write(_ value: Swift.Int?) throws
+  final public func write(_ value: Swift.Int8?) throws
+  final public func write(_ value: Swift.Int16?) throws
+  final public func write(_ value: Swift.UInt8?) throws
+  final public func write(_ value: Foundation.Data?) throws
+  final public func write(_ value: SmithyReadWrite.Document?) throws
+  final public func writeTimestamp(_ value: Foundation.Date?, format: SmithyTimestamps.TimestampFormat) throws
+  final public func write<T>(_ value: T?) throws where T : Swift.RawRepresentable, T.RawValue == Swift.Int
+  final public func write<T>(_ value: T?) throws where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  final public func writeMap<T>(_ value: [Swift.String : T]?, valueWritingClosure: (T, SmithyXML.Writer) throws -> Swift.Void, keyNodeInfo: SmithyXML.NodeInfo, valueNodeInfo: SmithyXML.NodeInfo, isFlattened: Swift.Bool) throws
+  final public func writeList<T>(_ value: [T]?, memberWritingClosure: (T, SmithyXML.Writer) throws -> Swift.Void, memberNodeInfo: SmithyXML.NodeInfo, isFlattened: Swift.Bool) throws
+  final public func writeNull() throws
+  public typealias NodeInfo = SmithyXML.NodeInfo
+  @objc deinit
+}
+extension SmithyXML.NodeInfo.Location : Swift.Equatable {}
+extension SmithyXML.NodeInfo.Location : Swift.Hashable {}

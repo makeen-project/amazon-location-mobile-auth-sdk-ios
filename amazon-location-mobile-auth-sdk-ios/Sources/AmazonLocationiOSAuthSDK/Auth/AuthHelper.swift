@@ -1,20 +1,20 @@
 import Foundation
 import AwsCommonRuntimeKit
 
-@objc public class AuthHelper: NSObject {
+@objc open class AuthHelper: NSObject {
 
     private var locationCredentialsProvider: LocationCredentialsProvider?
     
     @objc public override init() {
     }
     
-    @objc public func authenticateWithCognitoIdentityPool(identityPoolId: String) async throws -> LocationCredentialsProvider? {
+    @objc open func authenticateWithCognitoIdentityPool(identityPoolId: String) async throws -> LocationCredentialsProvider? {
         let region = AmazonLocationRegion.toRegionString(identityPoolId: identityPoolId)
         locationCredentialsProvider = try? await authenticateWithCognitoIdentityPoolAndRegion(identityPoolId: identityPoolId, region: region)
         return locationCredentialsProvider
     }
     
-    @objc public func authenticateWithCognitoIdentityPool(identityPoolId: String, region: String) async throws -> LocationCredentialsProvider? {
+    @objc open func authenticateWithCognitoIdentityPool(identityPoolId: String, region: String) async throws -> LocationCredentialsProvider? {
         locationCredentialsProvider = try? await authenticateWithCognitoIdentityPoolAndRegion(identityPoolId: identityPoolId, region: region)
         return locationCredentialsProvider
     }
@@ -26,7 +26,7 @@ import AwsCommonRuntimeKit
         return credentialProvider
     }
 
-    @objc public func authenticateWithApiKey(apiKey: String, region: String) -> LocationCredentialsProvider {
+    @objc open func authenticateWithApiKey(apiKey: String, region: String) -> LocationCredentialsProvider {
         let credentialProvider = LocationCredentialsProvider(region: region, apiKey: apiKey)
         credentialProvider.setAPIKey(apiKey: apiKey)
         credentialProvider.setRegion(region: region)
@@ -34,13 +34,13 @@ import AwsCommonRuntimeKit
         return credentialProvider
     }
     
-    @objc public func authenticateWithCredentialsProvider(credentialsProvider: AmazonLocationCustomCredentialsProvider, region: String) async throws -> LocationCredentialsProvider? {
+    @objc open func authenticateWithCredentialsProvider(credentialsProvider: AmazonLocationCustomCredentialsProvider, region: String) async throws -> LocationCredentialsProvider? {
         let credentialProvider = LocationCredentialsProvider(credentialsProvider: credentialsProvider)
         credentialProvider.setRegion(region: region)
         return credentialProvider
     }
     
-    @objc public func getLocationClient() -> AmazonLocationClient?
+    @objc open func getLocationClient() -> AmazonLocationClient?
     {
         guard let locationCredentialsProvider = self.locationCredentialsProvider else {
             return nil

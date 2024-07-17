@@ -1,0 +1,190 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyHTTPAPI",
+        "printedName": "SmithyHTTPAPI",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyHTTPAPI",
+        "printedName": "SmithyHTTPAPI",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyChecksumsAPI",
+        "printedName": "SmithyChecksumsAPI",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyChecksums",
+        "printedName": "SmithyChecksums",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "Import",
+        "name": "AwsCommonRuntimeKit",
+        "printedName": "AwsCommonRuntimeKit",
+        "declKind": "Import",
+        "moduleName": "AWSSDKChecksums"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SdkHttpRequestBuilder",
+        "printedName": "SdkHttpRequestBuilder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setAwsChunkedHeaders",
+            "printedName": "setAwsChunkedHeaders()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyHTTPAPI21SdkHttpRequestBuilderC15AWSSDKChecksumsE20setAwsChunkedHeadersyyKF",
+            "mangledName": "$s13SmithyHTTPAPI21SdkHttpRequestBuilderC15AWSSDKChecksumsE20setAwsChunkedHeadersyyKF",
+            "moduleName": "AWSSDKChecksums",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setChunkedBody",
+            "printedName": "setChunkedBody(signingConfig:signature:trailingHeaders:checksumString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningConfig",
+                "printedName": "AwsCommonRuntimeKit.SigningConfig",
+                "usr": "s:19AwsCommonRuntimeKit13SigningConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Headers",
+                "printedName": "SmithyHTTPAPI.Headers",
+                "usr": "s:13SmithyHTTPAPI7HeadersV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyHTTPAPI21SdkHttpRequestBuilderC15AWSSDKChecksumsE14setChunkedBody13signingConfig9signature15trailingHeaders14checksumStringy19AwsCommonRuntimeKit07SigningL0V_SSAA0O0VSSSgtKF",
+            "mangledName": "$s13SmithyHTTPAPI21SdkHttpRequestBuilderC15AWSSDKChecksumsE14setChunkedBody13signingConfig9signature15trailingHeaders14checksumStringy19AwsCommonRuntimeKit07SigningL0V_SSAA0O0VSSSgtKF",
+            "moduleName": "AWSSDKChecksums",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13SmithyHTTPAPI21SdkHttpRequestBuilderC",
+        "mangledName": "$s13SmithyHTTPAPI21SdkHttpRequestBuilderC",
+        "moduleName": "SmithyHTTPAPI",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RequestMessageBuilder",
+            "printedName": "RequestMessageBuilder",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RequestType",
+                "printedName": "RequestType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkHttpRequest",
+                    "printedName": "SmithyHTTPAPI.SdkHttpRequest",
+                    "usr": "s:13SmithyHTTPAPI14SdkHttpRequestC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:6Smithy21RequestMessageBuilderP",
+            "mangledName": "$s6Smithy21RequestMessageBuilderP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

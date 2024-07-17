@@ -1,0 +1,209 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyReadWrite
+import CoreFoundation/*.CFBooleanGetTypeID*/
+import CoreFoundation/*.CFGetTypeID*/
+import Foundation/*.Data*/
+import Foundation/*.Date*/
+import Foundation/*.JSONSerialization*/
+import Foundation/*.NSNull*/
+import Foundation/*.NSNumber*/
+import SmithyTimestamps/*.TimestampFormat*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol WireDataProviding : AnyObject {
+  #if compiler(>=5.3) && $AsyncAwait
+  func data() async throws -> Foundation.Data
+  #endif
+}
+public enum Document {
+  case array([SmithyReadWrite.Document])
+  case boolean(Swift.Bool)
+  case number(Swift.Double)
+  case object([Swift.String : SmithyReadWrite.Document])
+  case string(Swift.String)
+  case null
+}
+extension SmithyReadWrite.Document : Swift.Equatable {
+  public static func == (a: SmithyReadWrite.Document, b: SmithyReadWrite.Document) -> Swift.Bool
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: SmithyReadWrite.Document...)
+  public typealias ArrayLiteralElement = SmithyReadWrite.Document
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, SmithyReadWrite.Document)...)
+  public typealias Key = Swift.String
+  public typealias Value = SmithyReadWrite.Document
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByNilLiteral {
+  public init(nilLiteral: ())
+}
+extension SmithyReadWrite.Document : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension SmithyReadWrite.Document {
+  public subscript(key: Swift.String) -> SmithyReadWrite.Document? {
+    get
+  }
+  public subscript(key: Swift.Int) -> SmithyReadWrite.Document? {
+    get
+  }
+}
+extension SmithyReadWrite.Document {
+  public static func make(from jsonObject: Any) throws -> SmithyReadWrite.Document
+  public static func make(from data: Foundation.Data) throws -> SmithyReadWrite.Document
+}
+public typealias ReadingClosure<T, Reader> = (Reader) throws -> T
+public func mapReadingClosure<T, Reader>(valueReadingClosure: @escaping SmithyReadWrite.ReadingClosure<T, Reader>, keyNodeInfo: Reader.NodeInfo, valueNodeInfo: Reader.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.ReadingClosure<[Swift.String : T], Reader> where Reader : SmithyReadWrite.SmithyReader
+public func mapReadingClosure<T, Reader>(valueReadingClosure: @escaping SmithyReadWrite.ReadingClosure<T, Reader>, keyNodeInfo: Reader.NodeInfo, valueNodeInfo: Reader.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.ReadingClosure<[Swift.String : T]?, Reader> where Reader : SmithyReadWrite.SmithyReader
+public func listReadingClosure<T, Reader>(memberReadingClosure: @escaping SmithyReadWrite.ReadingClosure<T, Reader>, memberNodeInfo: Reader.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.ReadingClosure<[T], Reader> where Reader : SmithyReadWrite.SmithyReader
+public func listReadingClosure<T, Reader>(memberReadingClosure: @escaping SmithyReadWrite.ReadingClosure<T, Reader>, memberNodeInfo: Reader.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.ReadingClosure<[T]?, Reader> where Reader : SmithyReadWrite.SmithyReader
+public func timestampReadingClosure<Reader>(format: SmithyTimestamps.TimestampFormat) -> SmithyReadWrite.ReadingClosure<Foundation.Date, Reader> where Reader : SmithyReadWrite.SmithyReader
+public func timestampReadingClosure<Reader>(format: SmithyTimestamps.TimestampFormat) -> SmithyReadWrite.ReadingClosure<Foundation.Date?, Reader> where Reader : SmithyReadWrite.SmithyReader
+public struct ReadingClosureBox<Value> where Value : Swift.RawRepresentable {
+  public init()
+  public func read<Reader>(from reader: Reader) throws -> Value where Reader : SmithyReadWrite.SmithyReader, Value.RawValue == Swift.Int
+  public func read<Reader>(from reader: Reader) throws -> Value? where Reader : SmithyReadWrite.SmithyReader, Value.RawValue == Swift.Int
+  public func read<Reader>(from reader: Reader) throws -> Value where Reader : SmithyReadWrite.SmithyReader, Value.RawValue == Swift.String
+  public func read<Reader>(from reader: Reader) throws -> Value? where Reader : SmithyReadWrite.SmithyReader, Value.RawValue == Swift.String
+}
+public enum ReadingClosures {
+  public static func readString<Reader>(from reader: Reader) throws -> Swift.String where Reader : SmithyReadWrite.SmithyReader
+  public static func readString<Reader>(from reader: Reader) throws -> Swift.String? where Reader : SmithyReadWrite.SmithyReader
+  public static func readBool<Reader>(from reader: Reader) throws -> Swift.Bool where Reader : SmithyReadWrite.SmithyReader
+  public static func readBool<Reader>(from reader: Reader) throws -> Swift.Bool? where Reader : SmithyReadWrite.SmithyReader
+  public static func readInt<Reader>(from reader: Reader) throws -> Swift.Int where Reader : SmithyReadWrite.SmithyReader
+  public static func readInt<Reader>(from reader: Reader) throws -> Swift.Int? where Reader : SmithyReadWrite.SmithyReader
+  public static func readFloat<Reader>(from reader: Reader) throws -> Swift.Float where Reader : SmithyReadWrite.SmithyReader
+  public static func readFloat<Reader>(from reader: Reader) throws -> Swift.Float? where Reader : SmithyReadWrite.SmithyReader
+  public static func readDouble<Reader>(from reader: Reader) throws -> Swift.Double where Reader : SmithyReadWrite.SmithyReader
+  public static func readDouble<Reader>(from reader: Reader) throws -> Swift.Double? where Reader : SmithyReadWrite.SmithyReader
+  public static func readData<Reader>(from reader: Reader) throws -> Foundation.Data where Reader : SmithyReadWrite.SmithyReader
+  public static func readData<Reader>(from reader: Reader) throws -> Foundation.Data? where Reader : SmithyReadWrite.SmithyReader
+  public static func readDocument<Reader>(from reader: Reader) throws -> SmithyReadWrite.Document where Reader : SmithyReadWrite.SmithyReader
+  public static func readDocument<Reader>(from reader: Reader) throws -> SmithyReadWrite.Document? where Reader : SmithyReadWrite.SmithyReader
+}
+public func optionalFormOf<T, Reader>(readingClosure: @escaping SmithyReadWrite.ReadingClosure<T, Reader>) -> SmithyReadWrite.ReadingClosure<T?, Reader> where Reader : SmithyReadWrite.SmithyReader
+public protocol SmithyReader : AnyObject {
+  associatedtype NodeInfo
+  static func from(data: Foundation.Data) throws -> Self
+  static func readFrom<T>(_ data: Foundation.Data, with readingClosure: (Self) throws -> T) throws -> T
+  var hasContent: Swift.Bool { get }
+  subscript(nodeInfo: Self.NodeInfo) -> Self { get }
+  func readIfPresent() throws -> Swift.String?
+  func readIfPresent() throws -> Swift.Int8?
+  func readIfPresent() throws -> Swift.Int16?
+  func readIfPresent() throws -> Swift.Int?
+  func readIfPresent() throws -> Swift.Float?
+  func readIfPresent() throws -> Swift.Double?
+  func readIfPresent() throws -> Swift.Bool?
+  func readIfPresent() throws -> Foundation.Data?
+  func readIfPresent() throws -> SmithyReadWrite.Document?
+  func readIfPresent<T>() throws -> T? where T : Swift.RawRepresentable, T.RawValue == Swift.Int
+  func readIfPresent<T>() throws -> T? where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  func readTimestampIfPresent(format: SmithyTimestamps.TimestampFormat) throws -> Foundation.Date?
+  func readMapIfPresent<Value>(valueReadingClosure: (Self) throws -> Value, keyNodeInfo: Self.NodeInfo, valueNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws -> [Swift.String : Value]?
+  func readListIfPresent<Member>(memberReadingClosure: (Self) throws -> Member, memberNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws -> [Member]?
+  func readNullIfPresent() throws -> Swift.Bool?
+}
+extension SmithyReadWrite.SmithyReader {
+  public static func readFrom<T>(_ data: Foundation.Data, with readingClosure: (Self) throws -> T) throws -> T
+  public func read<T>(with readingClosure: (Self) throws -> T) throws -> T
+  public func readIfPresent<T>(with readingClosure: (Self) throws -> T) throws -> T?
+  public func read() throws -> Swift.String
+  public func read() throws -> Swift.Int8
+  public func read() throws -> Swift.Int16
+  public func read() throws -> Swift.Int
+  public func read() throws -> Swift.Float
+  public func read() throws -> Swift.Double
+  public func read() throws -> Swift.Bool
+  public func read() throws -> Foundation.Data
+  public func read() throws -> SmithyReadWrite.Document
+  public func readTimestamp(format: SmithyTimestamps.TimestampFormat) throws -> Foundation.Date
+  public func read<T>() throws -> T where T : Swift.RawRepresentable, T.RawValue == Swift.Int
+  public func read<T>() throws -> T where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  public func readMap<T>(valueReadingClosure: (Self) throws -> T, keyNodeInfo: Self.NodeInfo, valueNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws -> [Swift.String : T]
+  public func readList<T>(memberReadingClosure: (Self) throws -> T, memberNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws -> [T]
+  public func readNull() throws -> Swift.Bool
+}
+public enum ReaderError : Swift.Error {
+  case requiredValueNotPresent
+  public static func == (a: SmithyReadWrite.ReaderError, b: SmithyReadWrite.ReaderError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SmithyWriter : AnyObject {
+  associatedtype NodeInfo
+  init(nodeInfo: Self.NodeInfo)
+  func data() throws -> Foundation.Data
+  subscript(nodeInfo: Self.NodeInfo) -> Self { get }
+  func write(_ value: Swift.Bool?) throws
+  func write(_ value: Swift.String?) throws
+  func write(_ value: Swift.Double?) throws
+  func write(_ value: Swift.Float?) throws
+  func write(_ value: Swift.Int?) throws
+  func write(_ value: Swift.Int8?) throws
+  func write(_ value: Swift.Int16?) throws
+  func write(_ value: Swift.UInt8?) throws
+  func write(_ value: Foundation.Data?) throws
+  func write(_ value: SmithyReadWrite.Document?) throws
+  func writeTimestamp(_ value: Foundation.Date?, format: SmithyTimestamps.TimestampFormat) throws
+  func write<T>(_ value: T?) throws where T : Swift.RawRepresentable, T.RawValue == Swift.Int
+  func write<T>(_ value: T?) throws where T : Swift.RawRepresentable, T.RawValue == Swift.String
+  func writeMap<T>(_ value: [Swift.String : T]?, valueWritingClosure: (T, Self) throws -> Swift.Void, keyNodeInfo: Self.NodeInfo, valueNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws
+  func writeList<T>(_ value: [T]?, memberWritingClosure: (T, Self) throws -> Swift.Void, memberNodeInfo: Self.NodeInfo, isFlattened: Swift.Bool) throws
+  func writeNull() throws
+}
+extension SmithyReadWrite.SmithyWriter {
+  public static func write<T>(_ value: T, rootNodeInfo: Self.NodeInfo, with writingClosure: (T, Self) throws -> Swift.Void) throws -> Foundation.Data?
+  public func write<T>(_ value: T, with writingClosure: (T, Self) throws -> Swift.Void) throws
+}
+#if compiler(>=5.3) && $AsyncAwait
+public typealias WireResponseErrorClosure<WireResponse> = (WireResponse) async throws -> any Swift.Error
+#endif
+#if compiler(>=5.3) && $AsyncAwait
+public typealias WireResponseOutputClosure<WireResponse, OperationStackOutput> = (WireResponse) async throws -> OperationStackOutput
+#endif
+public typealias WritingClosure<T, Writer> = (T, Writer) throws -> Swift.Void
+public func mapWritingClosure<T, Writer>(valueWritingClosure: @escaping SmithyReadWrite.WritingClosure<T, Writer>, keyNodeInfo: Writer.NodeInfo, valueNodeInfo: Writer.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.WritingClosure<[Swift.String : T]?, Writer> where Writer : SmithyReadWrite.SmithyWriter
+public func listWritingClosure<T, Writer>(memberWritingClosure: @escaping SmithyReadWrite.WritingClosure<T, Writer>, memberNodeInfo: Writer.NodeInfo, isFlattened: Swift.Bool) -> SmithyReadWrite.WritingClosure<[T]?, Writer> where Writer : SmithyReadWrite.SmithyWriter
+public func timestampWritingClosure<Writer>(format: SmithyTimestamps.TimestampFormat) -> SmithyReadWrite.WritingClosure<Foundation.Date, Writer> where Writer : SmithyReadWrite.SmithyWriter
+public struct WritingClosureBox<Value> where Value : Swift.RawRepresentable {
+  public init()
+  public func write<Writer>(value: Value?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter, Value.RawValue == Swift.Int
+  public func write<Writer>(value: Value?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter, Value.RawValue == Swift.String
+}
+public enum WritingClosures {
+  public static func writeString<Writer>(value: Swift.String?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeBool<Writer>(value: Swift.Bool?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeInt<Writer>(value: Swift.Int?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeInt8<Writer>(value: Swift.Int8?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeInt16<Writer>(value: Swift.Int16?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeDouble<Writer>(value: Swift.Double?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeFloat<Writer>(value: Swift.Float?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeData<Writer>(value: Foundation.Data?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+  public static func writeDocument<Writer>(value: SmithyReadWrite.Document?, to writer: Writer) throws where Writer : SmithyReadWrite.SmithyWriter
+}
+public func sparseFormOf<T, Writer>(writingClosure: @escaping SmithyReadWrite.WritingClosure<T?, Writer>) -> SmithyReadWrite.WritingClosure<T?, Writer> where Writer : SmithyReadWrite.SmithyWriter
+extension SmithyReadWrite.ReaderError : Swift.Equatable {}
+extension SmithyReadWrite.ReaderError : Swift.Hashable {}

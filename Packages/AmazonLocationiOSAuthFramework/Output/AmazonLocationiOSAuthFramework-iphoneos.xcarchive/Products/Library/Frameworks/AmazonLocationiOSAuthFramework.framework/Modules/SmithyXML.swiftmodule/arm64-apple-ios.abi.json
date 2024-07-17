@@ -1,0 +1,2882 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "NodeInfo",
+        "printedName": "NodeInfo",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Location",
+            "printedName": "Location",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "element",
+                "printedName": "element",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyXML.NodeInfo.Location.Type) -> SmithyXML.NodeInfo.Location",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Location",
+                        "printedName": "SmithyXML.NodeInfo.Location",
+                        "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SmithyXML.NodeInfo.Location.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Location",
+                            "printedName": "SmithyXML.NodeInfo.Location",
+                            "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO7elementyA2EmF",
+                "mangledName": "$s9SmithyXML8NodeInfoV8LocationO7elementyA2EmF",
+                "moduleName": "SmithyXML"
+              },
+              {
+                "kind": "Var",
+                "name": "attribute",
+                "printedName": "attribute",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyXML.NodeInfo.Location.Type) -> SmithyXML.NodeInfo.Location",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Location",
+                        "printedName": "SmithyXML.NodeInfo.Location",
+                        "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SmithyXML.NodeInfo.Location.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Location",
+                            "printedName": "SmithyXML.NodeInfo.Location",
+                            "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO9attributeyA2EmF",
+                "mangledName": "$s9SmithyXML8NodeInfoV8LocationO9attributeyA2EmF",
+                "moduleName": "SmithyXML"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "SmithyXML.NodeInfo.Location",
+                    "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "SmithyXML.NodeInfo.Location",
+                    "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9SmithyXML8NodeInfoV8LocationO2eeoiySbAE_AEtFZ",
+                "moduleName": "SmithyXML",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO9hashValueSivp",
+                "mangledName": "$s9SmithyXML8NodeInfoV8LocationO9hashValueSivp",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9SmithyXML8NodeInfoV8LocationO9hashValueSivg",
+                    "mangledName": "$s9SmithyXML8NodeInfoV8LocationO9hashValueSivg",
+                    "moduleName": "SmithyXML",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s9SmithyXML8NodeInfoV8LocationO4hash4intoys6HasherVz_tF",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:9SmithyXML8NodeInfoV8LocationO",
+            "mangledName": "$s9SmithyXML8NodeInfoV8LocationO",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Namespace",
+            "printedName": "Namespace",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(prefix:uri:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:9SmithyXML8NodeInfoV9NamespaceV6prefix3uriAESS_SStcfc",
+                "mangledName": "$s9SmithyXML8NodeInfoV9NamespaceV6prefix3uriAESS_SStcfc",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9SmithyXML8NodeInfoV9NamespaceV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9SmithyXML8NodeInfoV9NamespaceV2eeoiySbAE_AEtFZ",
+                "moduleName": "SmithyXML",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:9SmithyXML8NodeInfoV9NamespaceV",
+            "mangledName": "$s9SmithyXML8NodeInfoV9NamespaceV",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "prefix",
+            "printedName": "prefix",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML8NodeInfoV6prefixSSSgvp",
+            "mangledName": "$s9SmithyXML8NodeInfoV6prefixSSSgvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML8NodeInfoV6prefixSSSgvg",
+                "mangledName": "$s9SmithyXML8NodeInfoV6prefixSSSgvg",
+                "moduleName": "SmithyXML",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML8NodeInfoV4nameSSvp",
+            "mangledName": "$s9SmithyXML8NodeInfoV4nameSSvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML8NodeInfoV4nameSSvg",
+                "mangledName": "$s9SmithyXML8NodeInfoV4nameSSvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "location",
+            "printedName": "location",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Location",
+                "printedName": "SmithyXML.NodeInfo.Location",
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML8NodeInfoV8locationAC8LocationOvp",
+            "mangledName": "$s9SmithyXML8NodeInfoV8locationAC8LocationOvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "SmithyXML.NodeInfo.Location",
+                    "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML8NodeInfoV8locationAC8LocationOvg",
+                "mangledName": "$s9SmithyXML8NodeInfoV8locationAC8LocationOvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namespaceDef",
+            "printedName": "namespaceDef",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyXML.NodeInfo.Namespace?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML8NodeInfoV12namespaceDefAC9NamespaceVSgvp",
+            "mangledName": "$s9SmithyXML8NodeInfoV12namespaceDefAC9NamespaceVSgvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyXML.NodeInfo.Namespace?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Namespace",
+                        "printedName": "SmithyXML.NodeInfo.Namespace",
+                        "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML8NodeInfoV12namespaceDefAC9NamespaceVSgvg",
+                "mangledName": "$s9SmithyXML8NodeInfoV12namespaceDefAC9NamespaceVSgvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namespace",
+            "printedName": "namespace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyXML.NodeInfo.Namespace?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML8NodeInfoV9namespaceAC9NamespaceVSgvp",
+            "mangledName": "$s9SmithyXML8NodeInfoV9namespaceAC9NamespaceVSgvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyXML.NodeInfo.Namespace?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Namespace",
+                        "printedName": "SmithyXML.NodeInfo.Namespace",
+                        "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML8NodeInfoV9namespaceAC9NamespaceVSgvg",
+                "mangledName": "$s9SmithyXML8NodeInfoV9namespaceAC9NamespaceVSgvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:location:namespaceDef:namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Location",
+                "printedName": "SmithyXML.NodeInfo.Location",
+                "hasDefaultArg": true,
+                "usr": "s:9SmithyXML8NodeInfoV8LocationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyXML.NodeInfo.Namespace?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyXML.NodeInfo.Namespace?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Namespace",
+                    "printedName": "SmithyXML.NodeInfo.Namespace",
+                    "usr": "s:9SmithyXML8NodeInfoV9NamespaceV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9SmithyXML8NodeInfoV_8location12namespaceDef0F0ACSS_AC8LocationOAC9NamespaceVSgAKtcfc",
+            "mangledName": "$s9SmithyXML8NodeInfoV_8location12namespaceDef0F0ACSS_AC8LocationOAC9NamespaceVSgAKtcfc",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML8NodeInfoV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9SmithyXML8NodeInfoV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyXML",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9SmithyXML8NodeInfoV13stringLiteralACSS_tcfc",
+            "mangledName": "$s9SmithyXML8NodeInfoV13stringLiteralACSS_tcfc",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9SmithyXML8NodeInfoV",
+        "mangledName": "$s9SmithyXML8NodeInfoV",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "libxml2",
+        "printedName": "libxml2",
+        "declKind": "Import",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Reader",
+        "printedName": "Reader",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "children",
+            "printedName": "children",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyXML.Reader]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyXML.Reader",
+                    "usr": "s:9SmithyXML6ReaderC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6ReaderC8childrenSayACGvp",
+            "mangledName": "$s9SmithyXML6ReaderC8childrenSayACGvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyXML.Reader]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reader",
+                        "printedName": "SmithyXML.Reader",
+                        "usr": "s:9SmithyXML6ReaderC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderC8childrenSayACGvg",
+                "mangledName": "$s9SmithyXML6ReaderC8childrenSayACGvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parent",
+            "printedName": "parent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "SmithyXML.Reader?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6ReaderC6parentACSgvp",
+            "mangledName": "$s9SmithyXML6ReaderC6parentACSgvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyXML.Reader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reader",
+                        "printedName": "SmithyXML.Reader",
+                        "usr": "s:9SmithyXML6ReaderC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderC6parentACSgvg",
+                "mangledName": "$s9SmithyXML6ReaderC6parentACSgvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nodeInfo",
+            "printedName": "nodeInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6ReaderC8nodeInfoAA04NodeE0Vvp",
+            "mangledName": "$s9SmithyXML6ReaderC8nodeInfoAA04NodeE0Vvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderC8nodeInfoAA04NodeE0Vvg",
+                "mangledName": "$s9SmithyXML6ReaderC8nodeInfoAA04NodeE0Vvg",
+                "moduleName": "SmithyXML",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nodeInfoPath",
+            "printedName": "nodeInfoPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyXML.NodeInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6ReaderC12nodeInfoPathSayAA04NodeE0VGvp",
+            "mangledName": "$s9SmithyXML6ReaderC12nodeInfoPathSayAA04NodeE0VGvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyXML.NodeInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NodeInfo",
+                        "printedName": "SmithyXML.NodeInfo",
+                        "usr": "s:9SmithyXML8NodeInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderC12nodeInfoPathSayAA04NodeE0VGvg",
+                "mangledName": "$s9SmithyXML6ReaderC12nodeInfoPathSayAA04NodeE0VGvg",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasContent",
+            "printedName": "hasContent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6ReaderC10hasContentSbvp",
+            "mangledName": "$s9SmithyXML6ReaderC10hasContentSbvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderC10hasContentSbvg",
+                "mangledName": "$s9SmithyXML6ReaderC10hasContentSbvg",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reader",
+                "printedName": "SmithyXML.Reader",
+                "usr": "s:9SmithyXML6ReaderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:9SmithyXML6ReaderCyAcA8NodeInfoVcip",
+            "mangledName": "$s9SmithyXML6ReaderCyAcA8NodeInfoVcip",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyXML.Reader",
+                    "usr": "s:9SmithyXML6ReaderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6ReaderCyAcA8NodeInfoVcig",
+                "mangledName": "$s9SmithyXML6ReaderCyAcA8NodeInfoVcig",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "detach",
+            "printedName": "detach()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC6detachyyF",
+            "mangledName": "$s9SmithyXML6ReaderC6detachyyF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unwrap",
+            "printedName": "unwrap()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reader",
+                "printedName": "SmithyXML.Reader",
+                "usr": "s:9SmithyXML6ReaderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC6unwrapACyF",
+            "mangledName": "$s9SmithyXML6ReaderC6unwrapACyF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentSSSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentSSSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresents4Int8VSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresents4Int8VSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresents5Int16VSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresents5Int16VSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentSiSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentSiSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Float?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentSfSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentSfSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentSdSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentSdSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentSbSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentSbSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresent10Foundation4DataVSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresent10Foundation4DataVSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyReadWrite.Document?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Document",
+                    "printedName": "SmithyReadWrite.Document",
+                    "usr": "s:15SmithyReadWrite8DocumentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresent0A9ReadWrite8DocumentOSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresent0A9ReadWrite8DocumentOSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readTimestampIfPresent",
+            "printedName": "readTimestampIfPresent(format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC22readTimestampIfPresent6format10Foundation4DateVSg0A10Timestamps0E6FormatO_tKF",
+            "mangledName": "$s9SmithyXML6ReaderC22readTimestampIfPresent6format10Foundation4DateVSg0A10Timestamps0E6FormatO_tKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentxSgyKSYRzSi8RawValueRtzlF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentxSgyKSYRzSi8RawValueRtzlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.Int>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.Int>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC13readIfPresentxSgyKSYRzSS8RawValueRtzlF",
+            "mangledName": "$s9SmithyXML6ReaderC13readIfPresentxSgyKSYRzSS8RawValueRtzlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.String>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readMapIfPresent",
+            "printedName": "readMapIfPresent(valueReadingClosure:keyNodeInfo:valueNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyXML.Reader) throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyXML.Reader",
+                    "usr": "s:9SmithyXML6ReaderC"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC16readMapIfPresent19valueReadingClosure11keyNodeInfo0hlM011isFlattenedSDySSxGSgxACKXE_AA0lM0VALSbtKlF",
+            "mangledName": "$s9SmithyXML6ReaderC16readMapIfPresent19valueReadingClosure11keyNodeInfo0hlM011isFlattenedSDySSxGSgxACKXE_AA0lM0VALSbtKlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readListIfPresent",
+            "printedName": "readListIfPresent(memberReadingClosure:memberNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyXML.Reader) throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyXML.Reader",
+                    "usr": "s:9SmithyXML6ReaderC"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC17readListIfPresent20memberReadingClosure0H8NodeInfo11isFlattenedSayxGSgxACKXE_AA0kL0VSbtKlF",
+            "mangledName": "$s9SmithyXML6ReaderC17readListIfPresent20memberReadingClosure0H8NodeInfo11isFlattenedSayxGSgxACKXE_AA0kL0VSbtKlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Member>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readNullIfPresent",
+            "printedName": "readNullIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC17readNullIfPresentSbSgyKF",
+            "mangledName": "$s9SmithyXML6ReaderC17readNullIfPresentSbSgyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "from",
+            "printedName": "from(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reader",
+                "printedName": "SmithyXML.Reader",
+                "usr": "s:9SmithyXML6ReaderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6ReaderC4from4dataAC10Foundation4DataV_tKFZ",
+            "mangledName": "$s9SmithyXML6ReaderC4from4dataAC10Foundation4DataV_tKFZ",
+            "moduleName": "SmithyXML",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9SmithyXML6ReaderC",
+        "mangledName": "$s9SmithyXML6ReaderC",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SmithyReader",
+            "printedName": "SmithyReader",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "NodeInfo",
+                "printedName": "NodeInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15SmithyReadWrite0A6ReaderP",
+            "mangledName": "$s15SmithyReadWrite0A6ReaderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "libxml2",
+        "printedName": "libxml2",
+        "declKind": "Import",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyXML"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Writer",
+        "printedName": "Writer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nodeInfoPath",
+            "printedName": "nodeInfoPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyXML.NodeInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9SmithyXML6WriterC12nodeInfoPathSayAA04NodeE0VGvp",
+            "mangledName": "$s9SmithyXML6WriterC12nodeInfoPathSayAA04NodeE0VGvp",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyXML.NodeInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NodeInfo",
+                        "printedName": "SmithyXML.NodeInfo",
+                        "usr": "s:9SmithyXML8NodeInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6WriterC12nodeInfoPathSayAA04NodeE0VGvg",
+                "mangledName": "$s9SmithyXML6WriterC12nodeInfoPathSayAA04NodeE0VGvg",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nodeInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyXML.Writer",
+                "usr": "s:9SmithyXML6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9SmithyXML6WriterC8nodeInfoAcA04NodeE0V_tcfc",
+            "mangledName": "$s9SmithyXML6WriterC8nodeInfoAcA04NodeE0V_tcfc",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyXML.Writer",
+                "usr": "s:9SmithyXML6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:9SmithyXML6WriterCyAcA8NodeInfoVcip",
+            "mangledName": "$s9SmithyXML6WriterCyAcA8NodeInfoVcip",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Writer",
+                    "printedName": "SmithyXML.Writer",
+                    "usr": "s:9SmithyXML6WriterC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9SmithyXML6WriterCyAcA8NodeInfoVcig",
+                "mangledName": "$s9SmithyXML6WriterCyAcA8NodeInfoVcig",
+                "moduleName": "SmithyXML",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyySbSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyySbSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyySSSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyySSSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyySdSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyySdSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Float?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyySfSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyySfSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyySiSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyySiSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyys4Int8VSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyys4Int8VSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyys5Int16VSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyys5Int16VSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyys5UInt8VSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyys5UInt8VSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyy10Foundation4DataVSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyy10Foundation4DataVSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyReadWrite.Document?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Document",
+                    "printedName": "SmithyReadWrite.Document",
+                    "usr": "s:15SmithyReadWrite8DocumentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeTimestamp",
+            "printedName": "writeTimestamp(_:format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0E6FormatOtKF",
+            "mangledName": "$s9SmithyXML6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0E6FormatOtKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.Int>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.Int>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "mangledName": "$s9SmithyXML6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.String>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeMap",
+            "printedName": "writeMap(_:valueWritingClosure:keyNodeInfo:valueNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyXML.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyXML.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyXML.Writer",
+                        "usr": "s:9SmithyXML6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0fjK011isFlattenedySDySSxGSg_yx_ACtKXEAA0jK0VALSbtKlF",
+            "mangledName": "$s9SmithyXML6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0fjK011isFlattenedySDySSxGSg_yx_ACtKXEAA0jK0VALSbtKlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeList",
+            "printedName": "writeList(_:memberWritingClosure:memberNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyXML.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyXML.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyXML.Writer",
+                        "usr": "s:9SmithyXML6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyXML.NodeInfo",
+                "usr": "s:9SmithyXML8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC9writeList_20memberWritingClosure0F8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0iJ0VSbtKlF",
+            "mangledName": "$s9SmithyXML6WriterC9writeList_20memberWritingClosure0F8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0iJ0VSbtKlF",
+            "moduleName": "SmithyXML",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeNull",
+            "printedName": "writeNull()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC9writeNullyyKF",
+            "mangledName": "$s9SmithyXML6WriterC9writeNullyyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9SmithyXML6WriterC4data10Foundation4DataVyKF",
+            "mangledName": "$s9SmithyXML6WriterC4data10Foundation4DataVyKF",
+            "moduleName": "SmithyXML",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9SmithyXML6WriterC",
+        "mangledName": "$s9SmithyXML6WriterC",
+        "moduleName": "SmithyXML",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SmithyWriter",
+            "printedName": "SmithyWriter",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "NodeInfo",
+                "printedName": "NodeInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyXML.NodeInfo",
+                    "usr": "s:9SmithyXML8NodeInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15SmithyReadWrite0A6WriterP",
+            "mangledName": "$s15SmithyReadWrite0A6WriterP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Reader\/Reader+libxml2.swift",
+      "kind": "StringLiteral",
+      "offset": 5700,
+      "length": 35,
+      "value": "\"XML buffer could not be allocated\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Reader\/Reader+libxml2.swift",
+      "kind": "StringLiteral",
+      "offset": 5775,
+      "length": 22,
+      "value": "\"XML node was invalid\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Reader\/Reader+libxml2.swift",
+      "kind": "StringLiteral",
+      "offset": 5841,
+      "length": 27,
+      "value": "\"XML node name was invalid\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Reader\/Reader.swift",
+      "kind": "Array",
+      "offset": 546,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Writer\/Writer.swift",
+      "kind": "Array",
+      "offset": 953,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyXML\/Writer\/Writer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1035,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name Smithy
+import Foundation
+import Foundation/*.Data*/
+import Foundation/*.FileHandle*/
+import Logging
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AttributeKey<ValueType> {
+  public init(name: Swift.String)
+}
+public struct Attributes {
+  public var size: Swift.Int {
+    get
+  }
+  public init()
+  public func get<T>(key: Smithy.AttributeKey<T>) -> T?
+  public func contains<T>(key: Smithy.AttributeKey<T>) -> Swift.Bool
+  public mutating func set<T>(key: Smithy.AttributeKey<T>, value: T?)
+  public mutating func remove<T>(key: Smithy.AttributeKey<T>)
+}
+public protocol HasAttributes : AnyObject {
+  func get<T>(key: Smithy.AttributeKey<T>) -> T?
+  func contains<T>(key: Smithy.AttributeKey<T>) -> Swift.Bool
+  func set<T>(key: Smithy.AttributeKey<T>, value: T?)
+  func remove<T>(key: Smithy.AttributeKey<T>)
+}
+public enum ByteStream {
+  case data(Foundation.Data?)
+  case stream(any Smithy.Stream)
+  case noStream
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readData() async throws -> Foundation.Data?
+  #endif
+}
+extension Smithy.ByteStream {
+  public static var empty: Smithy.ByteStream {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+}
+extension Smithy.ByteStream : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum ByteStreamError : Swift.Error {
+  case streamNotSeeakble
+  case invalidStreamTypeForChunkedBody(Swift.String)
+  case streamClosedOrEmpty
+  case streamDoesNotConformToChunkedStream(Swift.String)
+}
+public enum ClientError : Swift.Error {
+  case serializationFailed(Swift.String)
+  case dataNotFound(Swift.String)
+  case unknownError(Swift.String)
+  case authError(Swift.String)
+}
+public class Context {
+  public var attributes: Smithy.Attributes
+  public init(attributes: Smithy.Attributes)
+  public func toBuilder() -> Smithy.ContextBuilder
+  public func getLogger() -> (any Smithy.LogAgent)?
+  @objc deinit
+}
+extension Smithy.Context : Smithy.HasAttributes {
+  public func get<T>(key: Smithy.AttributeKey<T>) -> T?
+  public func contains<T>(key: Smithy.AttributeKey<T>) -> Swift.Bool
+  public func set<T>(key: Smithy.AttributeKey<T>, value: T?)
+  public func remove<T>(key: Smithy.AttributeKey<T>)
+}
+public class ContextBuilder {
+  public init()
+  public var attributes: Smithy.Attributes
+  @discardableResult
+  public func with<T>(key: Smithy.AttributeKey<T>, value: T) -> Self
+  @discardableResult
+  public func withLogger(value: any Smithy.LogAgent) -> Self
+  public func build() -> Smithy.Context
+  @objc deinit
+}
+public protocol LogAgent {
+  var name: Swift.String { get }
+  var level: Smithy.LogAgentLevel { get set }
+  func log(level: Smithy.LogAgentLevel, message: Swift.String, metadata: [Swift.String : Swift.String]?, source: Swift.String, file: Swift.String, function: Swift.String, line: Swift.UInt)
+}
+public enum LogAgentLevel : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case trace
+  case debug
+  case info
+  case warn
+  case error
+  case fatal
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [Smithy.LogAgentLevel]
+  public typealias RawValue = Swift.String
+  public static var allCases: [Smithy.LogAgentLevel] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Smithy.LogAgent {
+  public func info(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+  public func warn(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+  public func debug(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+  public func error(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+  public func trace(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+  public func fatal(_ message: Swift.String, file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line)
+}
+public struct SwiftLogger : Smithy.LogAgent {
+  public init(label: Swift.String)
+  public var level: Smithy.LogAgentLevel {
+    get
+    set(value)
+  }
+  public var name: Swift.String {
+    get
+  }
+  public func log(level: Smithy.LogAgentLevel, message: Swift.String, metadata: [Swift.String : Swift.String]?, source: Swift.String, file: Swift.String, function: Swift.String, line: Swift.UInt)
+}
+public protocol RequestMessage {
+  associatedtype RequestBuilderType : Smithy.RequestMessageBuilder where Self == Self.RequestBuilderType.RequestType
+  var host: Swift.String { get }
+  var body: Smithy.ByteStream { get }
+  var destination: Smithy.URI { get }
+  func toBuilder() -> Self.RequestBuilderType
+}
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol RequestMessageBuilder<RequestType> : AnyObject {
+  associatedtype RequestType : Smithy.RequestMessage
+  init()
+  func build() -> Self.RequestType
+}
+#else
+public protocol RequestMessageBuilder : AnyObject {
+  associatedtype RequestType : Smithy.RequestMessage
+  init()
+  func build() -> Self.RequestType
+}
+#endif
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol RequestMessageSerializer<InputType, RequestType> {
+  associatedtype InputType
+  associatedtype RequestType : Smithy.RequestMessage
+  func apply(input: Self.InputType, builder: Self.RequestType.RequestBuilderType, attributes: Smithy.Context) throws
+}
+#else
+public protocol RequestMessageSerializer {
+  associatedtype InputType
+  associatedtype RequestType : Smithy.RequestMessage
+  func apply(input: Self.InputType, builder: Self.RequestType.RequestBuilderType, attributes: Smithy.Context) throws
+}
+#endif
+public protocol ResponseMessage {
+  var body: Smithy.ByteStream { get }
+}
+#if compiler(>=5.3) && $PrimaryAssociatedTypes2
+public protocol ResponseMessageDeserializer<OutputType, ResponseType, AttributesType> {
+  associatedtype OutputType
+  associatedtype ResponseType : Smithy.ResponseMessage
+  associatedtype AttributesType : Smithy.HasAttributes
+  #if compiler(>=5.3) && $AsyncAwait
+  func deserialize(response: Self.ResponseType, attributes: Self.AttributesType) async throws -> Swift.Result<Self.OutputType, any Swift.Error>
+  #endif
+}
+#else
+public protocol ResponseMessageDeserializer {
+  associatedtype OutputType
+  associatedtype ResponseType : Smithy.ResponseMessage
+  associatedtype AttributesType : Smithy.HasAttributes
+  #if compiler(>=5.3) && $AsyncAwait
+  func deserialize(response: Self.ResponseType, attributes: Self.AttributesType) async throws -> Swift.Result<Self.OutputType, any Swift.Error>
+  #endif
+}
+#endif
+public protocol ReadableStream : AnyObject {
+  var position: Foundation.Data.Index { get }
+  var length: Swift.Int? { get }
+  var isEmpty: Swift.Bool { get }
+  var isSeekable: Swift.Bool { get }
+  func read(upToCount count: Swift.Int) throws -> Foundation.Data?
+  #if compiler(>=5.3) && $AsyncAwait
+  func readAsync(upToCount count: Swift.Int) async throws -> Foundation.Data?
+  #endif
+  func readToEnd() throws -> Foundation.Data?
+  #if compiler(>=5.3) && $AsyncAwait
+  func readToEndAsync() async throws -> Foundation.Data?
+  #endif
+  func seek(toOffset offset: Swift.Int) throws
+}
+public protocol WriteableStream : AnyObject {
+  func write(contentsOf data: Foundation.Data) throws
+  func close()
+  func closeWithError(_ error: any Swift.Error)
+}
+public protocol Stream : Smithy.ReadableStream, Smithy.WriteableStream {
+}
+public enum StreamError : Swift.Error {
+  case invalidOffset(Swift.String)
+  case notSupported(Swift.String)
+}
+extension Smithy.Stream {
+  public func seek(toOffset offset: Swift.Int) throws
+}
+public struct URI : Swift.Hashable {
+  public let scheme: Smithy.URIScheme
+  public let path: Swift.String
+  public let host: Swift.String
+  public let port: Swift.Int16?
+  public var defaultPort: Swift.Int16 {
+    get
+  }
+  public let queryItems: [Smithy.URIQueryItem]
+  public let username: Swift.String?
+  public let password: Swift.String?
+  public let fragment: Swift.String?
+  public var url: Foundation.URL? {
+    get
+  }
+  public var queryString: Swift.String? {
+    get
+  }
+  public func toBuilder() -> Smithy.URIBuilder
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Smithy.URI, b: Smithy.URI) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class URIBuilder {
+  public init()
+  @discardableResult
+  final public func withScheme(_ value: Smithy.URIScheme) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withPath(_ value: Swift.String) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withHost(_ value: Swift.String) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withPort(_ value: Swift.Int16?) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withPort(_ value: Swift.Int?) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withQueryItems(_ value: [Smithy.URIQueryItem]) -> Smithy.URIBuilder
+  @discardableResult
+  final public func appendQueryItems(_ items: [Smithy.URIQueryItem]) -> Smithy.URIBuilder
+  @discardableResult
+  final public func appendQueryItem(_ item: Smithy.URIQueryItem) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withUsername(_ value: Swift.String?) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withPassword(_ value: Swift.String?) -> Smithy.URIBuilder
+  @discardableResult
+  final public func withFragment(_ value: Swift.String?) -> Smithy.URIBuilder
+  final public func build() -> Smithy.URI
+  @objc deinit
+}
+extension Swift.String {
+  public func percentEncodePathIncludingSemicolon() -> Swift.String
+  public func percentEncodeQuery() -> Swift.String
+}
+extension Swift.Array where Element == Smithy.URIQueryItem {
+  public var queryString: Swift.String? {
+    get
+  }
+  public func toURLQueryItems() -> [Foundation.URLQueryItem]
+  public func containsPercentEncode() -> Swift.Bool
+}
+extension Swift.Array where Element == Foundation.URLQueryItem {
+  public func containsPercentEncode() -> Swift.Bool
+}
+public struct URIQueryItem : Swift.Hashable {
+  public var name: Swift.String
+  public var value: Swift.String?
+  public init(name: Swift.String, value: Swift.String?)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: Smithy.URIQueryItem, b: Smithy.URIQueryItem) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum URIScheme : Swift.String, Swift.CaseIterable {
+  case http
+  case https
+  public var port: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [Smithy.URIScheme]
+  public typealias RawValue = Swift.String
+  public static var allCases: [Smithy.URIScheme] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Smithy.LogAgentLevel : Swift.Equatable {}
+extension Smithy.LogAgentLevel : Swift.Hashable {}
+extension Smithy.LogAgentLevel : Swift.RawRepresentable {}
+extension Smithy.URIScheme : Swift.Equatable {}
+extension Smithy.URIScheme : Swift.Hashable {}
+extension Smithy.URIScheme : Swift.RawRepresentable {}

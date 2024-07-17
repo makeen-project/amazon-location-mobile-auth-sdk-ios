@@ -1,0 +1,1008 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name aws_sdk_swift -module-name AWSCognitoIdentity
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSClientConfigDefaultsProvider*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSDefaultClientConfiguration*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSJSONError*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSRegionClientConfiguration*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSRetryErrorInfoProvider*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSRetryMode*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSServiceError*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.AWSUserAgentMetadata*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.DefaultAWSClientPlugin*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.EndpointResolverMiddleware*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.UnknownAWSHTTPServiceError*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.UserAgentMiddleware*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.XAmzTargetMiddleware*/
+@_spi(UnknownAWSHTTPServiceError) import AWSClientRuntime/*.awsPartitionJSON*/
+import AWSSDKHTTPAuth/*.SigV4AuthScheme*/
+import ClientRuntime/*.AuthSchemeMiddleware*/
+import ClientRuntime/*.BodyMiddleware*/
+import ClientRuntime/*.Client*/
+import ClientRuntime/*.ClientBuilder*/
+import ClientRuntime/*.ClientConfiguration*/
+import ClientRuntime/*.ClientLogMode*/
+import ClientRuntime/*.ContentLengthMiddleware*/
+import ClientRuntime/*.ContentTypeMiddleware*/
+import ClientRuntime/*.DefaultClientConfiguration*/
+import ClientRuntime/*.DefaultClientPlugin*/
+import ClientRuntime/*.DefaultEndpointResolver*/
+import ClientRuntime/*.DefaultHttpClientConfiguration*/
+import ClientRuntime/*.DefaultTelemetry*/
+import ClientRuntime/*.DeserializeMiddleware*/
+import ClientRuntime/*.EndpointsRequestContext*/
+import ClientRuntime/*.EndpointsRequestContextProviding*/
+import ClientRuntime/*.ErrorFault*/
+import ClientRuntime/*.HTTPError*/
+import ClientRuntime/*.HttpClientConfiguration*/
+import ClientRuntime/*.IdempotencyTokenGenerator*/
+import ClientRuntime/*.LoggerMiddleware*/
+import ClientRuntime/*.ModeledError*/
+import ClientRuntime/*.OperationStack*/
+import ClientRuntime/*.PaginateToken*/
+import ClientRuntime/*.PaginatorSequence*/
+import ClientRuntime/*.Plugin*/
+import ClientRuntime/*.RetryMiddleware*/
+import ClientRuntime/*.SdkHttpClient*/
+import ClientRuntime/*.SignerMiddleware*/
+import ClientRuntime/*.TelemetryProvider*/
+import ClientRuntime/*.URLHostMiddleware*/
+import ClientRuntime/*.URLPathMiddleware*/
+import Foundation
+import Smithy/*.ClientError*/
+import Smithy/*.Context*/
+import Smithy/*.ContextBuilder*/
+import Smithy/*.LogAgent*/
+import SmithyHTTPAPI/*.Endpoint*/
+import SmithyHTTPAPI/*.HTTPClient*/
+import SmithyHTTPAPI/*.HttpResponse*/
+import SmithyHTTPAuthAPI/*.AuthOption*/
+import SmithyHTTPAuthAPI/*.AuthSchemeResolver*/
+import SmithyHTTPAuthAPI/*.AuthSchemeResolverParameters*/
+import SmithyHTTPAuthAPI/*.AuthSchemes*/
+import SmithyHTTPAuthAPI/*.SigningPropertyKeys*/
+import SmithyIdentity/*.AWSCredentialIdentityResolver*/
+import SmithyJSON/*.Reader*/
+import SmithyJSON/*.Writer*/
+import SmithyReadWrite/*.ReaderError*/
+import SmithyReadWrite/*.ReadingClosures*/
+import SmithyReadWrite/*.WritingClosures*/
+import SmithyRetries/*.DefaultRetryStrategy*/
+import SmithyRetriesAPI/*.RetryStrategyOptions*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct CognitoIdentityAuthSchemeResolverParameters : SmithyHTTPAuthAPI.AuthSchemeResolverParameters {
+  public let operation: Swift.String
+  public let region: Swift.String?
+}
+public protocol CognitoIdentityAuthSchemeResolver : SmithyHTTPAuthAPI.AuthSchemeResolver {
+}
+public struct DefaultCognitoIdentityAuthSchemeResolver : AWSCognitoIdentity.CognitoIdentityAuthSchemeResolver {
+  public func resolveAuthScheme(params: any SmithyHTTPAuthAPI.AuthSchemeResolverParameters) throws -> [SmithyHTTPAuthAPI.AuthOption]
+  public func constructParameters(context: Smithy.Context) throws -> any SmithyHTTPAuthAPI.AuthSchemeResolverParameters
+}
+public class CognitoIdentityClient : ClientRuntime.Client {
+  public static let clientName: Swift.String
+  required public init(config: AWSCognitoIdentity.CognitoIdentityClient.CognitoIdentityClientConfiguration)
+  convenience public init(region: Swift.String) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  convenience required public init() async throws
+  #endif
+  public typealias Config = AWSCognitoIdentity.CognitoIdentityClient.CognitoIdentityClientConfiguration
+  @objc deinit
+}
+extension AWSCognitoIdentity.CognitoIdentityClient {
+  @_hasMissingDesignatedInitializers public class CognitoIdentityClientConfiguration : AWSClientRuntime.AWSDefaultClientConfiguration & AWSClientRuntime.AWSRegionClientConfiguration & ClientRuntime.DefaultClientConfiguration & ClientRuntime.DefaultHttpClientConfiguration {
+    public var useFIPS: Swift.Bool?
+    public var useDualStack: Swift.Bool?
+    public var appID: Swift.String?
+    public var awsCredentialIdentityResolver: any SmithyIdentity.AWSCredentialIdentityResolver
+    public var awsRetryMode: AWSClientRuntime.AWSRetryMode
+    public var region: Swift.String?
+    public var signingRegion: Swift.String?
+    public var endpointResolver: any AWSCognitoIdentity.EndpointResolver
+    public var telemetryProvider: any ClientRuntime.TelemetryProvider
+    public var retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions
+    public var clientLogMode: ClientRuntime.ClientLogMode
+    public var endpoint: Swift.String?
+    public var idempotencyTokenGenerator: any ClientRuntime.IdempotencyTokenGenerator
+    public var httpClientEngine: any SmithyHTTPAPI.HTTPClient
+    public var httpClientConfiguration: ClientRuntime.HttpClientConfiguration
+    public var authSchemes: SmithyHTTPAuthAPI.AuthSchemes?
+    public var authSchemeResolver: any SmithyHTTPAuthAPI.AuthSchemeResolver
+    convenience public init(useFIPS: Swift.Bool? = nil, useDualStack: Swift.Bool? = nil, appID: Swift.String? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil, awsRetryMode: AWSClientRuntime.AWSRetryMode? = nil, region: Swift.String? = nil, signingRegion: Swift.String? = nil, endpointResolver: (any AWSCognitoIdentity.EndpointResolver)? = nil, telemetryProvider: (any ClientRuntime.TelemetryProvider)? = nil, retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions? = nil, clientLogMode: ClientRuntime.ClientLogMode? = nil, endpoint: Swift.String? = nil, idempotencyTokenGenerator: (any ClientRuntime.IdempotencyTokenGenerator)? = nil, httpClientEngine: (any SmithyHTTPAPI.HTTPClient)? = nil, httpClientConfiguration: ClientRuntime.HttpClientConfiguration? = nil, authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any SmithyHTTPAuthAPI.AuthSchemeResolver)? = nil) throws
+    #if compiler(>=5.3) && $AsyncAwait
+    convenience public init(useFIPS: Swift.Bool? = nil, useDualStack: Swift.Bool? = nil, appID: Swift.String? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil, awsRetryMode: AWSClientRuntime.AWSRetryMode? = nil, region: Swift.String? = nil, signingRegion: Swift.String? = nil, endpointResolver: (any AWSCognitoIdentity.EndpointResolver)? = nil, telemetryProvider: (any ClientRuntime.TelemetryProvider)? = nil, retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions? = nil, clientLogMode: ClientRuntime.ClientLogMode? = nil, endpoint: Swift.String? = nil, idempotencyTokenGenerator: (any ClientRuntime.IdempotencyTokenGenerator)? = nil, httpClientEngine: (any SmithyHTTPAPI.HTTPClient)? = nil, httpClientConfiguration: ClientRuntime.HttpClientConfiguration? = nil, authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any SmithyHTTPAuthAPI.AuthSchemeResolver)? = nil) async throws
+    #endif
+    #if compiler(>=5.3) && $AsyncAwait
+    convenience required public init() async throws
+    #endif
+    convenience public init(region: Swift.String) throws
+    public var partitionID: Swift.String? {
+      get
+    }
+    @objc deinit
+  }
+  public static func builder() -> ClientRuntime.ClientBuilder<AWSCognitoIdentity.CognitoIdentityClient>
+}
+extension AWSCognitoIdentity.CognitoIdentityClient {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createIdentityPool(input: AWSCognitoIdentity.CreateIdentityPoolInput) async throws -> AWSCognitoIdentity.CreateIdentityPoolOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteIdentities(input: AWSCognitoIdentity.DeleteIdentitiesInput) async throws -> AWSCognitoIdentity.DeleteIdentitiesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteIdentityPool(input: AWSCognitoIdentity.DeleteIdentityPoolInput) async throws -> AWSCognitoIdentity.DeleteIdentityPoolOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeIdentity(input: AWSCognitoIdentity.DescribeIdentityInput) async throws -> AWSCognitoIdentity.DescribeIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeIdentityPool(input: AWSCognitoIdentity.DescribeIdentityPoolInput) async throws -> AWSCognitoIdentity.DescribeIdentityPoolOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getCredentialsForIdentity(input: AWSCognitoIdentity.GetCredentialsForIdentityInput) async throws -> AWSCognitoIdentity.GetCredentialsForIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getId(input: AWSCognitoIdentity.GetIdInput) async throws -> AWSCognitoIdentity.GetIdOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getIdentityPoolRoles(input: AWSCognitoIdentity.GetIdentityPoolRolesInput) async throws -> AWSCognitoIdentity.GetIdentityPoolRolesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getOpenIdToken(input: AWSCognitoIdentity.GetOpenIdTokenInput) async throws -> AWSCognitoIdentity.GetOpenIdTokenOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getOpenIdTokenForDeveloperIdentity(input: AWSCognitoIdentity.GetOpenIdTokenForDeveloperIdentityInput) async throws -> AWSCognitoIdentity.GetOpenIdTokenForDeveloperIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getPrincipalTagAttributeMap(input: AWSCognitoIdentity.GetPrincipalTagAttributeMapInput) async throws -> AWSCognitoIdentity.GetPrincipalTagAttributeMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listIdentities(input: AWSCognitoIdentity.ListIdentitiesInput) async throws -> AWSCognitoIdentity.ListIdentitiesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listIdentityPools(input: AWSCognitoIdentity.ListIdentityPoolsInput) async throws -> AWSCognitoIdentity.ListIdentityPoolsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listTagsForResource(input: AWSCognitoIdentity.ListTagsForResourceInput) async throws -> AWSCognitoIdentity.ListTagsForResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func lookupDeveloperIdentity(input: AWSCognitoIdentity.LookupDeveloperIdentityInput) async throws -> AWSCognitoIdentity.LookupDeveloperIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func mergeDeveloperIdentities(input: AWSCognitoIdentity.MergeDeveloperIdentitiesInput) async throws -> AWSCognitoIdentity.MergeDeveloperIdentitiesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func setIdentityPoolRoles(input: AWSCognitoIdentity.SetIdentityPoolRolesInput) async throws -> AWSCognitoIdentity.SetIdentityPoolRolesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func setPrincipalTagAttributeMap(input: AWSCognitoIdentity.SetPrincipalTagAttributeMapInput) async throws -> AWSCognitoIdentity.SetPrincipalTagAttributeMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func tagResource(input: AWSCognitoIdentity.TagResourceInput) async throws -> AWSCognitoIdentity.TagResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func unlinkDeveloperIdentity(input: AWSCognitoIdentity.UnlinkDeveloperIdentityInput) async throws -> AWSCognitoIdentity.UnlinkDeveloperIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func unlinkIdentity(input: AWSCognitoIdentity.UnlinkIdentityInput) async throws -> AWSCognitoIdentity.UnlinkIdentityOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func untagResource(input: AWSCognitoIdentity.UntagResourceInput) async throws -> AWSCognitoIdentity.UntagResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateIdentityPool(input: AWSCognitoIdentity.UpdateIdentityPoolInput) async throws -> AWSCognitoIdentity.UpdateIdentityPoolOutput
+  #endif
+}
+public struct EndpointParams {
+  public let endpoint: Swift.String?
+  public let region: Swift.String?
+  public let useDualStack: Swift.Bool
+  public let useFIPS: Swift.Bool
+  public init(endpoint: Swift.String? = nil, region: Swift.String? = nil, useDualStack: Swift.Bool = false, useFIPS: Swift.Bool = false)
+}
+extension AWSCognitoIdentity.EndpointParams : ClientRuntime.EndpointsRequestContextProviding {
+  #if compiler(>=5.3) && $EffectfulProp
+  public var context: ClientRuntime.EndpointsRequestContext {
+    get throws
+  }
+  #endif
+}
+public protocol EndpointResolver {
+  func resolve(params: AWSCognitoIdentity.EndpointParams) throws -> SmithyHTTPAPI.Endpoint
+}
+extension ClientRuntime.DefaultEndpointResolver : AWSCognitoIdentity.EndpointResolver where Params == AWSCognitoIdentity.EndpointParams {
+}
+public struct DeleteIdentityPoolOutput {
+  public init()
+}
+public struct SetIdentityPoolRolesOutput {
+  public init()
+}
+public struct UnlinkDeveloperIdentityOutput {
+  public init()
+}
+public struct UnlinkIdentityOutput {
+  public init()
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public enum AmbiguousRoleResolutionType : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case authenticatedRole
+    case deny
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSCognitoIdentity.CognitoIdentityClientTypes.AmbiguousRoleResolutionType] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSCognitoIdentity.CognitoIdentityClientTypes.AmbiguousRoleResolutionType]
+    public typealias RawValue = Swift.String
+  }
+}
+public struct InternalErrorException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.InternalErrorException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct InvalidParameterException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.InvalidParameterException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct LimitExceededException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.LimitExceededException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct NotAuthorizedException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.NotAuthorizedException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct ResourceConflictException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.ResourceConflictException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct TooManyRequestsException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.TooManyRequestsException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct CognitoIdentityProvider {
+    public var clientId: Swift.String?
+    public var providerName: Swift.String?
+    public var serverSideTokenCheck: Swift.Bool?
+    public init(clientId: Swift.String? = nil, providerName: Swift.String? = nil, serverSideTokenCheck: Swift.Bool? = nil)
+  }
+}
+public struct CreateIdentityPoolInput {
+  public var allowClassicFlow: Swift.Bool?
+  public var allowUnauthenticatedIdentities: Swift.Bool?
+  public var cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]?
+  public var developerProviderName: Swift.String?
+  public var identityPoolName: Swift.String?
+  public var identityPoolTags: [Swift.String : Swift.String]?
+  public var openIdConnectProviderARNs: [Swift.String]?
+  public var samlProviderARNs: [Swift.String]?
+  public var supportedLoginProviders: [Swift.String : Swift.String]?
+  public init(allowClassicFlow: Swift.Bool? = nil, allowUnauthenticatedIdentities: Swift.Bool? = nil, cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]? = nil, developerProviderName: Swift.String? = nil, identityPoolName: Swift.String? = nil, identityPoolTags: [Swift.String : Swift.String]? = nil, openIdConnectProviderARNs: [Swift.String]? = nil, samlProviderARNs: [Swift.String]? = nil, supportedLoginProviders: [Swift.String : Swift.String]? = nil)
+}
+public struct CreateIdentityPoolOutput {
+  public var allowClassicFlow: Swift.Bool?
+  public var allowUnauthenticatedIdentities: Swift.Bool
+  public var cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]?
+  public var developerProviderName: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var identityPoolName: Swift.String?
+  public var identityPoolTags: [Swift.String : Swift.String]?
+  public var openIdConnectProviderARNs: [Swift.String]?
+  public var samlProviderARNs: [Swift.String]?
+  public var supportedLoginProviders: [Swift.String : Swift.String]?
+  public init(allowClassicFlow: Swift.Bool? = nil, allowUnauthenticatedIdentities: Swift.Bool = false, cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]? = nil, developerProviderName: Swift.String? = nil, identityPoolId: Swift.String? = nil, identityPoolName: Swift.String? = nil, identityPoolTags: [Swift.String : Swift.String]? = nil, openIdConnectProviderARNs: [Swift.String]? = nil, samlProviderARNs: [Swift.String]? = nil, supportedLoginProviders: [Swift.String : Swift.String]? = nil)
+}
+public struct DeleteIdentitiesInput {
+  public var identityIdsToDelete: [Swift.String]?
+  public init(identityIdsToDelete: [Swift.String]? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public enum ErrorCode : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case accessDenied
+    case internalServerError
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSCognitoIdentity.CognitoIdentityClientTypes.ErrorCode] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSCognitoIdentity.CognitoIdentityClientTypes.ErrorCode]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct UnprocessedIdentityId {
+    public var errorCode: AWSCognitoIdentity.CognitoIdentityClientTypes.ErrorCode?
+    public var identityId: Swift.String?
+    public init(errorCode: AWSCognitoIdentity.CognitoIdentityClientTypes.ErrorCode? = nil, identityId: Swift.String? = nil)
+  }
+}
+public struct DeleteIdentitiesOutput {
+  public var unprocessedIdentityIds: [AWSCognitoIdentity.CognitoIdentityClientTypes.UnprocessedIdentityId]?
+  public init(unprocessedIdentityIds: [AWSCognitoIdentity.CognitoIdentityClientTypes.UnprocessedIdentityId]? = nil)
+}
+public struct ResourceNotFoundException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.ResourceNotFoundException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct DeleteIdentityPoolInput {
+  public var identityPoolId: Swift.String?
+  public init(identityPoolId: Swift.String? = nil)
+}
+public struct DescribeIdentityInput {
+  public var identityId: Swift.String?
+  public init(identityId: Swift.String? = nil)
+}
+public struct DescribeIdentityOutput {
+  public var creationDate: Foundation.Date?
+  public var identityId: Swift.String?
+  public var lastModifiedDate: Foundation.Date?
+  public var logins: [Swift.String]?
+  public init(creationDate: Foundation.Date? = nil, identityId: Swift.String? = nil, lastModifiedDate: Foundation.Date? = nil, logins: [Swift.String]? = nil)
+}
+public struct DescribeIdentityPoolInput {
+  public var identityPoolId: Swift.String?
+  public init(identityPoolId: Swift.String? = nil)
+}
+public struct DescribeIdentityPoolOutput {
+  public var allowClassicFlow: Swift.Bool?
+  public var allowUnauthenticatedIdentities: Swift.Bool
+  public var cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]?
+  public var developerProviderName: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var identityPoolName: Swift.String?
+  public var identityPoolTags: [Swift.String : Swift.String]?
+  public var openIdConnectProviderARNs: [Swift.String]?
+  public var samlProviderARNs: [Swift.String]?
+  public var supportedLoginProviders: [Swift.String : Swift.String]?
+  public init(allowClassicFlow: Swift.Bool? = nil, allowUnauthenticatedIdentities: Swift.Bool = false, cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]? = nil, developerProviderName: Swift.String? = nil, identityPoolId: Swift.String? = nil, identityPoolName: Swift.String? = nil, identityPoolTags: [Swift.String : Swift.String]? = nil, openIdConnectProviderARNs: [Swift.String]? = nil, samlProviderARNs: [Swift.String]? = nil, supportedLoginProviders: [Swift.String : Swift.String]? = nil)
+}
+public struct ExternalServiceException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.ExternalServiceException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct InvalidIdentityPoolConfigurationException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.InvalidIdentityPoolConfigurationException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct GetCredentialsForIdentityInput {
+  public var customRoleArn: Swift.String?
+  public var identityId: Swift.String?
+  public var logins: [Swift.String : Swift.String]?
+  public init(customRoleArn: Swift.String? = nil, identityId: Swift.String? = nil, logins: [Swift.String : Swift.String]? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct Credentials {
+    public var accessKeyId: Swift.String?
+    public var expiration: Foundation.Date?
+    public var secretKey: Swift.String?
+    public var sessionToken: Swift.String?
+    public init(accessKeyId: Swift.String? = nil, expiration: Foundation.Date? = nil, secretKey: Swift.String? = nil, sessionToken: Swift.String? = nil)
+  }
+}
+public struct GetCredentialsForIdentityOutput {
+  public var credentials: AWSCognitoIdentity.CognitoIdentityClientTypes.Credentials?
+  public var identityId: Swift.String?
+  public init(credentials: AWSCognitoIdentity.CognitoIdentityClientTypes.Credentials? = nil, identityId: Swift.String? = nil)
+}
+public struct GetIdInput {
+  public var accountId: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var logins: [Swift.String : Swift.String]?
+  public init(accountId: Swift.String? = nil, identityPoolId: Swift.String? = nil, logins: [Swift.String : Swift.String]? = nil)
+}
+public struct GetIdOutput {
+  public var identityId: Swift.String?
+  public init(identityId: Swift.String? = nil)
+}
+public struct GetIdentityPoolRolesInput {
+  public var identityPoolId: Swift.String?
+  public init(identityPoolId: Swift.String? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public enum MappingRuleMatchType : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case contains
+    case equals
+    case notEqual
+    case startsWith
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRuleMatchType] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRuleMatchType]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct MappingRule {
+    public var claim: Swift.String?
+    public var matchType: AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRuleMatchType?
+    public var roleARN: Swift.String?
+    public var value: Swift.String?
+    public init(claim: Swift.String? = nil, matchType: AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRuleMatchType? = nil, roleARN: Swift.String? = nil, value: Swift.String? = nil)
+  }
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct RulesConfigurationType {
+    public var rules: [AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRule]?
+    public init(rules: [AWSCognitoIdentity.CognitoIdentityClientTypes.MappingRule]? = nil)
+  }
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public enum RoleMappingType : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case rules
+    case token
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMappingType] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMappingType]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct RoleMapping {
+    public var ambiguousRoleResolution: AWSCognitoIdentity.CognitoIdentityClientTypes.AmbiguousRoleResolutionType?
+    public var rulesConfiguration: AWSCognitoIdentity.CognitoIdentityClientTypes.RulesConfigurationType?
+    public var type: AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMappingType?
+    public init(ambiguousRoleResolution: AWSCognitoIdentity.CognitoIdentityClientTypes.AmbiguousRoleResolutionType? = nil, rulesConfiguration: AWSCognitoIdentity.CognitoIdentityClientTypes.RulesConfigurationType? = nil, type: AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMappingType? = nil)
+  }
+}
+public struct GetIdentityPoolRolesOutput {
+  public var identityPoolId: Swift.String?
+  public var roleMappings: [Swift.String : AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMapping]?
+  public var roles: [Swift.String : Swift.String]?
+  public init(identityPoolId: Swift.String? = nil, roleMappings: [Swift.String : AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMapping]? = nil, roles: [Swift.String : Swift.String]? = nil)
+}
+public struct GetOpenIdTokenInput {
+  public var identityId: Swift.String?
+  public var logins: [Swift.String : Swift.String]?
+  public init(identityId: Swift.String? = nil, logins: [Swift.String : Swift.String]? = nil)
+}
+public struct GetOpenIdTokenOutput {
+  public var identityId: Swift.String?
+  public var token: Swift.String?
+  public init(identityId: Swift.String? = nil, token: Swift.String? = nil)
+}
+public struct DeveloperUserAlreadyRegisteredException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.DeveloperUserAlreadyRegisteredException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct GetOpenIdTokenForDeveloperIdentityInput {
+  public var identityId: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var logins: [Swift.String : Swift.String]?
+  public var principalTags: [Swift.String : Swift.String]?
+  public var tokenDuration: Swift.Int?
+  public init(identityId: Swift.String? = nil, identityPoolId: Swift.String? = nil, logins: [Swift.String : Swift.String]? = nil, principalTags: [Swift.String : Swift.String]? = nil, tokenDuration: Swift.Int? = nil)
+}
+public struct GetOpenIdTokenForDeveloperIdentityOutput {
+  public var identityId: Swift.String?
+  public var token: Swift.String?
+  public init(identityId: Swift.String? = nil, token: Swift.String? = nil)
+}
+public struct GetPrincipalTagAttributeMapInput {
+  public var identityPoolId: Swift.String?
+  public var identityProviderName: Swift.String?
+  public init(identityPoolId: Swift.String? = nil, identityProviderName: Swift.String? = nil)
+}
+public struct GetPrincipalTagAttributeMapOutput {
+  public var identityPoolId: Swift.String?
+  public var identityProviderName: Swift.String?
+  public var principalTags: [Swift.String : Swift.String]?
+  public var useDefaults: Swift.Bool?
+  public init(identityPoolId: Swift.String? = nil, identityProviderName: Swift.String? = nil, principalTags: [Swift.String : Swift.String]? = nil, useDefaults: Swift.Bool? = nil)
+}
+public struct ListIdentitiesInput {
+  public var hideDisabled: Swift.Bool?
+  public var identityPoolId: Swift.String?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(hideDisabled: Swift.Bool? = nil, identityPoolId: Swift.String? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct IdentityDescription {
+    public var creationDate: Foundation.Date?
+    public var identityId: Swift.String?
+    public var lastModifiedDate: Foundation.Date?
+    public var logins: [Swift.String]?
+    public init(creationDate: Foundation.Date? = nil, identityId: Swift.String? = nil, lastModifiedDate: Foundation.Date? = nil, logins: [Swift.String]? = nil)
+  }
+}
+public struct ListIdentitiesOutput {
+  public var identities: [AWSCognitoIdentity.CognitoIdentityClientTypes.IdentityDescription]?
+  public var identityPoolId: Swift.String?
+  public var nextToken: Swift.String?
+  public init(identities: [AWSCognitoIdentity.CognitoIdentityClientTypes.IdentityDescription]? = nil, identityPoolId: Swift.String? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListIdentityPoolsInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSCognitoIdentity.CognitoIdentityClientTypes {
+  public struct IdentityPoolShortDescription {
+    public var identityPoolId: Swift.String?
+    public var identityPoolName: Swift.String?
+    public init(identityPoolId: Swift.String? = nil, identityPoolName: Swift.String? = nil)
+  }
+}
+public struct ListIdentityPoolsOutput {
+  public var identityPools: [AWSCognitoIdentity.CognitoIdentityClientTypes.IdentityPoolShortDescription]?
+  public var nextToken: Swift.String?
+  public init(identityPools: [AWSCognitoIdentity.CognitoIdentityClientTypes.IdentityPoolShortDescription]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListTagsForResourceInput {
+  public var resourceArn: Swift.String?
+  public init(resourceArn: Swift.String? = nil)
+}
+public struct ListTagsForResourceOutput {
+  public var tags: [Swift.String : Swift.String]?
+  public init(tags: [Swift.String : Swift.String]? = nil)
+}
+public struct LookupDeveloperIdentityInput {
+  public var developerUserIdentifier: Swift.String?
+  public var identityId: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(developerUserIdentifier: Swift.String? = nil, identityId: Swift.String? = nil, identityPoolId: Swift.String? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+public struct LookupDeveloperIdentityOutput {
+  public var developerUserIdentifierList: [Swift.String]?
+  public var identityId: Swift.String?
+  public var nextToken: Swift.String?
+  public init(developerUserIdentifierList: [Swift.String]? = nil, identityId: Swift.String? = nil, nextToken: Swift.String? = nil)
+}
+public struct MergeDeveloperIdentitiesInput {
+  public var destinationUserIdentifier: Swift.String?
+  public var developerProviderName: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var sourceUserIdentifier: Swift.String?
+  public init(destinationUserIdentifier: Swift.String? = nil, developerProviderName: Swift.String? = nil, identityPoolId: Swift.String? = nil, sourceUserIdentifier: Swift.String? = nil)
+}
+public struct MergeDeveloperIdentitiesOutput {
+  public var identityId: Swift.String?
+  public init(identityId: Swift.String? = nil)
+}
+public struct ConcurrentModificationException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSCognitoIdentity.ConcurrentModificationException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct SetIdentityPoolRolesInput {
+  public var identityPoolId: Swift.String?
+  public var roleMappings: [Swift.String : AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMapping]?
+  public var roles: [Swift.String : Swift.String]?
+  public init(identityPoolId: Swift.String? = nil, roleMappings: [Swift.String : AWSCognitoIdentity.CognitoIdentityClientTypes.RoleMapping]? = nil, roles: [Swift.String : Swift.String]? = nil)
+}
+public struct SetPrincipalTagAttributeMapInput {
+  public var identityPoolId: Swift.String?
+  public var identityProviderName: Swift.String?
+  public var principalTags: [Swift.String : Swift.String]?
+  public var useDefaults: Swift.Bool?
+  public init(identityPoolId: Swift.String? = nil, identityProviderName: Swift.String? = nil, principalTags: [Swift.String : Swift.String]? = nil, useDefaults: Swift.Bool? = nil)
+}
+public struct SetPrincipalTagAttributeMapOutput {
+  public var identityPoolId: Swift.String?
+  public var identityProviderName: Swift.String?
+  public var principalTags: [Swift.String : Swift.String]?
+  public var useDefaults: Swift.Bool?
+  public init(identityPoolId: Swift.String? = nil, identityProviderName: Swift.String? = nil, principalTags: [Swift.String : Swift.String]? = nil, useDefaults: Swift.Bool? = nil)
+}
+public struct TagResourceInput {
+  public var resourceArn: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(resourceArn: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct TagResourceOutput {
+  public init()
+}
+public struct UnlinkDeveloperIdentityInput {
+  public var developerProviderName: Swift.String?
+  public var developerUserIdentifier: Swift.String?
+  public var identityId: Swift.String?
+  public var identityPoolId: Swift.String?
+  public init(developerProviderName: Swift.String? = nil, developerUserIdentifier: Swift.String? = nil, identityId: Swift.String? = nil, identityPoolId: Swift.String? = nil)
+}
+public struct UnlinkIdentityInput {
+  public var identityId: Swift.String?
+  public var logins: [Swift.String : Swift.String]?
+  public var loginsToRemove: [Swift.String]?
+  public init(identityId: Swift.String? = nil, logins: [Swift.String : Swift.String]? = nil, loginsToRemove: [Swift.String]? = nil)
+}
+public struct UntagResourceInput {
+  public var resourceArn: Swift.String?
+  public var tagKeys: [Swift.String]?
+  public init(resourceArn: Swift.String? = nil, tagKeys: [Swift.String]? = nil)
+}
+public struct UntagResourceOutput {
+  public init()
+}
+public struct UpdateIdentityPoolInput {
+  public var allowClassicFlow: Swift.Bool?
+  public var allowUnauthenticatedIdentities: Swift.Bool
+  public var cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]?
+  public var developerProviderName: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var identityPoolName: Swift.String?
+  public var identityPoolTags: [Swift.String : Swift.String]?
+  public var openIdConnectProviderARNs: [Swift.String]?
+  public var samlProviderARNs: [Swift.String]?
+  public var supportedLoginProviders: [Swift.String : Swift.String]?
+  public init(allowClassicFlow: Swift.Bool? = nil, allowUnauthenticatedIdentities: Swift.Bool = false, cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]? = nil, developerProviderName: Swift.String? = nil, identityPoolId: Swift.String? = nil, identityPoolName: Swift.String? = nil, identityPoolTags: [Swift.String : Swift.String]? = nil, openIdConnectProviderARNs: [Swift.String]? = nil, samlProviderARNs: [Swift.String]? = nil, supportedLoginProviders: [Swift.String : Swift.String]? = nil)
+}
+public struct UpdateIdentityPoolOutput {
+  public var allowClassicFlow: Swift.Bool?
+  public var allowUnauthenticatedIdentities: Swift.Bool
+  public var cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]?
+  public var developerProviderName: Swift.String?
+  public var identityPoolId: Swift.String?
+  public var identityPoolName: Swift.String?
+  public var identityPoolTags: [Swift.String : Swift.String]?
+  public var openIdConnectProviderARNs: [Swift.String]?
+  public var samlProviderARNs: [Swift.String]?
+  public var supportedLoginProviders: [Swift.String : Swift.String]?
+  public init(allowClassicFlow: Swift.Bool? = nil, allowUnauthenticatedIdentities: Swift.Bool = false, cognitoIdentityProviders: [AWSCognitoIdentity.CognitoIdentityClientTypes.CognitoIdentityProvider]? = nil, developerProviderName: Swift.String? = nil, identityPoolId: Swift.String? = nil, identityPoolName: Swift.String? = nil, identityPoolTags: [Swift.String : Swift.String]? = nil, openIdConnectProviderARNs: [Swift.String]? = nil, samlProviderARNs: [Swift.String]? = nil, supportedLoginProviders: [Swift.String : Swift.String]? = nil)
+}
+public enum CognitoIdentityClientTypes {
+}
+extension AWSCognitoIdentity.CognitoIdentityClient {
+  #if compiler(>=5.3) && $RethrowsProtocol
+  public func listIdentityPoolsPaginated(input: AWSCognitoIdentity.ListIdentityPoolsInput) -> ClientRuntime.PaginatorSequence<AWSCognitoIdentity.ListIdentityPoolsInput, AWSCognitoIdentity.ListIdentityPoolsOutput>
+  #endif
+}
+extension AWSCognitoIdentity.ListIdentityPoolsInput : ClientRuntime.PaginateToken {
+  public func usingPaginationToken(_ token: Swift.String) -> AWSCognitoIdentity.ListIdentityPoolsInput
+  public typealias Token = Swift.String
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+extension ClientRuntime.PaginatorSequence where OperationStackInput == AWSCognitoIdentity.ListIdentityPoolsInput, OperationStackOutput == AWSCognitoIdentity.ListIdentityPoolsOutput {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func identityPools() async throws -> [AWSCognitoIdentity.CognitoIdentityClientTypes.IdentityPoolShortDescription]
+  #endif
+}
+#endif
+public class CognitoIdentityClientEndpointPlugin : ClientRuntime.Plugin {
+  public init(endpointResolver: any AWSCognitoIdentity.EndpointResolver)
+  convenience public init() throws
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}
+public class DefaultAWSAuthSchemePlugin : ClientRuntime.Plugin {
+  public init()
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}
+public class CognitoIdentityClientAuthSchemePlugin : ClientRuntime.Plugin {
+  public init(authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any AWSCognitoIdentity.CognitoIdentityAuthSchemeResolver)? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil)
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}

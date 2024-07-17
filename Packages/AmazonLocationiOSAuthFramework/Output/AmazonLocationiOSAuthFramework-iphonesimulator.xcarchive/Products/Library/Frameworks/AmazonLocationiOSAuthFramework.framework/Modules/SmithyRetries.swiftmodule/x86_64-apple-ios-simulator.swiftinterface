@@ -1,0 +1,69 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyRetries
+import AwsCommonRuntimeKit
+import Foundation/*.Date*/
+import Foundation/*.TimeInterval*/
+import Foundation/*.pow*/
+import SmithyRetriesAPI/*.RetryBackoffStrategy*/
+import SmithyRetriesAPI/*.RetryError*/
+import SmithyRetriesAPI/*.RetryErrorInfo*/
+import SmithyRetriesAPI/*.RetryErrorType*/
+import SmithyRetriesAPI/*.RetryStrategy*/
+import SmithyRetriesAPI/*.RetryStrategyOptions*/
+import SmithyRetriesAPI/*.RetryToken*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SmithyRetries.DefaultRetryStrategy {
+  public enum Error : Swift.Error {
+    case insufficientQuota
+    public static func == (a: SmithyRetries.DefaultRetryStrategy.Error, b: SmithyRetries.DefaultRetryStrategy.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct DefaultRetryStrategy : SmithyRetriesAPI.RetryStrategy {
+  public typealias Token = SmithyRetries.DefaultRetryToken
+  public init(options: SmithyRetriesAPI.RetryStrategyOptions)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func acquireInitialRetryToken(tokenScope: Swift.String) async throws -> SmithyRetries.DefaultRetryToken
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func refreshRetryTokenForRetry(tokenToRenew: SmithyRetries.DefaultRetryToken, errorInfo: SmithyRetriesAPI.RetryErrorInfo) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func recordSuccess(token: SmithyRetries.DefaultRetryToken) async
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class DefaultRetryToken : SmithyRetriesAPI.RetryToken {
+  final public var retryCount: Swift.Int {
+    get
+  }
+  @objc deinit
+}
+public enum ExponentialBackOffJitterType {
+  case `default`
+  case none
+  case full
+  case decorrelated
+  public static func == (a: SmithyRetries.ExponentialBackOffJitterType, b: SmithyRetries.ExponentialBackOffJitterType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ExponentialBackoffStrategy : SmithyRetriesAPI.RetryBackoffStrategy {
+  public init()
+  public func computeNextBackoffDelay(attempt: Swift.Int) -> Foundation.TimeInterval
+}
+extension SmithyRetriesAPI.RetryErrorType {
+  public func toCRTType() -> AwsCommonRuntimeKit.RetryError
+}
+extension SmithyRetries.DefaultRetryStrategy.Error : Swift.Equatable {}
+extension SmithyRetries.DefaultRetryStrategy.Error : Swift.Hashable {}
+extension SmithyRetries.ExponentialBackOffJitterType : Swift.Equatable {}
+extension SmithyRetries.ExponentialBackOffJitterType : Swift.Hashable {}

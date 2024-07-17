@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name aws_sdk_swift -module-name AWSSDKIdentity
+import AWSSDKCommon
+import AwsCommonRuntimeKit/*.CredentialsProvider*/
+import ClientRuntime
+import Foundation/*.ProcessInfo*/
+import Foundation/*.TimeInterval*/
+import Foundation/*.URL*/
+import Foundation/*.URLComponents*/
+import Smithy/*.ClientError*/
+import SmithyHTTPAPI/*.HTTPClientError*/
+import SmithyIdentity/*.AWSCredentialIdentityResolvedByCRT*/
+import SmithyIdentity/*.AWSCredentialIdentityResolver*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct CachedAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(source: any SmithyIdentity.AWSCredentialIdentityResolver, refreshTime: Foundation.TimeInterval) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct DefaultAWSCredentialIdentityResolverChain : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init() throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct ECSAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(relativeURI: Swift.String? = nil, absoluteURI: Swift.String? = nil, authorizationToken: Swift.String? = nil) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct EnvironmentAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init() throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct IMDSAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init() throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct ProcessAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(profileName: Swift.String? = nil, configFilePath: Swift.String? = nil, credentialsFilePath: Swift.String? = nil) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct ProfileAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(profileName: Swift.String? = nil, configFilePath: Swift.String? = nil, credentialsFilePath: Swift.String? = nil) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct SSOAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(profileName: Swift.String? = nil, configFilePath: Swift.String? = nil, credentialsFilePath: Swift.String? = nil) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct STSAssumeRoleAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(awsCredentialIdentityResolver: any SmithyIdentity.AWSCredentialIdentityResolver, roleArn: Swift.String, sessionName: Swift.String, durationSeconds: Foundation.TimeInterval = 900) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}
+public struct STSWebIdentityAWSCredentialIdentityResolver : SmithyIdentity.AWSCredentialIdentityResolvedByCRT {
+  public let crtAWSCredentialIdentityResolver: AwsCommonRuntimeKit.CredentialsProvider
+  public init(configFilePath: Swift.String? = nil, credentialsFilePath: Swift.String? = nil, region: Swift.String? = nil, roleArn: Swift.String? = nil, roleSessionName: Swift.String? = nil, tokenFilePath: Swift.String? = nil) throws
+  public typealias IdentityT = SmithyIdentity.AWSCredentialIdentity
+}

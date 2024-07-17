@@ -1,0 +1,724 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyEventStreamsAPI",
+        "printedName": "SmithyEventStreamsAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageDataSigner",
+        "printedName": "MessageDataSigner",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "signEvent",
+            "printedName": "signEvent(payload:previousSignature:signingProperties:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningResult",
+                "printedName": "SmithyEventStreamsAuthAPI.SigningResult<SmithyEventStreamsAPI.Message>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "SmithyEventStreamsAPI.Message",
+                    "usr": "s:21SmithyEventStreamsAPI7MessageV"
+                  }
+                ],
+                "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25SmithyEventStreamsAuthAPI17MessageDataSignerP04signB07payload17previousSignature17signingPropertiesAA13SigningResultVy0abcE00F0VG10Foundation0G0V_SS0A010AttributesVtYaKF",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI17MessageDataSignerP04signB07payload17previousSignature17signingPropertiesAA13SigningResultVy0abcE00F0VG10Foundation0G0V_SS0A010AttributesVtYaKF",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAuthAPI.MessageDataSigner>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAuthAPI.MessageDataSigner>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25SmithyEventStreamsAuthAPI17MessageDataSignerP",
+        "mangledName": "$s25SmithyEventStreamsAuthAPI17MessageDataSignerP",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningResult",
+        "printedName": "SigningResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "output",
+            "printedName": "output",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV6outputxvp",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV6outputxvp",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV6outputxvg",
+                "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV6outputxvg",
+                "moduleName": "SmithyEventStreamsAuthAPI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signature",
+            "printedName": "signature",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV9signatureSSvp",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV9signatureSSvp",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV9signatureSSvg",
+                "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV9signatureSSvg",
+                "moduleName": "SmithyEventStreamsAuthAPI",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(output:signature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningResult",
+                "printedName": "SmithyEventStreamsAuthAPI.SigningResult<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV6output9signatureACyxGx_SStcfc",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV6output9signatureACyxGx_SStcfc",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:25SmithyEventStreamsAuthAPI13SigningResultV",
+        "mangledName": "$s25SmithyEventStreamsAuthAPI13SigningResultV",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<T>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageDecoderStream",
+        "printedName": "MessageDecoderStream",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Event",
+            "printedName": "Event",
+            "declKind": "AssociatedType",
+            "usr": "s:25SmithyEventStreamsAuthAPI20MessageDecoderStreamP0B0Qa",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageDecoderStreamP0B0Qa",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "protocolReq": true
+          },
+          {
+            "kind": "Function",
+            "name": "toAsyncStream",
+            "printedName": "toAsyncStream()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0.Event, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Event"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25SmithyEventStreamsAuthAPI20MessageDecoderStreamPAAE07toAsyncH0Scsy7ElementQzs5Error_pGyF",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageDecoderStreamPAAE07toAsyncH0Scsy7ElementQzs5Error_pGyF",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAuthAPI.MessageDecoderStream>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAuthAPI.MessageDecoderStream>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25SmithyEventStreamsAuthAPI20MessageDecoderStreamP",
+        "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageDecoderStreamP",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "genericSig": "<τ_0_0 : _Concurrency.AsyncSequence, τ_0_0.Element == τ_0_0.Event>",
+        "sugared_genericSig": "<Self : _Concurrency.AsyncSequence, Self.Element == Self.Event>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyEventStreamsAPI",
+        "printedName": "SmithyEventStreamsAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageEncoderStream",
+        "printedName": "MessageEncoderStream",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Event",
+            "printedName": "Event",
+            "declKind": "AssociatedType",
+            "usr": "s:25SmithyEventStreamsAuthAPI20MessageEncoderStreamP0B0Qa",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageEncoderStreamP0B0Qa",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "protocolReq": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stream:messageEncoder:marshalClosure:messageSigner:initialRequestMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AsyncThrowingStream",
+                "printedName": "_Concurrency.AsyncThrowingStream<τ_0_0.Event, any Swift.Error>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Event"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Scs"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEncoder",
+                "printedName": "any SmithyEventStreamsAPI.MessageEncoder",
+                "usr": "s:21SmithyEventStreamsAPI14MessageEncoderP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0.Event) throws -> SmithyEventStreamsAPI.Message",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "SmithyEventStreamsAPI.Message",
+                    "usr": "s:21SmithyEventStreamsAPI7MessageV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Event"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageSigner",
+                "printedName": "any SmithyEventStreamsAuthAPI.MessageSigner",
+                "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyEventStreamsAPI.Message?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "SmithyEventStreamsAPI.Message",
+                    "usr": "s:21SmithyEventStreamsAPI7MessageV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:25SmithyEventStreamsAuthAPI20MessageEncoderStreamP6stream07messageG014marshalClosure0J6Signer014initialRequestF0xScsy0B0Qzs5Error_pG_0abcE00fG0_pAM0F0VAJKcAA0fM0_pAPSgtcfc",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageEncoderStreamP6stream07messageG014marshalClosure0J6Signer014initialRequestF0xScsy0B0Qzs5Error_pG_0abcE00fG0_pAM0F0VAJKcAA0fM0_pAPSgtcfc",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAuthAPI.MessageEncoderStream>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAuthAPI.MessageEncoderStream>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25SmithyEventStreamsAuthAPI20MessageEncoderStreamP",
+        "mangledName": "$s25SmithyEventStreamsAuthAPI20MessageEncoderStreamP",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "genericSig": "<τ_0_0 : Smithy.Stream, τ_0_0 : _Concurrency.AsyncSequence, τ_0_0.Element == Foundation.Data>",
+        "sugared_genericSig": "<Self : Smithy.Stream, Self : _Concurrency.AsyncSequence, Self.Element == Foundation.Data>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AsyncSequence",
+            "printedName": "AsyncSequence",
+            "usr": "s:Sci",
+            "mangledName": "$sSci"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Stream",
+            "printedName": "Stream",
+            "usr": "s:6Smithy6StreamP",
+            "mangledName": "$s6Smithy6StreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "WriteableStream",
+            "printedName": "WriteableStream",
+            "usr": "s:6Smithy15WriteableStreamP",
+            "mangledName": "$s6Smithy15WriteableStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReadableStream",
+            "printedName": "ReadableStream",
+            "usr": "s:6Smithy14ReadableStreamP",
+            "mangledName": "$s6Smithy14ReadableStreamP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyEventStreamsAPI",
+        "printedName": "SmithyEventStreamsAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageSigner",
+        "printedName": "MessageSigner",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sign",
+            "printedName": "sign(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP4sign7message0abcE00F0VAH_tYaKF",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI13MessageSignerP4sign7message0abcE00F0VAH_tYaKF",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAuthAPI.MessageSigner>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAuthAPI.MessageSigner>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Mutating",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "Mutating"
+          },
+          {
+            "kind": "Function",
+            "name": "signEmpty",
+            "printedName": "signEmpty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "SmithyEventStreamsAPI.Message",
+                "usr": "s:21SmithyEventStreamsAPI7MessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP9signEmpty0abcE00F0VyYaKF",
+            "mangledName": "$s25SmithyEventStreamsAuthAPI13MessageSignerP9signEmpty0abcE00F0VyYaKF",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyEventStreamsAuthAPI.MessageSigner>",
+            "sugared_genericSig": "<Self where Self : SmithyEventStreamsAuthAPI.MessageSigner>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP",
+        "mangledName": "$s25SmithyEventStreamsAuthAPI13MessageSignerP",
+        "moduleName": "SmithyEventStreamsAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Context",
+        "printedName": "Context",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "messageSigner",
+            "printedName": "messageSigner",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyEventStreamsAuthAPI.MessageSigner)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageSigner",
+                    "printedName": "any SmithyEventStreamsAuthAPI.MessageSigner",
+                    "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvp",
+            "mangledName": "$s6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvp",
+            "moduleName": "SmithyEventStreamsAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyEventStreamsAuthAPI.MessageSigner)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageSigner",
+                        "printedName": "any SmithyEventStreamsAuthAPI.MessageSigner",
+                        "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvg",
+                "mangledName": "$s6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvg",
+                "moduleName": "SmithyEventStreamsAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyEventStreamsAuthAPI.MessageSigner)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageSigner",
+                        "printedName": "any SmithyEventStreamsAuthAPI.MessageSigner",
+                        "usr": "s:25SmithyEventStreamsAuthAPI13MessageSignerP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvs",
+                "mangledName": "$s6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvs",
+                "moduleName": "SmithyEventStreamsAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvM",
+                "mangledName": "$s6Smithy7ContextC0A19EventStreamsAuthAPIE13messageSignerAD07MessageH0_pSgvM",
+                "moduleName": "SmithyEventStreamsAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Smithy7ContextC",
+        "mangledName": "$s6Smithy7ContextC",
+        "moduleName": "Smithy",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "HasAttributes",
+            "printedName": "HasAttributes",
+            "usr": "s:6Smithy13HasAttributesP",
+            "mangledName": "$s6Smithy13HasAttributesP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyEventStreamsAuthAPI\/Context+EventStreamsAuthAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 451,
+      "length": 18,
+      "value": "\"MessageSignerKey\""
+    }
+  ]
+}

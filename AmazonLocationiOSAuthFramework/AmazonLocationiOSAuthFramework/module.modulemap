@@ -1,20 +1,18 @@
-//
-//  module.map.modulemap
-//  AmazonLocationiOSAuthFramework
-//
-//  Created by Zeeshan Sheikh on 12/07/2024.
-//
-
 framework module AmazonLocationiOSAuthFramework {
   umbrella header "AmazonLocationiOSAuthFramework.h"
   export *
+
   module * { export * }
-  
-  module
-  
-//   Explicitly import the module for AmazonLocationiOSAuthSDK
-//  explicit module AmazonLocationiOSAuthSDK {
-//    header "<AmazonLocationiOSAuthSDK/AmazonLocationiOSAuthSDK.h>"
-//    export *
-//  }
+}
+
+module AmazonLocationiOSAuthFramework.Swift {
+  header "AmazonLocationiOSAuthFramework-Swift.h"
+  requires objc
+}
+
+module AmazonLocationiOSAuthSDK {
+  header "AmazonLocationiOSAuthSDK-Swift.h"
+  export *
+  module * { export * }
+  requires objc
 }

@@ -1,0 +1,1141 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultRetryStrategy",
+        "printedName": "DefaultRetryStrategy",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultRetryStrategy",
+                "printedName": "SmithyRetries.DefaultRetryStrategy",
+                "usr": "s:13SmithyRetries20DefaultRetryStrategyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryStrategyOptions",
+                "printedName": "SmithyRetriesAPI.RetryStrategyOptions",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SmithyRetries20DefaultRetryStrategyV7optionsAC0aB3API0dE7OptionsV_tcfc",
+            "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV7optionsAC0aB3API0dE7OptionsV_tcfc",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "acquireInitialRetryToken",
+            "printedName": "acquireInitialRetryToken(tokenScope:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultRetryToken",
+                "printedName": "SmithyRetries.DefaultRetryToken",
+                "usr": "s:13SmithyRetries17DefaultRetryTokenC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries20DefaultRetryStrategyV014acquireInitialD5Token10tokenScopeAA0cdH0CSS_tYaKF",
+            "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV014acquireInitialD5Token10tokenScopeAA0cdH0CSS_tYaKF",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshRetryTokenForRetry",
+            "printedName": "refreshRetryTokenForRetry(tokenToRenew:errorInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultRetryToken",
+                "printedName": "SmithyRetries.DefaultRetryToken",
+                "usr": "s:13SmithyRetries17DefaultRetryTokenC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorInfo",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries20DefaultRetryStrategyV07refreshd8TokenForD012tokenToRenew9errorInfoyAA0cdG0C_0aB3API0d5ErrorM0VtYaKF",
+            "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV07refreshd8TokenForD012tokenToRenew9errorInfoyAA0cdG0C_0aB3API0d5ErrorM0VtYaKF",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "recordSuccess",
+            "printedName": "recordSuccess(token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultRetryToken",
+                "printedName": "SmithyRetries.DefaultRetryToken",
+                "usr": "s:13SmithyRetries17DefaultRetryTokenC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries20DefaultRetryStrategyV13recordSuccess5tokenyAA0cD5TokenC_tYaF",
+            "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV13recordSuccess5tokenyAA0cD5TokenC_tYaF",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Error",
+            "printedName": "Error",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "insufficientQuota",
+                "printedName": "insufficientQuota",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyRetries.DefaultRetryStrategy.Error.Type) -> SmithyRetries.DefaultRetryStrategy.Error",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "SmithyRetries.DefaultRetryStrategy.Error",
+                        "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SmithyRetries.DefaultRetryStrategy.Error.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "SmithyRetries.DefaultRetryStrategy.Error",
+                            "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO17insufficientQuotayA2EmF",
+                "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO17insufficientQuotayA2EmF",
+                "moduleName": "SmithyRetries",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "SmithyRetries.DefaultRetryStrategy.Error",
+                    "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "SmithyRetries.DefaultRetryStrategy.Error",
+                    "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO2eeoiySbAE_AEtFZ",
+                "moduleName": "SmithyRetries",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO9hashValueSivp",
+                "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO9hashValueSivp",
+                "moduleName": "SmithyRetries",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO9hashValueSivg",
+                    "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO9hashValueSivg",
+                    "moduleName": "SmithyRetries",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO4hash4intoys6HasherVz_tF",
+                "moduleName": "SmithyRetries",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:13SmithyRetries20DefaultRetryStrategyV5ErrorO",
+            "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV5ErrorO",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SmithyRetries20DefaultRetryStrategyV",
+        "mangledName": "$s13SmithyRetries20DefaultRetryStrategyV",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RetryStrategy",
+            "printedName": "RetryStrategy",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Token",
+                "printedName": "Token",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultRetryToken",
+                    "printedName": "SmithyRetries.DefaultRetryToken",
+                    "usr": "s:13SmithyRetries17DefaultRetryTokenC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultRetryToken",
+        "printedName": "DefaultRetryToken",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "retryCount",
+            "printedName": "retryCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SmithyRetries17DefaultRetryTokenC10retryCountSivp",
+            "mangledName": "$s13SmithyRetries17DefaultRetryTokenC10retryCountSivp",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SmithyRetries17DefaultRetryTokenC10retryCountSivg",
+                "mangledName": "$s13SmithyRetries17DefaultRetryTokenC10retryCountSivg",
+                "moduleName": "SmithyRetries",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13SmithyRetries17DefaultRetryTokenC",
+        "mangledName": "$s13SmithyRetries17DefaultRetryTokenC",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RetryToken",
+            "printedName": "RetryToken",
+            "usr": "s:16SmithyRetriesAPI10RetryTokenP",
+            "mangledName": "$s16SmithyRetriesAPI10RetryTokenP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AwsCommonRuntimeKit",
+        "printedName": "AwsCommonRuntimeKit",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ExponentialBackOffJitterType",
+        "printedName": "ExponentialBackOffJitterType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetries.ExponentialBackOffJitterType.Type) -> SmithyRetries.ExponentialBackOffJitterType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExponentialBackOffJitterType",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                    "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExponentialBackOffJitterType",
+                        "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                        "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO7defaultyA2CmF",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO7defaultyA2CmF",
+            "moduleName": "SmithyRetries"
+          },
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetries.ExponentialBackOffJitterType.Type) -> SmithyRetries.ExponentialBackOffJitterType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExponentialBackOffJitterType",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                    "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExponentialBackOffJitterType",
+                        "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                        "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO4noneyA2CmF",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO4noneyA2CmF",
+            "moduleName": "SmithyRetries"
+          },
+          {
+            "kind": "Var",
+            "name": "full",
+            "printedName": "full",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetries.ExponentialBackOffJitterType.Type) -> SmithyRetries.ExponentialBackOffJitterType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExponentialBackOffJitterType",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                    "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExponentialBackOffJitterType",
+                        "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                        "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO4fullyA2CmF",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO4fullyA2CmF",
+            "moduleName": "SmithyRetries"
+          },
+          {
+            "kind": "Var",
+            "name": "decorrelated",
+            "printedName": "decorrelated",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetries.ExponentialBackOffJitterType.Type) -> SmithyRetries.ExponentialBackOffJitterType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExponentialBackOffJitterType",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                    "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetries.ExponentialBackOffJitterType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExponentialBackOffJitterType",
+                        "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                        "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO12decorrelatedyA2CmF",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO12decorrelatedyA2CmF",
+            "moduleName": "SmithyRetries"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExponentialBackOffJitterType",
+                "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExponentialBackOffJitterType",
+                "printedName": "SmithyRetries.ExponentialBackOffJitterType",
+                "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyRetries",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO9hashValueSivp",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO9hashValueSivp",
+            "moduleName": "SmithyRetries",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO9hashValueSivg",
+                "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO9hashValueSivg",
+                "moduleName": "SmithyRetries",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyRetries",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13SmithyRetries28ExponentialBackOffJitterTypeO",
+        "mangledName": "$s13SmithyRetries28ExponentialBackOffJitterTypeO",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ExponentialBackoffStrategy",
+        "printedName": "ExponentialBackoffStrategy",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExponentialBackoffStrategy",
+                "printedName": "SmithyRetries.ExponentialBackoffStrategy",
+                "usr": "s:13SmithyRetries26ExponentialBackoffStrategyV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SmithyRetries26ExponentialBackoffStrategyVACycfc",
+            "mangledName": "$s13SmithyRetries26ExponentialBackoffStrategyVACycfc",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "computeNextBackoffDelay",
+            "printedName": "computeNextBackoffDelay(attempt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyRetries26ExponentialBackoffStrategyV011computeNextD5Delay7attemptSdSi_tF",
+            "mangledName": "$s13SmithyRetries26ExponentialBackoffStrategyV011computeNextD5Delay7attemptSdSi_tF",
+            "moduleName": "SmithyRetries",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SmithyRetries26ExponentialBackoffStrategyV",
+        "mangledName": "$s13SmithyRetries26ExponentialBackoffStrategyV",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RetryBackoffStrategy",
+            "printedName": "RetryBackoffStrategy",
+            "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP",
+            "mangledName": "$s16SmithyRetriesAPI20RetryBackoffStrategyP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyRetriesAPI",
+        "printedName": "SmithyRetriesAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AwsCommonRuntimeKit",
+        "printedName": "AwsCommonRuntimeKit",
+        "declKind": "Import",
+        "moduleName": "SmithyRetries"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryErrorType",
+        "printedName": "RetryErrorType",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toCRTType",
+            "printedName": "toCRTType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RetryError",
+                "printedName": "AwsCommonRuntimeKit.RetryError",
+                "usr": "s:19AwsCommonRuntimeKit10RetryErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO0aB0E9toCRTType19AwsCommonRuntimeKit0dE0OyF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO0aB0E9toCRTType19AwsCommonRuntimeKit0dE0OyF",
+            "moduleName": "SmithyRetries",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO",
+        "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO",
+        "moduleName": "SmithyRetriesAPI",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 335,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 369,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 398,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 417,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 445,
+      "length": 3,
+      "value": "0.4"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 552,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 586,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 624,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 667,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 689,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 728,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 793,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 825,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 1024,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/ClientSideRateLimiter.swift",
+      "kind": "FloatLiteral",
+      "offset": 1683,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/DefaultRetryStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 763,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/DefaultRetryStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 840,
+      "length": 15,
+      "value": "1000000000.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/DefaultRetryStrategy\/DefaultRetryToken.swift",
+      "kind": "IntegerLiteral",
+      "offset": 696,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/ExponentialBackoffStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 409,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/ExponentialBackoffStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 415,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/ExponentialBackoffStrategy.swift",
+      "kind": "FloatLiteral",
+      "offset": 479,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/ExponentialBackoffStrategyOptions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1014,
+      "length": 5,
+      "value": "0.025"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetries\/ExponentialBackoffStrategyOptions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1056,
+      "length": 4,
+      "value": "20.0"
+    }
+  ]
+}

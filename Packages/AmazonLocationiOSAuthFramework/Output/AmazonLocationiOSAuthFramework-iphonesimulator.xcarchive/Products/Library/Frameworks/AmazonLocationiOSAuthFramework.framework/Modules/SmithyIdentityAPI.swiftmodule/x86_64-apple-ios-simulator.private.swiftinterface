@@ -1,0 +1,48 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyIdentityAPI
+import Foundation/*.Date*/
+import Smithy/*.AttributeKey*/
+import Smithy/*.Attributes*/
+import Smithy/*.Context*/
+import Smithy/*.ContextBuilder*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public let flowTypeKey: Smithy.AttributeKey<SmithyIdentityAPI.FlowType>
+extension Smithy.Context {
+  public func getFlowType() -> SmithyIdentityAPI.FlowType
+}
+extension Smithy.ContextBuilder {
+  @discardableResult
+  public func withFlowType(value: SmithyIdentityAPI.FlowType) -> Self
+}
+extension Smithy.Context {
+  public func getIdentityResolvers() -> Smithy.Attributes?
+}
+extension Smithy.ContextBuilder {
+  @discardableResult
+  public func removeIdentityResolvers() -> Self
+  @discardableResult
+  public func withIdentityResolver<T>(value: T, schemeID: Swift.String) -> Self where T : SmithyIdentityAPI.IdentityResolver
+}
+public enum FlowType {
+  case NORMAL, PRESIGN_REQUEST, PRESIGN_URL
+  public static func == (a: SmithyIdentityAPI.FlowType, b: SmithyIdentityAPI.FlowType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Identity {
+  var expiration: Foundation.Date? { get }
+}
+public protocol IdentityResolver {
+  associatedtype IdentityT : SmithyIdentityAPI.Identity
+  #if compiler(>=5.3) && $AsyncAwait
+  func getIdentity(identityProperties: Smithy.Attributes?) async throws -> Self.IdentityT
+  #endif
+}
+extension SmithyIdentityAPI.FlowType : Swift.Equatable {}
+extension SmithyIdentityAPI.FlowType : Swift.Hashable {}

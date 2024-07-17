@@ -1,0 +1,2244 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NodeInfo",
+        "printedName": "NodeInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SmithyJSON8NodeInfoV4nameSSvp",
+            "mangledName": "$s10SmithyJSON8NodeInfoV4nameSSvp",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON8NodeInfoV4nameSSvg",
+                "mangledName": "$s10SmithyJSON8NodeInfoV4nameSSvg",
+                "moduleName": "SmithyJSON",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SmithyJSON8NodeInfoVyACSScfc",
+            "mangledName": "$s10SmithyJSON8NodeInfoVyACSScfc",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON8NodeInfoV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10SmithyJSON8NodeInfoV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyJSON",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SmithyJSON8NodeInfoV13stringLiteralACSS_tcfc",
+            "mangledName": "$s10SmithyJSON8NodeInfoV13stringLiteralACSS_tcfc",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SmithyJSON8NodeInfoV",
+        "mangledName": "$s10SmithyJSON8NodeInfoV",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreFoundation",
+        "printedName": "CoreFoundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreFoundation",
+        "printedName": "CoreFoundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Reader",
+        "printedName": "Reader",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nodeInfo",
+            "printedName": "nodeInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SmithyJSON6ReaderC8nodeInfoAA04NodeE0Vvp",
+            "mangledName": "$s10SmithyJSON6ReaderC8nodeInfoAA04NodeE0Vvp",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyJSON.NodeInfo",
+                    "usr": "s:10SmithyJSON8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6ReaderC8nodeInfoAA04NodeE0Vvg",
+                "mangledName": "$s10SmithyJSON6ReaderC8nodeInfoAA04NodeE0Vvg",
+                "moduleName": "SmithyJSON",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "children",
+            "printedName": "children",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyJSON.Reader]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyJSON.Reader",
+                    "usr": "s:10SmithyJSON6ReaderC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SmithyJSON6ReaderC8childrenSayACGvp",
+            "mangledName": "$s10SmithyJSON6ReaderC8childrenSayACGvp",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyJSON.Reader]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reader",
+                        "printedName": "SmithyJSON.Reader",
+                        "usr": "s:10SmithyJSON6ReaderC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6ReaderC8childrenSayACGvg",
+                "mangledName": "$s10SmithyJSON6ReaderC8childrenSayACGvg",
+                "moduleName": "SmithyJSON",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parent",
+            "printedName": "parent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "SmithyJSON.Reader?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SmithyJSON6ReaderC6parentACSgvp",
+            "mangledName": "$s10SmithyJSON6ReaderC6parentACSgvp",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyJSON.Reader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reader",
+                        "printedName": "SmithyJSON.Reader",
+                        "usr": "s:10SmithyJSON6ReaderC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6ReaderC6parentACSgvg",
+                "mangledName": "$s10SmithyJSON6ReaderC6parentACSgvg",
+                "moduleName": "SmithyJSON",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasContent",
+            "printedName": "hasContent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SmithyJSON6ReaderC10hasContentSbvp",
+            "mangledName": "$s10SmithyJSON6ReaderC10hasContentSbvp",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6ReaderC10hasContentSbvg",
+                "mangledName": "$s10SmithyJSON6ReaderC10hasContentSbvg",
+                "moduleName": "SmithyJSON",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "from",
+            "printedName": "from(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reader",
+                "printedName": "SmithyJSON.Reader",
+                "usr": "s:10SmithyJSON6ReaderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC4from4dataAC10Foundation4DataV_tKFZ",
+            "mangledName": "$s10SmithyJSON6ReaderC4from4dataAC10Foundation4DataV_tKFZ",
+            "moduleName": "SmithyJSON",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reader",
+                "printedName": "SmithyJSON.Reader",
+                "usr": "s:10SmithyJSON6ReaderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:10SmithyJSON6ReaderCyAcA8NodeInfoVcip",
+            "mangledName": "$s10SmithyJSON6ReaderCyAcA8NodeInfoVcip",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyJSON.Reader",
+                    "usr": "s:10SmithyJSON6ReaderC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyJSON.NodeInfo",
+                    "usr": "s:10SmithyJSON8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6ReaderCyAcA8NodeInfoVcig",
+                "mangledName": "$s10SmithyJSON6ReaderCyAcA8NodeInfoVcig",
+                "moduleName": "SmithyJSON",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentSSSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentSSSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresents4Int8VSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresents4Int8VSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresents5Int16VSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresents5Int16VSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentSiSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentSiSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Float?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentSfSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentSfSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentSdSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentSdSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentSbSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentSbSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresent10Foundation4DataVSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresent10Foundation4DataVSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyReadWrite.Document?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Document",
+                    "printedName": "SmithyReadWrite.Document",
+                    "usr": "s:15SmithyReadWrite8DocumentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresent0A9ReadWrite8DocumentOSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresent0A9ReadWrite8DocumentOSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readTimestampIfPresent",
+            "printedName": "readTimestampIfPresent(format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC22readTimestampIfPresent6format10Foundation4DateVSg0A10Timestamps0E6FormatO_tKF",
+            "mangledName": "$s10SmithyJSON6ReaderC22readTimestampIfPresent6format10Foundation4DateVSg0A10Timestamps0E6FormatO_tKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentxSgyKSYRzSi8RawValueRtzlF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentxSgyKSYRzSi8RawValueRtzlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.Int>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.Int>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readIfPresent",
+            "printedName": "readIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC13readIfPresentxSgyKSYRzSS8RawValueRtzlF",
+            "mangledName": "$s10SmithyJSON6ReaderC13readIfPresentxSgyKSYRzSS8RawValueRtzlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.String>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readMapIfPresent",
+            "printedName": "readMapIfPresent(valueReadingClosure:keyNodeInfo:valueNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyJSON.Reader) throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyJSON.Reader",
+                    "usr": "s:10SmithyJSON6ReaderC"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC16readMapIfPresent19valueReadingClosure11keyNodeInfo0hlM011isFlattenedSDySSxGSgxACKXE_AA0lM0VALSbtKlF",
+            "mangledName": "$s10SmithyJSON6ReaderC16readMapIfPresent19valueReadingClosure11keyNodeInfo0hlM011isFlattenedSDySSxGSgxACKXE_AA0lM0VALSbtKlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readListIfPresent",
+            "printedName": "readListIfPresent(memberReadingClosure:memberNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyJSON.Reader) throws -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Reader",
+                    "printedName": "SmithyJSON.Reader",
+                    "usr": "s:10SmithyJSON6ReaderC"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC17readListIfPresent20memberReadingClosure0H8NodeInfo11isFlattenedSayxGSgxACKXE_AA0kL0VSbtKlF",
+            "mangledName": "$s10SmithyJSON6ReaderC17readListIfPresent20memberReadingClosure0H8NodeInfo11isFlattenedSayxGSgxACKXE_AA0kL0VSbtKlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Member>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readNullIfPresent",
+            "printedName": "readNullIfPresent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6ReaderC17readNullIfPresentSbSgyKF",
+            "mangledName": "$s10SmithyJSON6ReaderC17readNullIfPresentSbSgyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10SmithyJSON6ReaderC",
+        "mangledName": "$s10SmithyJSON6ReaderC",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SmithyReader",
+            "printedName": "SmithyReader",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "NodeInfo",
+                "printedName": "NodeInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyJSON.NodeInfo",
+                    "usr": "s:10SmithyJSON8NodeInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15SmithyReadWrite0A6ReaderP",
+            "mangledName": "$s15SmithyReadWrite0A6ReaderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyJSON"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Writer",
+        "printedName": "Writer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nodeInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyJSON.Writer",
+                "usr": "s:10SmithyJSON6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SmithyJSON6WriterC8nodeInfoAcA04NodeE0V_tcfc",
+            "mangledName": "$s10SmithyJSON6WriterC8nodeInfoAcA04NodeE0V_tcfc",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nodeInfo:parent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyJSON.Writer",
+                "usr": "s:10SmithyJSON6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyJSON.Writer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Writer",
+                    "printedName": "SmithyJSON.Writer",
+                    "usr": "s:10SmithyJSON6WriterC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SmithyJSON6WriterC8nodeInfo6parentAcA04NodeE0V_ACSgtcfc",
+            "mangledName": "$s10SmithyJSON6WriterC8nodeInfo6parentAcA04NodeE0V_ACSgtcfc",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC4data10Foundation4DataVyKF",
+            "mangledName": "$s10SmithyJSON6WriterC4data10Foundation4DataVyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyJSON.Writer",
+                "usr": "s:10SmithyJSON6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:10SmithyJSON6WriterCyAcA8NodeInfoVcip",
+            "mangledName": "$s10SmithyJSON6WriterCyAcA8NodeInfoVcip",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Writer",
+                    "printedName": "SmithyJSON.Writer",
+                    "usr": "s:10SmithyJSON6WriterC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyJSON.NodeInfo",
+                    "usr": "s:10SmithyJSON8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SmithyJSON6WriterCyAcA8NodeInfoVcig",
+                "mangledName": "$s10SmithyJSON6WriterCyAcA8NodeInfoVcig",
+                "moduleName": "SmithyJSON",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyySbSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyySbSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyySSSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyySSSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyySdSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyySdSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Float?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyySfSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyySfSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyySiSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyySiSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyys4Int8VSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyys4Int8VSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyys5Int16VSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyys5Int16VSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyys5UInt8VSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyys5UInt8VSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyy10Foundation4DataVSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyy10Foundation4DataVSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyReadWrite.Document?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Document",
+                    "printedName": "SmithyReadWrite.Document",
+                    "usr": "s:15SmithyReadWrite8DocumentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeTimestamp",
+            "printedName": "writeTimestamp(_:format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0E6FormatOtKF",
+            "mangledName": "$s10SmithyJSON6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0E6FormatOtKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.Int>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.Int>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "mangledName": "$s10SmithyJSON6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.String>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeMap",
+            "printedName": "writeMap(_:valueWritingClosure:keyNodeInfo:valueNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyJSON.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyJSON.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyJSON.Writer",
+                        "usr": "s:10SmithyJSON6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0fjK011isFlattenedySDySSxGSg_yx_ACtKXEAA0jK0VALSbtKlF",
+            "mangledName": "$s10SmithyJSON6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0fjK011isFlattenedySDySSxGSg_yx_ACtKXEAA0jK0VALSbtKlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeList",
+            "printedName": "writeList(_:memberWritingClosure:memberNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyJSON.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyJSON.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyJSON.Writer",
+                        "usr": "s:10SmithyJSON6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyJSON.NodeInfo",
+                "usr": "s:10SmithyJSON8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC9writeList_20memberWritingClosure0F8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0iJ0VSbtKlF",
+            "mangledName": "$s10SmithyJSON6WriterC9writeList_20memberWritingClosure0F8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0iJ0VSbtKlF",
+            "moduleName": "SmithyJSON",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeNull",
+            "printedName": "writeNull()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SmithyJSON6WriterC9writeNullyyKF",
+            "mangledName": "$s10SmithyJSON6WriterC9writeNullyyKF",
+            "moduleName": "SmithyJSON",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10SmithyJSON6WriterC",
+        "mangledName": "$s10SmithyJSON6WriterC",
+        "moduleName": "SmithyJSON",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SmithyWriter",
+            "printedName": "SmithyWriter",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "NodeInfo",
+                "printedName": "NodeInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyJSON.NodeInfo",
+                    "usr": "s:10SmithyJSON8NodeInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15SmithyReadWrite0A6WriterP",
+            "mangledName": "$s15SmithyReadWrite0A6WriterP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyJSON\/Writer\/Writer.swift",
+      "kind": "Array",
+      "offset": 571,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

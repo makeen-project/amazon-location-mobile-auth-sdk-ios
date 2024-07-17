@@ -1,0 +1,2202 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name aws_sdk_swift -module-name AWSLocation
+import AWSClientRuntime/*.AWSClientConfigDefaultsProvider*/
+import AWSClientRuntime/*.AWSDefaultClientConfiguration*/
+import AWSClientRuntime/*.AWSRegionClientConfiguration*/
+import AWSClientRuntime/*.AWSRetryErrorInfoProvider*/
+import AWSClientRuntime/*.AWSRetryMode*/
+import AWSClientRuntime/*.AWSServiceError*/
+import AWSClientRuntime/*.AWSUserAgentMetadata*/
+import AWSClientRuntime/*.DefaultAWSClientPlugin*/
+import AWSClientRuntime/*.EndpointResolverMiddleware*/
+import AWSClientRuntime/*.RestJSONError*/
+import AWSClientRuntime/*.UnknownAWSHTTPServiceError*/
+import AWSClientRuntime/*.UserAgentMiddleware*/
+import AWSClientRuntime/*.awsPartitionJSON*/
+import AWSSDKHTTPAuth/*.SigV4AuthScheme*/
+import ClientRuntime/*.AuthSchemeMiddleware*/
+import ClientRuntime/*.BodyMiddleware*/
+import ClientRuntime/*.Client*/
+import ClientRuntime/*.ClientBuilder*/
+import ClientRuntime/*.ClientConfiguration*/
+import ClientRuntime/*.ClientLogMode*/
+import ClientRuntime/*.ContentLengthMiddleware*/
+import ClientRuntime/*.ContentTypeMiddleware*/
+import ClientRuntime/*.DefaultClientConfiguration*/
+import ClientRuntime/*.DefaultClientPlugin*/
+import ClientRuntime/*.DefaultEndpointResolver*/
+import ClientRuntime/*.DefaultHttpClientConfiguration*/
+import ClientRuntime/*.DefaultTelemetry*/
+import ClientRuntime/*.DeserializeMiddleware*/
+import ClientRuntime/*.EndpointsRequestContext*/
+import ClientRuntime/*.EndpointsRequestContextProviding*/
+import ClientRuntime/*.ErrorFault*/
+import ClientRuntime/*.HTTPError*/
+import ClientRuntime/*.HttpClientConfiguration*/
+import ClientRuntime/*.IdempotencyTokenGenerator*/
+import ClientRuntime/*.LoggerMiddleware*/
+import ClientRuntime/*.ModeledError*/
+import ClientRuntime/*.OperationStack*/
+import ClientRuntime/*.Plugin*/
+import ClientRuntime/*.QueryItemMiddleware*/
+import ClientRuntime/*.RetryMiddleware*/
+import ClientRuntime/*.SdkHttpClient*/
+import ClientRuntime/*.SignerMiddleware*/
+import ClientRuntime/*.TelemetryProvider*/
+import ClientRuntime/*.URLHostMiddleware*/
+import ClientRuntime/*.URLPathMiddleware*/
+import Foundation
+import Smithy/*.ClientError*/
+import Smithy/*.Context*/
+import Smithy/*.ContextBuilder*/
+import Smithy/*.LogAgent*/
+import Smithy/*.URIQueryItem*/
+import SmithyHTTPAPI/*.Endpoint*/
+import SmithyHTTPAPI/*.HTTPClient*/
+import SmithyHTTPAPI/*.HttpResponse*/
+import SmithyHTTPAuthAPI/*.AuthOption*/
+import SmithyHTTPAuthAPI/*.AuthSchemeResolver*/
+import SmithyHTTPAuthAPI/*.AuthSchemeResolverParameters*/
+import SmithyHTTPAuthAPI/*.AuthSchemes*/
+import SmithyHTTPAuthAPI/*.SigningPropertyKeys*/
+import SmithyIdentity/*.AWSCredentialIdentityResolver*/
+import SmithyJSON/*.Reader*/
+import SmithyJSON/*.Writer*/
+import SmithyReadWrite/*.ReaderError*/
+import SmithyReadWrite/*.ReadingClosures*/
+import SmithyReadWrite/*.WritingClosures*/
+import SmithyReadWrite/*.listReadingClosure*/
+import SmithyReadWrite/*.listWritingClosure*/
+import SmithyRetries/*.DefaultRetryStrategy*/
+import SmithyRetriesAPI/*.RetryStrategyOptions*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct LocationAuthSchemeResolverParameters : SmithyHTTPAuthAPI.AuthSchemeResolverParameters {
+  public let operation: Swift.String
+  public let region: Swift.String?
+}
+public protocol LocationAuthSchemeResolver : SmithyHTTPAuthAPI.AuthSchemeResolver {
+}
+public struct DefaultLocationAuthSchemeResolver : AWSLocation.LocationAuthSchemeResolver {
+  public func resolveAuthScheme(params: any SmithyHTTPAuthAPI.AuthSchemeResolverParameters) throws -> [SmithyHTTPAuthAPI.AuthOption]
+  public func constructParameters(context: Smithy.Context) throws -> any SmithyHTTPAuthAPI.AuthSchemeResolverParameters
+}
+public struct EndpointParams {
+  public let endpoint: Swift.String?
+  public let region: Swift.String?
+  public let useDualStack: Swift.Bool
+  public let useFIPS: Swift.Bool
+  public init(endpoint: Swift.String? = nil, region: Swift.String? = nil, useDualStack: Swift.Bool = false, useFIPS: Swift.Bool = false)
+}
+extension AWSLocation.EndpointParams : ClientRuntime.EndpointsRequestContextProviding {
+  #if compiler(>=5.3) && $EffectfulProp
+  public var context: ClientRuntime.EndpointsRequestContext {
+    get throws
+  }
+  #endif
+}
+public protocol EndpointResolver {
+  func resolve(params: AWSLocation.EndpointParams) throws -> SmithyHTTPAPI.Endpoint
+}
+extension ClientRuntime.DefaultEndpointResolver : AWSLocation.EndpointResolver where Params == AWSLocation.EndpointParams {
+}
+public class LocationClient : ClientRuntime.Client {
+  public static let clientName: Swift.String
+  required public init(config: AWSLocation.LocationClient.LocationClientConfiguration)
+  convenience public init(region: Swift.String) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  convenience required public init() async throws
+  #endif
+  public typealias Config = AWSLocation.LocationClient.LocationClientConfiguration
+  @objc deinit
+}
+extension AWSLocation.LocationClient {
+  @_hasMissingDesignatedInitializers public class LocationClientConfiguration : AWSClientRuntime.AWSDefaultClientConfiguration & AWSClientRuntime.AWSRegionClientConfiguration & ClientRuntime.DefaultClientConfiguration & ClientRuntime.DefaultHttpClientConfiguration {
+    public var useFIPS: Swift.Bool?
+    public var useDualStack: Swift.Bool?
+    public var appID: Swift.String?
+    public var awsCredentialIdentityResolver: any SmithyIdentity.AWSCredentialIdentityResolver
+    public var awsRetryMode: AWSClientRuntime.AWSRetryMode
+    public var region: Swift.String?
+    public var signingRegion: Swift.String?
+    public var endpointResolver: any AWSLocation.EndpointResolver
+    public var telemetryProvider: any ClientRuntime.TelemetryProvider
+    public var retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions
+    public var clientLogMode: ClientRuntime.ClientLogMode
+    public var endpoint: Swift.String?
+    public var idempotencyTokenGenerator: any ClientRuntime.IdempotencyTokenGenerator
+    public var httpClientEngine: any SmithyHTTPAPI.HTTPClient
+    public var httpClientConfiguration: ClientRuntime.HttpClientConfiguration
+    public var authSchemes: SmithyHTTPAuthAPI.AuthSchemes?
+    public var authSchemeResolver: any SmithyHTTPAuthAPI.AuthSchemeResolver
+    convenience public init(useFIPS: Swift.Bool? = nil, useDualStack: Swift.Bool? = nil, appID: Swift.String? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil, awsRetryMode: AWSClientRuntime.AWSRetryMode? = nil, region: Swift.String? = nil, signingRegion: Swift.String? = nil, endpointResolver: (any AWSLocation.EndpointResolver)? = nil, telemetryProvider: (any ClientRuntime.TelemetryProvider)? = nil, retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions? = nil, clientLogMode: ClientRuntime.ClientLogMode? = nil, endpoint: Swift.String? = nil, idempotencyTokenGenerator: (any ClientRuntime.IdempotencyTokenGenerator)? = nil, httpClientEngine: (any SmithyHTTPAPI.HTTPClient)? = nil, httpClientConfiguration: ClientRuntime.HttpClientConfiguration? = nil, authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any SmithyHTTPAuthAPI.AuthSchemeResolver)? = nil) throws
+    #if compiler(>=5.3) && $AsyncAwait
+    convenience public init(useFIPS: Swift.Bool? = nil, useDualStack: Swift.Bool? = nil, appID: Swift.String? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil, awsRetryMode: AWSClientRuntime.AWSRetryMode? = nil, region: Swift.String? = nil, signingRegion: Swift.String? = nil, endpointResolver: (any AWSLocation.EndpointResolver)? = nil, telemetryProvider: (any ClientRuntime.TelemetryProvider)? = nil, retryStrategyOptions: SmithyRetriesAPI.RetryStrategyOptions? = nil, clientLogMode: ClientRuntime.ClientLogMode? = nil, endpoint: Swift.String? = nil, idempotencyTokenGenerator: (any ClientRuntime.IdempotencyTokenGenerator)? = nil, httpClientEngine: (any SmithyHTTPAPI.HTTPClient)? = nil, httpClientConfiguration: ClientRuntime.HttpClientConfiguration? = nil, authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any SmithyHTTPAuthAPI.AuthSchemeResolver)? = nil) async throws
+    #endif
+    #if compiler(>=5.3) && $AsyncAwait
+    convenience required public init() async throws
+    #endif
+    convenience public init(region: Swift.String) throws
+    public var partitionID: Swift.String? {
+      get
+    }
+    @objc deinit
+  }
+  public static func builder() -> ClientRuntime.ClientBuilder<AWSLocation.LocationClient>
+}
+extension AWSLocation.LocationClient {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func associateTrackerConsumer(input: AWSLocation.AssociateTrackerConsumerInput) async throws -> AWSLocation.AssociateTrackerConsumerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchDeleteDevicePositionHistory(input: AWSLocation.BatchDeleteDevicePositionHistoryInput) async throws -> AWSLocation.BatchDeleteDevicePositionHistoryOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchDeleteGeofence(input: AWSLocation.BatchDeleteGeofenceInput) async throws -> AWSLocation.BatchDeleteGeofenceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchEvaluateGeofences(input: AWSLocation.BatchEvaluateGeofencesInput) async throws -> AWSLocation.BatchEvaluateGeofencesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchGetDevicePosition(input: AWSLocation.BatchGetDevicePositionInput) async throws -> AWSLocation.BatchGetDevicePositionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchPutGeofence(input: AWSLocation.BatchPutGeofenceInput) async throws -> AWSLocation.BatchPutGeofenceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func batchUpdateDevicePosition(input: AWSLocation.BatchUpdateDevicePositionInput) async throws -> AWSLocation.BatchUpdateDevicePositionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func calculateRoute(input: AWSLocation.CalculateRouteInput) async throws -> AWSLocation.CalculateRouteOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func calculateRouteMatrix(input: AWSLocation.CalculateRouteMatrixInput) async throws -> AWSLocation.CalculateRouteMatrixOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createGeofenceCollection(input: AWSLocation.CreateGeofenceCollectionInput) async throws -> AWSLocation.CreateGeofenceCollectionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createKey(input: AWSLocation.CreateKeyInput) async throws -> AWSLocation.CreateKeyOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createMap(input: AWSLocation.CreateMapInput) async throws -> AWSLocation.CreateMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createPlaceIndex(input: AWSLocation.CreatePlaceIndexInput) async throws -> AWSLocation.CreatePlaceIndexOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createRouteCalculator(input: AWSLocation.CreateRouteCalculatorInput) async throws -> AWSLocation.CreateRouteCalculatorOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createTracker(input: AWSLocation.CreateTrackerInput) async throws -> AWSLocation.CreateTrackerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteGeofenceCollection(input: AWSLocation.DeleteGeofenceCollectionInput) async throws -> AWSLocation.DeleteGeofenceCollectionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteKey(input: AWSLocation.DeleteKeyInput) async throws -> AWSLocation.DeleteKeyOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteMap(input: AWSLocation.DeleteMapInput) async throws -> AWSLocation.DeleteMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deletePlaceIndex(input: AWSLocation.DeletePlaceIndexInput) async throws -> AWSLocation.DeletePlaceIndexOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteRouteCalculator(input: AWSLocation.DeleteRouteCalculatorInput) async throws -> AWSLocation.DeleteRouteCalculatorOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func deleteTracker(input: AWSLocation.DeleteTrackerInput) async throws -> AWSLocation.DeleteTrackerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeGeofenceCollection(input: AWSLocation.DescribeGeofenceCollectionInput) async throws -> AWSLocation.DescribeGeofenceCollectionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeKey(input: AWSLocation.DescribeKeyInput) async throws -> AWSLocation.DescribeKeyOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeMap(input: AWSLocation.DescribeMapInput) async throws -> AWSLocation.DescribeMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describePlaceIndex(input: AWSLocation.DescribePlaceIndexInput) async throws -> AWSLocation.DescribePlaceIndexOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeRouteCalculator(input: AWSLocation.DescribeRouteCalculatorInput) async throws -> AWSLocation.DescribeRouteCalculatorOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func describeTracker(input: AWSLocation.DescribeTrackerInput) async throws -> AWSLocation.DescribeTrackerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func disassociateTrackerConsumer(input: AWSLocation.DisassociateTrackerConsumerInput) async throws -> AWSLocation.DisassociateTrackerConsumerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func forecastGeofenceEvents(input: AWSLocation.ForecastGeofenceEventsInput) async throws -> AWSLocation.ForecastGeofenceEventsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getDevicePosition(input: AWSLocation.GetDevicePositionInput) async throws -> AWSLocation.GetDevicePositionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getDevicePositionHistory(input: AWSLocation.GetDevicePositionHistoryInput) async throws -> AWSLocation.GetDevicePositionHistoryOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getGeofence(input: AWSLocation.GetGeofenceInput) async throws -> AWSLocation.GetGeofenceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMapGlyphs(input: AWSLocation.GetMapGlyphsInput) async throws -> AWSLocation.GetMapGlyphsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMapSprites(input: AWSLocation.GetMapSpritesInput) async throws -> AWSLocation.GetMapSpritesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMapStyleDescriptor(input: AWSLocation.GetMapStyleDescriptorInput) async throws -> AWSLocation.GetMapStyleDescriptorOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMapTile(input: AWSLocation.GetMapTileInput) async throws -> AWSLocation.GetMapTileOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getPlace(input: AWSLocation.GetPlaceInput) async throws -> AWSLocation.GetPlaceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listDevicePositions(input: AWSLocation.ListDevicePositionsInput) async throws -> AWSLocation.ListDevicePositionsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listGeofenceCollections(input: AWSLocation.ListGeofenceCollectionsInput) async throws -> AWSLocation.ListGeofenceCollectionsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listGeofences(input: AWSLocation.ListGeofencesInput) async throws -> AWSLocation.ListGeofencesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listKeys(input: AWSLocation.ListKeysInput) async throws -> AWSLocation.ListKeysOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listMaps(input: AWSLocation.ListMapsInput) async throws -> AWSLocation.ListMapsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listPlaceIndexes(input: AWSLocation.ListPlaceIndexesInput) async throws -> AWSLocation.ListPlaceIndexesOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listRouteCalculators(input: AWSLocation.ListRouteCalculatorsInput) async throws -> AWSLocation.ListRouteCalculatorsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listTagsForResource(input: AWSLocation.ListTagsForResourceInput) async throws -> AWSLocation.ListTagsForResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listTrackerConsumers(input: AWSLocation.ListTrackerConsumersInput) async throws -> AWSLocation.ListTrackerConsumersOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func listTrackers(input: AWSLocation.ListTrackersInput) async throws -> AWSLocation.ListTrackersOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func putGeofence(input: AWSLocation.PutGeofenceInput) async throws -> AWSLocation.PutGeofenceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func searchPlaceIndexForPosition(input: AWSLocation.SearchPlaceIndexForPositionInput) async throws -> AWSLocation.SearchPlaceIndexForPositionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func searchPlaceIndexForSuggestions(input: AWSLocation.SearchPlaceIndexForSuggestionsInput) async throws -> AWSLocation.SearchPlaceIndexForSuggestionsOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func searchPlaceIndexForText(input: AWSLocation.SearchPlaceIndexForTextInput) async throws -> AWSLocation.SearchPlaceIndexForTextOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func tagResource(input: AWSLocation.TagResourceInput) async throws -> AWSLocation.TagResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func untagResource(input: AWSLocation.UntagResourceInput) async throws -> AWSLocation.UntagResourceOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateGeofenceCollection(input: AWSLocation.UpdateGeofenceCollectionInput) async throws -> AWSLocation.UpdateGeofenceCollectionOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateKey(input: AWSLocation.UpdateKeyInput) async throws -> AWSLocation.UpdateKeyOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateMap(input: AWSLocation.UpdateMapInput) async throws -> AWSLocation.UpdateMapOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updatePlaceIndex(input: AWSLocation.UpdatePlaceIndexInput) async throws -> AWSLocation.UpdatePlaceIndexOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateRouteCalculator(input: AWSLocation.UpdateRouteCalculatorInput) async throws -> AWSLocation.UpdateRouteCalculatorOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func updateTracker(input: AWSLocation.UpdateTrackerInput) async throws -> AWSLocation.UpdateTrackerOutput
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func verifyDevicePosition(input: AWSLocation.VerifyDevicePositionInput) async throws -> AWSLocation.VerifyDevicePositionOutput
+  #endif
+}
+public struct AccessDeniedException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.AccessDeniedException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public enum Status : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case active
+    case expired
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.Status] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.Status]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ApiKeyFilter {
+    public var keyStatus: AWSLocation.LocationClientTypes.Status?
+    public init(keyStatus: AWSLocation.LocationClientTypes.Status? = nil)
+  }
+}
+public struct ConflictException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.ConflictException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct InternalServerException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.InternalServerException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct ServiceQuotaExceededException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.ServiceQuotaExceededException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct ThrottlingException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.ThrottlingException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ValidationExceptionField {
+    public var message: Swift.String?
+    public var name: Swift.String?
+    public init(message: Swift.String? = nil, name: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum ValidationExceptionReason : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case cannotparse
+    case fieldvalidationfailed
+    case missing
+    case other
+    case unknownoperation
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.ValidationExceptionReason] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.ValidationExceptionReason]
+    public typealias RawValue = Swift.String
+  }
+}
+public struct ValidationException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var fieldList: [AWSLocation.LocationClientTypes.ValidationExceptionField]? {
+      get
+    }
+    public var message: Swift.String? {
+      get
+    }
+    public var reason: AWSLocation.LocationClientTypes.ValidationExceptionReason? {
+      get
+    }
+  }
+  public var properties: AWSLocation.ValidationException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(fieldList: [AWSLocation.LocationClientTypes.ValidationExceptionField]? = nil, message: Swift.String? = nil, reason: AWSLocation.LocationClientTypes.ValidationExceptionReason? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ApiKeyRestrictions {
+    public var allowActions: [Swift.String]?
+    public var allowReferers: [Swift.String]?
+    public var allowResources: [Swift.String]?
+    public init(allowActions: [Swift.String]? = nil, allowReferers: [Swift.String]? = nil, allowResources: [Swift.String]? = nil)
+  }
+}
+public struct CreateKeyInput {
+  public var description: Swift.String?
+  public var expireTime: Foundation.Date?
+  public var keyName: Swift.String?
+  public var noExpiry: Swift.Bool?
+  public var restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions?
+  public var tags: [Swift.String : Swift.String]?
+  public init(description: Swift.String? = nil, expireTime: Foundation.Date? = nil, keyName: Swift.String? = nil, noExpiry: Swift.Bool? = nil, restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct CreateKeyOutput {
+  public var createTime: Foundation.Date?
+  public var key: Swift.String?
+  public var keyArn: Swift.String?
+  public var keyName: Swift.String?
+  public init(createTime: Foundation.Date? = nil, key: Swift.String? = nil, keyArn: Swift.String? = nil, keyName: Swift.String? = nil)
+}
+extension AWSLocation.CreateKeyOutput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ResourceNotFoundException : ClientRuntime.ModeledError, AWSClientRuntime.AWSServiceError, ClientRuntime.HTTPError, Swift.Error {
+  public struct Properties {
+    public var message: Swift.String? {
+      get
+    }
+  }
+  public var properties: AWSLocation.ResourceNotFoundException.Properties {
+    get
+  }
+  public static var typeName: Swift.String {
+    get
+  }
+  public static var fault: ClientRuntime.ErrorFault {
+    get
+  }
+  public static var isRetryable: Swift.Bool {
+    get
+  }
+  public static var isThrottling: Swift.Bool {
+    get
+  }
+  public var httpResponse: SmithyHTTPAPI.HttpResponse {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var requestID: Swift.String? {
+    get
+  }
+  public init(message: Swift.String? = nil)
+}
+public struct DeleteKeyInput {
+  public var forceDelete: Swift.Bool?
+  public var keyName: Swift.String?
+  public init(forceDelete: Swift.Bool? = nil, keyName: Swift.String? = nil)
+}
+public struct DeleteKeyOutput {
+  public init()
+}
+public struct DescribeKeyInput {
+  public var keyName: Swift.String?
+  public init(keyName: Swift.String? = nil)
+}
+public struct DescribeKeyOutput {
+  public var createTime: Foundation.Date?
+  public var description: Swift.String?
+  public var expireTime: Foundation.Date?
+  public var key: Swift.String?
+  public var keyArn: Swift.String?
+  public var keyName: Swift.String?
+  public var restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions?
+  public var tags: [Swift.String : Swift.String]?
+  public var updateTime: Foundation.Date?
+  public init(createTime: Foundation.Date? = nil, description: Swift.String? = nil, expireTime: Foundation.Date? = nil, key: Swift.String? = nil, keyArn: Swift.String? = nil, keyName: Swift.String? = nil, restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions? = nil, tags: [Swift.String : Swift.String]? = nil, updateTime: Foundation.Date? = nil)
+}
+extension AWSLocation.DescribeKeyOutput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ListKeysInput {
+  public var filter: AWSLocation.LocationClientTypes.ApiKeyFilter?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(filter: AWSLocation.LocationClientTypes.ApiKeyFilter? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListKeysResponseEntry {
+    public var createTime: Foundation.Date?
+    public var description: Swift.String?
+    public var expireTime: Foundation.Date?
+    public var keyName: Swift.String?
+    public var restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, description: Swift.String? = nil, expireTime: Foundation.Date? = nil, keyName: Swift.String? = nil, restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListKeysOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListKeysResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListKeysResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct UpdateKeyInput {
+  public var description: Swift.String?
+  public var expireTime: Foundation.Date?
+  public var forceUpdate: Swift.Bool?
+  public var keyName: Swift.String?
+  public var noExpiry: Swift.Bool?
+  public var restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions?
+  public init(description: Swift.String? = nil, expireTime: Foundation.Date? = nil, forceUpdate: Swift.Bool? = nil, keyName: Swift.String? = nil, noExpiry: Swift.Bool? = nil, restrictions: AWSLocation.LocationClientTypes.ApiKeyRestrictions? = nil)
+}
+public struct UpdateKeyOutput {
+  public var keyArn: Swift.String?
+  public var keyName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(keyArn: Swift.String? = nil, keyName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct AssociateTrackerConsumerInput {
+  public var consumerArn: Swift.String?
+  public var trackerName: Swift.String?
+  public init(consumerArn: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+public struct AssociateTrackerConsumerOutput {
+  public init()
+}
+public struct BatchDeleteDevicePositionHistoryInput {
+  public var deviceIds: [Swift.String]?
+  public var trackerName: Swift.String?
+  public init(deviceIds: [Swift.String]? = nil, trackerName: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public enum BatchItemErrorCode : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case accessdeniederror
+    case conflicterror
+    case internalservererror
+    case resourcenotfounderror
+    case throttlingerror
+    case validationerror
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.BatchItemErrorCode] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.BatchItemErrorCode]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchItemError {
+    public var code: AWSLocation.LocationClientTypes.BatchItemErrorCode?
+    public var message: Swift.String?
+    public init(code: AWSLocation.LocationClientTypes.BatchItemErrorCode? = nil, message: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchDeleteDevicePositionHistoryError {
+    public var deviceId: Swift.String?
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public init(deviceId: Swift.String? = nil, error: AWSLocation.LocationClientTypes.BatchItemError? = nil)
+  }
+}
+public struct BatchDeleteDevicePositionHistoryOutput {
+  public var errors: [AWSLocation.LocationClientTypes.BatchDeleteDevicePositionHistoryError]?
+  public init(errors: [AWSLocation.LocationClientTypes.BatchDeleteDevicePositionHistoryError]? = nil)
+}
+public struct BatchDeleteGeofenceInput {
+  public var collectionName: Swift.String?
+  public var geofenceIds: [Swift.String]?
+  public init(collectionName: Swift.String? = nil, geofenceIds: [Swift.String]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchDeleteGeofenceError {
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public var geofenceId: Swift.String?
+    public init(error: AWSLocation.LocationClientTypes.BatchItemError? = nil, geofenceId: Swift.String? = nil)
+  }
+}
+public struct BatchDeleteGeofenceOutput {
+  public var errors: [AWSLocation.LocationClientTypes.BatchDeleteGeofenceError]?
+  public init(errors: [AWSLocation.LocationClientTypes.BatchDeleteGeofenceError]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct PositionalAccuracy {
+    public var horizontal: Swift.Double?
+    public init(horizontal: Swift.Double? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct DevicePositionUpdate {
+    public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+    public var deviceId: Swift.String?
+    public var position: [Swift.Double]?
+    public var positionProperties: [Swift.String : Swift.String]?
+    public var sampleTime: Foundation.Date?
+    public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, deviceId: Swift.String? = nil, position: [Swift.Double]? = nil, positionProperties: [Swift.String : Swift.String]? = nil, sampleTime: Foundation.Date? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.DevicePositionUpdate : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct BatchEvaluateGeofencesInput {
+  public var collectionName: Swift.String?
+  public var devicePositionUpdates: [AWSLocation.LocationClientTypes.DevicePositionUpdate]?
+  public init(collectionName: Swift.String? = nil, devicePositionUpdates: [AWSLocation.LocationClientTypes.DevicePositionUpdate]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchEvaluateGeofencesError {
+    public var deviceId: Swift.String?
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public var sampleTime: Foundation.Date?
+    public init(deviceId: Swift.String? = nil, error: AWSLocation.LocationClientTypes.BatchItemError? = nil, sampleTime: Foundation.Date? = nil)
+  }
+}
+public struct BatchEvaluateGeofencesOutput {
+  public var errors: [AWSLocation.LocationClientTypes.BatchEvaluateGeofencesError]?
+  public init(errors: [AWSLocation.LocationClientTypes.BatchEvaluateGeofencesError]? = nil)
+}
+public struct BatchGetDevicePositionInput {
+  public var deviceIds: [Swift.String]?
+  public var trackerName: Swift.String?
+  public init(deviceIds: [Swift.String]? = nil, trackerName: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct DevicePosition {
+    public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+    public var deviceId: Swift.String?
+    public var position: [Swift.Double]?
+    public var positionProperties: [Swift.String : Swift.String]?
+    public var receivedTime: Foundation.Date?
+    public var sampleTime: Foundation.Date?
+    public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, deviceId: Swift.String? = nil, position: [Swift.Double]? = nil, positionProperties: [Swift.String : Swift.String]? = nil, receivedTime: Foundation.Date? = nil, sampleTime: Foundation.Date? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.DevicePosition : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchGetDevicePositionError {
+    public var deviceId: Swift.String?
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public init(deviceId: Swift.String? = nil, error: AWSLocation.LocationClientTypes.BatchItemError? = nil)
+  }
+}
+public struct BatchGetDevicePositionOutput {
+  public var devicePositions: [AWSLocation.LocationClientTypes.DevicePosition]?
+  public var errors: [AWSLocation.LocationClientTypes.BatchGetDevicePositionError]?
+  public init(devicePositions: [AWSLocation.LocationClientTypes.DevicePosition]? = nil, errors: [AWSLocation.LocationClientTypes.BatchGetDevicePositionError]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct Circle {
+    public var center: [Swift.Double]?
+    public var radius: Swift.Double?
+    public init(center: [Swift.Double]? = nil, radius: Swift.Double? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.Circle : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct GeofenceGeometry {
+    public var circle: AWSLocation.LocationClientTypes.Circle?
+    public var geobuf: Foundation.Data?
+    public var polygon: [[[Swift.Double]]]?
+    public init(circle: AWSLocation.LocationClientTypes.Circle? = nil, geobuf: Foundation.Data? = nil, polygon: [[[Swift.Double]]]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.GeofenceGeometry : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchPutGeofenceRequestEntry {
+    public var geofenceId: Swift.String?
+    public var geofenceProperties: [Swift.String : Swift.String]?
+    public var geometry: AWSLocation.LocationClientTypes.GeofenceGeometry?
+    public init(geofenceId: Swift.String? = nil, geofenceProperties: [Swift.String : Swift.String]? = nil, geometry: AWSLocation.LocationClientTypes.GeofenceGeometry? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.BatchPutGeofenceRequestEntry : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct BatchPutGeofenceInput {
+  public var collectionName: Swift.String?
+  public var entries: [AWSLocation.LocationClientTypes.BatchPutGeofenceRequestEntry]?
+  public init(collectionName: Swift.String? = nil, entries: [AWSLocation.LocationClientTypes.BatchPutGeofenceRequestEntry]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchPutGeofenceError {
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public var geofenceId: Swift.String?
+    public init(error: AWSLocation.LocationClientTypes.BatchItemError? = nil, geofenceId: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchPutGeofenceSuccess {
+    public var createTime: Foundation.Date?
+    public var geofenceId: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, geofenceId: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct BatchPutGeofenceOutput {
+  public var errors: [AWSLocation.LocationClientTypes.BatchPutGeofenceError]?
+  public var successes: [AWSLocation.LocationClientTypes.BatchPutGeofenceSuccess]?
+  public init(errors: [AWSLocation.LocationClientTypes.BatchPutGeofenceError]? = nil, successes: [AWSLocation.LocationClientTypes.BatchPutGeofenceSuccess]? = nil)
+}
+public struct BatchUpdateDevicePositionInput {
+  public var trackerName: Swift.String?
+  public var updates: [AWSLocation.LocationClientTypes.DevicePositionUpdate]?
+  public init(trackerName: Swift.String? = nil, updates: [AWSLocation.LocationClientTypes.DevicePositionUpdate]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct BatchUpdateDevicePositionError {
+    public var deviceId: Swift.String?
+    public var error: AWSLocation.LocationClientTypes.BatchItemError?
+    public var sampleTime: Foundation.Date?
+    public init(deviceId: Swift.String? = nil, error: AWSLocation.LocationClientTypes.BatchItemError? = nil, sampleTime: Foundation.Date? = nil)
+  }
+}
+public struct BatchUpdateDevicePositionOutput {
+  public var errors: [AWSLocation.LocationClientTypes.BatchUpdateDevicePositionError]?
+  public init(errors: [AWSLocation.LocationClientTypes.BatchUpdateDevicePositionError]? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct CalculateRouteCarModeOptions {
+    public var avoidFerries: Swift.Bool?
+    public var avoidTolls: Swift.Bool?
+    public init(avoidFerries: Swift.Bool? = nil, avoidTolls: Swift.Bool? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum DistanceUnit : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case kilometers
+    case miles
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.DistanceUnit] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.DistanceUnit]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum OptimizationMode : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case fastestroute
+    case shortestroute
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.OptimizationMode] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.OptimizationMode]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum TravelMode : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case bicycle
+    case car
+    case motorcycle
+    case truck
+    case walking
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.TravelMode] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.TravelMode]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum DimensionUnit : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case feet
+    case meters
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.DimensionUnit] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.DimensionUnit]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct TruckDimensions {
+    public var height: Swift.Double?
+    public var length: Swift.Double?
+    public var unit: AWSLocation.LocationClientTypes.DimensionUnit?
+    public var width: Swift.Double?
+    public init(height: Swift.Double? = nil, length: Swift.Double? = nil, unit: AWSLocation.LocationClientTypes.DimensionUnit? = nil, width: Swift.Double? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum VehicleWeightUnit : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case kilograms
+    case pounds
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.VehicleWeightUnit] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.VehicleWeightUnit]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct TruckWeight {
+    public var total: Swift.Double?
+    public var unit: AWSLocation.LocationClientTypes.VehicleWeightUnit?
+    public init(total: Swift.Double? = nil, unit: AWSLocation.LocationClientTypes.VehicleWeightUnit? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct CalculateRouteTruckModeOptions {
+    public var avoidFerries: Swift.Bool?
+    public var avoidTolls: Swift.Bool?
+    public var dimensions: AWSLocation.LocationClientTypes.TruckDimensions?
+    public var weight: AWSLocation.LocationClientTypes.TruckWeight?
+    public init(avoidFerries: Swift.Bool? = nil, avoidTolls: Swift.Bool? = nil, dimensions: AWSLocation.LocationClientTypes.TruckDimensions? = nil, weight: AWSLocation.LocationClientTypes.TruckWeight? = nil)
+  }
+}
+public struct CalculateRouteInput {
+  public var arrivalTime: Foundation.Date?
+  public var calculatorName: Swift.String?
+  public var carModeOptions: AWSLocation.LocationClientTypes.CalculateRouteCarModeOptions?
+  public var departNow: Swift.Bool?
+  public var departurePosition: [Swift.Double]?
+  public var departureTime: Foundation.Date?
+  public var destinationPosition: [Swift.Double]?
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var includeLegGeometry: Swift.Bool?
+  public var key: Swift.String?
+  public var optimizeFor: AWSLocation.LocationClientTypes.OptimizationMode?
+  public var travelMode: AWSLocation.LocationClientTypes.TravelMode?
+  public var truckModeOptions: AWSLocation.LocationClientTypes.CalculateRouteTruckModeOptions?
+  public var waypointPositions: [[Swift.Double]]?
+  public init(arrivalTime: Foundation.Date? = nil, calculatorName: Swift.String? = nil, carModeOptions: AWSLocation.LocationClientTypes.CalculateRouteCarModeOptions? = nil, departNow: Swift.Bool? = nil, departurePosition: [Swift.Double]? = nil, departureTime: Foundation.Date? = nil, destinationPosition: [Swift.Double]? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, includeLegGeometry: Swift.Bool? = nil, key: Swift.String? = nil, optimizeFor: AWSLocation.LocationClientTypes.OptimizationMode? = nil, travelMode: AWSLocation.LocationClientTypes.TravelMode? = nil, truckModeOptions: AWSLocation.LocationClientTypes.CalculateRouteTruckModeOptions? = nil, waypointPositions: [[Swift.Double]]? = nil)
+}
+extension AWSLocation.CalculateRouteInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct LegGeometry {
+    public var lineString: [[Swift.Double]]?
+    public init(lineString: [[Swift.Double]]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct Step {
+    public var distance: Swift.Double?
+    public var durationSeconds: Swift.Double?
+    public var endPosition: [Swift.Double]?
+    public var geometryOffset: Swift.Int?
+    public var startPosition: [Swift.Double]?
+    public init(distance: Swift.Double? = nil, durationSeconds: Swift.Double? = nil, endPosition: [Swift.Double]? = nil, geometryOffset: Swift.Int? = nil, startPosition: [Swift.Double]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.Step : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct Leg {
+    public var distance: Swift.Double?
+    public var durationSeconds: Swift.Double?
+    public var endPosition: [Swift.Double]?
+    public var geometry: AWSLocation.LocationClientTypes.LegGeometry?
+    public var startPosition: [Swift.Double]?
+    public var steps: [AWSLocation.LocationClientTypes.Step]?
+    public init(distance: Swift.Double? = nil, durationSeconds: Swift.Double? = nil, endPosition: [Swift.Double]? = nil, geometry: AWSLocation.LocationClientTypes.LegGeometry? = nil, startPosition: [Swift.Double]? = nil, steps: [AWSLocation.LocationClientTypes.Step]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.Leg : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct CalculateRouteSummary {
+    public var dataSource: Swift.String?
+    public var distance: Swift.Double?
+    public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+    public var durationSeconds: Swift.Double?
+    public var routeBBox: [Swift.Double]?
+    public init(dataSource: Swift.String? = nil, distance: Swift.Double? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, durationSeconds: Swift.Double? = nil, routeBBox: [Swift.Double]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.CalculateRouteSummary : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct CalculateRouteOutput {
+  public var legs: [AWSLocation.LocationClientTypes.Leg]?
+  public var summary: AWSLocation.LocationClientTypes.CalculateRouteSummary?
+  public init(legs: [AWSLocation.LocationClientTypes.Leg]? = nil, summary: AWSLocation.LocationClientTypes.CalculateRouteSummary? = nil)
+}
+public struct CalculateRouteMatrixInput {
+  public var calculatorName: Swift.String?
+  public var carModeOptions: AWSLocation.LocationClientTypes.CalculateRouteCarModeOptions?
+  public var departNow: Swift.Bool?
+  public var departurePositions: [[Swift.Double]]?
+  public var departureTime: Foundation.Date?
+  public var destinationPositions: [[Swift.Double]]?
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var key: Swift.String?
+  public var travelMode: AWSLocation.LocationClientTypes.TravelMode?
+  public var truckModeOptions: AWSLocation.LocationClientTypes.CalculateRouteTruckModeOptions?
+  public init(calculatorName: Swift.String? = nil, carModeOptions: AWSLocation.LocationClientTypes.CalculateRouteCarModeOptions? = nil, departNow: Swift.Bool? = nil, departurePositions: [[Swift.Double]]? = nil, departureTime: Foundation.Date? = nil, destinationPositions: [[Swift.Double]]? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, key: Swift.String? = nil, travelMode: AWSLocation.LocationClientTypes.TravelMode? = nil, truckModeOptions: AWSLocation.LocationClientTypes.CalculateRouteTruckModeOptions? = nil)
+}
+extension AWSLocation.CalculateRouteMatrixInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum RouteMatrixErrorCode : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case departurepositionnotfound
+    case destinationpositionnotfound
+    case othervalidationerror
+    case positionsnotfound
+    case routenotfound
+    case routetoolong
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.RouteMatrixErrorCode] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.RouteMatrixErrorCode]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct RouteMatrixEntryError {
+    public var code: AWSLocation.LocationClientTypes.RouteMatrixErrorCode?
+    public var message: Swift.String?
+    public init(code: AWSLocation.LocationClientTypes.RouteMatrixErrorCode? = nil, message: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct RouteMatrixEntry {
+    public var distance: Swift.Double?
+    public var durationSeconds: Swift.Double?
+    public var error: AWSLocation.LocationClientTypes.RouteMatrixEntryError?
+    public init(distance: Swift.Double? = nil, durationSeconds: Swift.Double? = nil, error: AWSLocation.LocationClientTypes.RouteMatrixEntryError? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct CalculateRouteMatrixSummary {
+    public var dataSource: Swift.String?
+    public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+    public var errorCount: Swift.Int?
+    public var routeCount: Swift.Int?
+    public init(dataSource: Swift.String? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, errorCount: Swift.Int? = nil, routeCount: Swift.Int? = nil)
+  }
+}
+public struct CalculateRouteMatrixOutput {
+  public var routeMatrix: [[AWSLocation.LocationClientTypes.RouteMatrixEntry]]?
+  public var snappedDeparturePositions: [[Swift.Double]]?
+  public var snappedDestinationPositions: [[Swift.Double]]?
+  public var summary: AWSLocation.LocationClientTypes.CalculateRouteMatrixSummary?
+  public init(routeMatrix: [[AWSLocation.LocationClientTypes.RouteMatrixEntry]]? = nil, snappedDeparturePositions: [[Swift.Double]]? = nil, snappedDestinationPositions: [[Swift.Double]]? = nil, summary: AWSLocation.LocationClientTypes.CalculateRouteMatrixSummary? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct LteLocalId {
+    public var earfcn: Swift.Int
+    public var pci: Swift.Int
+    public init(earfcn: Swift.Int = 0, pci: Swift.Int = 0)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct LteNetworkMeasurements {
+    public var cellId: Swift.Int
+    public var earfcn: Swift.Int
+    public var pci: Swift.Int
+    public var rsrp: Swift.Int?
+    public var rsrq: Swift.Float?
+    public init(cellId: Swift.Int = 0, earfcn: Swift.Int = 0, pci: Swift.Int = 0, rsrp: Swift.Int? = nil, rsrq: Swift.Float? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct LteCellDetails {
+    public var cellId: Swift.Int
+    public var localId: AWSLocation.LocationClientTypes.LteLocalId?
+    public var mcc: Swift.Int?
+    public var mnc: Swift.Int?
+    public var networkMeasurements: [AWSLocation.LocationClientTypes.LteNetworkMeasurements]?
+    public var nrCapable: Swift.Bool?
+    public var rsrp: Swift.Int?
+    public var rsrq: Swift.Float?
+    public var tac: Swift.Int?
+    public var timingAdvance: Swift.Int?
+    public init(cellId: Swift.Int = 0, localId: AWSLocation.LocationClientTypes.LteLocalId? = nil, mcc: Swift.Int? = nil, mnc: Swift.Int? = nil, networkMeasurements: [AWSLocation.LocationClientTypes.LteNetworkMeasurements]? = nil, nrCapable: Swift.Bool? = nil, rsrp: Swift.Int? = nil, rsrq: Swift.Float? = nil, tac: Swift.Int? = nil, timingAdvance: Swift.Int? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct CellSignals {
+    public var lteCellDetails: [AWSLocation.LocationClientTypes.LteCellDetails]?
+    public init(lteCellDetails: [AWSLocation.LocationClientTypes.LteCellDetails]? = nil)
+  }
+}
+public struct CreateGeofenceCollectionInput {
+  public var collectionName: Swift.String?
+  public var description: Swift.String?
+  public var kmsKeyId: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(collectionName: Swift.String? = nil, description: Swift.String? = nil, kmsKeyId: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct CreateGeofenceCollectionOutput {
+  public var collectionArn: Swift.String?
+  public var collectionName: Swift.String?
+  public var createTime: Foundation.Date?
+  public init(collectionArn: Swift.String? = nil, collectionName: Swift.String? = nil, createTime: Foundation.Date? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct MapConfiguration {
+    public var customLayers: [Swift.String]?
+    public var politicalView: Swift.String?
+    public var style: Swift.String?
+    public init(customLayers: [Swift.String]? = nil, politicalView: Swift.String? = nil, style: Swift.String? = nil)
+  }
+}
+public struct CreateMapInput {
+  public var configuration: AWSLocation.LocationClientTypes.MapConfiguration?
+  public var description: Swift.String?
+  public var mapName: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(configuration: AWSLocation.LocationClientTypes.MapConfiguration? = nil, description: Swift.String? = nil, mapName: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct CreateMapOutput {
+  public var createTime: Foundation.Date?
+  public var mapArn: Swift.String?
+  public var mapName: Swift.String?
+  public init(createTime: Foundation.Date? = nil, mapArn: Swift.String? = nil, mapName: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public enum IntendedUse : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case singleuse
+    case storage
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.IntendedUse] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.IntendedUse]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct DataSourceConfiguration {
+    public var intendedUse: AWSLocation.LocationClientTypes.IntendedUse?
+    public init(intendedUse: AWSLocation.LocationClientTypes.IntendedUse? = nil)
+  }
+}
+public struct CreatePlaceIndexInput {
+  public var dataSource: Swift.String?
+  public var dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration?
+  public var description: Swift.String?
+  public var indexName: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(dataSource: Swift.String? = nil, dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration? = nil, description: Swift.String? = nil, indexName: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct CreatePlaceIndexOutput {
+  public var createTime: Foundation.Date?
+  public var indexArn: Swift.String?
+  public var indexName: Swift.String?
+  public init(createTime: Foundation.Date? = nil, indexArn: Swift.String? = nil, indexName: Swift.String? = nil)
+}
+public struct CreateRouteCalculatorInput {
+  public var calculatorName: Swift.String?
+  public var dataSource: Swift.String?
+  public var description: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(calculatorName: Swift.String? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct CreateRouteCalculatorOutput {
+  public var calculatorArn: Swift.String?
+  public var calculatorName: Swift.String?
+  public var createTime: Foundation.Date?
+  public init(calculatorArn: Swift.String? = nil, calculatorName: Swift.String? = nil, createTime: Foundation.Date? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public enum PositionFiltering : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case accuracybased
+    case distancebased
+    case timebased
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.PositionFiltering] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.PositionFiltering]
+    public typealias RawValue = Swift.String
+  }
+}
+public struct CreateTrackerInput {
+  public var description: Swift.String?
+  public var eventBridgeEnabled: Swift.Bool?
+  public var kmsKeyEnableGeospatialQueries: Swift.Bool?
+  public var kmsKeyId: Swift.String?
+  public var positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering?
+  public var tags: [Swift.String : Swift.String]?
+  public var trackerName: Swift.String?
+  public init(description: Swift.String? = nil, eventBridgeEnabled: Swift.Bool? = nil, kmsKeyEnableGeospatialQueries: Swift.Bool? = nil, kmsKeyId: Swift.String? = nil, positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering? = nil, tags: [Swift.String : Swift.String]? = nil, trackerName: Swift.String? = nil)
+}
+public struct CreateTrackerOutput {
+  public var createTime: Foundation.Date?
+  public var trackerArn: Swift.String?
+  public var trackerName: Swift.String?
+  public init(createTime: Foundation.Date? = nil, trackerArn: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+public struct DeleteGeofenceCollectionInput {
+  public var collectionName: Swift.String?
+  public init(collectionName: Swift.String? = nil)
+}
+public struct DeleteGeofenceCollectionOutput {
+  public init()
+}
+public struct DeleteMapInput {
+  public var mapName: Swift.String?
+  public init(mapName: Swift.String? = nil)
+}
+public struct DeleteMapOutput {
+  public init()
+}
+public struct DeletePlaceIndexInput {
+  public var indexName: Swift.String?
+  public init(indexName: Swift.String? = nil)
+}
+public struct DeletePlaceIndexOutput {
+  public init()
+}
+public struct DeleteRouteCalculatorInput {
+  public var calculatorName: Swift.String?
+  public init(calculatorName: Swift.String? = nil)
+}
+public struct DeleteRouteCalculatorOutput {
+  public init()
+}
+public struct DeleteTrackerInput {
+  public var trackerName: Swift.String?
+  public init(trackerName: Swift.String? = nil)
+}
+public struct DeleteTrackerOutput {
+  public init()
+}
+public struct DescribeGeofenceCollectionInput {
+  public var collectionName: Swift.String?
+  public init(collectionName: Swift.String? = nil)
+}
+public struct DescribeGeofenceCollectionOutput {
+  public var collectionArn: Swift.String?
+  public var collectionName: Swift.String?
+  public var createTime: Foundation.Date?
+  public var description: Swift.String?
+  public var geofenceCount: Swift.Int?
+  public var kmsKeyId: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public var updateTime: Foundation.Date?
+  public init(collectionArn: Swift.String? = nil, collectionName: Swift.String? = nil, createTime: Foundation.Date? = nil, description: Swift.String? = nil, geofenceCount: Swift.Int? = nil, kmsKeyId: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct DescribeMapInput {
+  public var mapName: Swift.String?
+  public init(mapName: Swift.String? = nil)
+}
+public struct DescribeMapOutput {
+  public var configuration: AWSLocation.LocationClientTypes.MapConfiguration?
+  public var createTime: Foundation.Date?
+  public var dataSource: Swift.String?
+  public var description: Swift.String?
+  public var mapArn: Swift.String?
+  public var mapName: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public var updateTime: Foundation.Date?
+  public init(configuration: AWSLocation.LocationClientTypes.MapConfiguration? = nil, createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, mapArn: Swift.String? = nil, mapName: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct DescribePlaceIndexInput {
+  public var indexName: Swift.String?
+  public init(indexName: Swift.String? = nil)
+}
+public struct DescribePlaceIndexOutput {
+  public var createTime: Foundation.Date?
+  public var dataSource: Swift.String?
+  public var dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration?
+  public var description: Swift.String?
+  public var indexArn: Swift.String?
+  public var indexName: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public var updateTime: Foundation.Date?
+  public init(createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration? = nil, description: Swift.String? = nil, indexArn: Swift.String? = nil, indexName: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct DescribeRouteCalculatorInput {
+  public var calculatorName: Swift.String?
+  public init(calculatorName: Swift.String? = nil)
+}
+public struct DescribeRouteCalculatorOutput {
+  public var calculatorArn: Swift.String?
+  public var calculatorName: Swift.String?
+  public var createTime: Foundation.Date?
+  public var dataSource: Swift.String?
+  public var description: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public var updateTime: Foundation.Date?
+  public init(calculatorArn: Swift.String? = nil, calculatorName: Swift.String? = nil, createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct DescribeTrackerInput {
+  public var trackerName: Swift.String?
+  public init(trackerName: Swift.String? = nil)
+}
+public struct DescribeTrackerOutput {
+  public var createTime: Foundation.Date?
+  public var description: Swift.String?
+  public var eventBridgeEnabled: Swift.Bool?
+  public var kmsKeyEnableGeospatialQueries: Swift.Bool?
+  public var kmsKeyId: Swift.String?
+  public var positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering?
+  public var tags: [Swift.String : Swift.String]?
+  public var trackerArn: Swift.String?
+  public var trackerName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(createTime: Foundation.Date? = nil, description: Swift.String? = nil, eventBridgeEnabled: Swift.Bool? = nil, kmsKeyEnableGeospatialQueries: Swift.Bool? = nil, kmsKeyId: Swift.String? = nil, positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering? = nil, tags: [Swift.String : Swift.String]? = nil, trackerArn: Swift.String? = nil, trackerName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct WiFiAccessPoint {
+    public var macAddress: Swift.String?
+    public var rss: Swift.Int?
+    public init(macAddress: Swift.String? = nil, rss: Swift.Int? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct DeviceState {
+    public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+    public var cellSignals: AWSLocation.LocationClientTypes.CellSignals?
+    public var deviceId: Swift.String?
+    public var ipv4Address: Swift.String?
+    public var position: [Swift.Double]?
+    public var sampleTime: Foundation.Date?
+    public var wiFiAccessPoints: [AWSLocation.LocationClientTypes.WiFiAccessPoint]?
+    public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, cellSignals: AWSLocation.LocationClientTypes.CellSignals? = nil, deviceId: Swift.String? = nil, ipv4Address: Swift.String? = nil, position: [Swift.Double]? = nil, sampleTime: Foundation.Date? = nil, wiFiAccessPoints: [AWSLocation.LocationClientTypes.WiFiAccessPoint]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.DeviceState : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct DisassociateTrackerConsumerInput {
+  public var consumerArn: Swift.String?
+  public var trackerName: Swift.String?
+  public init(consumerArn: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+public struct DisassociateTrackerConsumerOutput {
+  public init()
+}
+extension AWSLocation.LocationClientTypes {
+  public enum ForecastedGeofenceEventType : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case enter
+    case exit
+    case idle
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.ForecastedGeofenceEventType] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.ForecastedGeofenceEventType]
+    public typealias RawValue = Swift.String
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ForecastedEvent {
+    public var eventId: Swift.String?
+    public var eventType: AWSLocation.LocationClientTypes.ForecastedGeofenceEventType?
+    public var forecastedBreachTime: Foundation.Date?
+    public var geofenceId: Swift.String?
+    public var geofenceProperties: [Swift.String : Swift.String]?
+    public var isDeviceInGeofence: Swift.Bool?
+    public var nearestDistance: Swift.Double
+    public init(eventId: Swift.String? = nil, eventType: AWSLocation.LocationClientTypes.ForecastedGeofenceEventType? = nil, forecastedBreachTime: Foundation.Date? = nil, geofenceId: Swift.String? = nil, geofenceProperties: [Swift.String : Swift.String]? = nil, isDeviceInGeofence: Swift.Bool? = nil, nearestDistance: Swift.Double = 0.0)
+  }
+}
+extension AWSLocation.LocationClientTypes.ForecastedEvent : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ForecastGeofenceEventsDeviceState {
+    public var position: [Swift.Double]?
+    public var speed: Swift.Double?
+    public init(position: [Swift.Double]? = nil, speed: Swift.Double? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.ForecastGeofenceEventsDeviceState : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public enum SpeedUnit : Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable, Swift.Hashable {
+    case kilometersperhour
+    case milesperhour
+    case sdkUnknown(Swift.String)
+    public static var allCases: [AWSLocation.LocationClientTypes.SpeedUnit] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [AWSLocation.LocationClientTypes.SpeedUnit]
+    public typealias RawValue = Swift.String
+  }
+}
+public struct ForecastGeofenceEventsInput {
+  public var collectionName: Swift.String?
+  public var deviceState: AWSLocation.LocationClientTypes.ForecastGeofenceEventsDeviceState?
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public var speedUnit: AWSLocation.LocationClientTypes.SpeedUnit?
+  public var timeHorizonMinutes: Swift.Double?
+  public init(collectionName: Swift.String? = nil, deviceState: AWSLocation.LocationClientTypes.ForecastGeofenceEventsDeviceState? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil, speedUnit: AWSLocation.LocationClientTypes.SpeedUnit? = nil, timeHorizonMinutes: Swift.Double? = nil)
+}
+public struct ForecastGeofenceEventsOutput {
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var forecastedEvents: [AWSLocation.LocationClientTypes.ForecastedEvent]?
+  public var nextToken: Swift.String?
+  public var speedUnit: AWSLocation.LocationClientTypes.SpeedUnit?
+  public init(distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, forecastedEvents: [AWSLocation.LocationClientTypes.ForecastedEvent]? = nil, nextToken: Swift.String? = nil, speedUnit: AWSLocation.LocationClientTypes.SpeedUnit? = nil)
+}
+public struct ListTagsForResourceInput {
+  public var resourceArn: Swift.String?
+  public init(resourceArn: Swift.String? = nil)
+}
+public struct ListTagsForResourceOutput {
+  public var tags: [Swift.String : Swift.String]?
+  public init(tags: [Swift.String : Swift.String]? = nil)
+}
+public struct TagResourceInput {
+  public var resourceArn: Swift.String?
+  public var tags: [Swift.String : Swift.String]?
+  public init(resourceArn: Swift.String? = nil, tags: [Swift.String : Swift.String]? = nil)
+}
+public struct TagResourceOutput {
+  public init()
+}
+public struct UntagResourceInput {
+  public var resourceArn: Swift.String?
+  public var tagKeys: [Swift.String]?
+  public init(resourceArn: Swift.String? = nil, tagKeys: [Swift.String]? = nil)
+}
+public struct UntagResourceOutput {
+  public init()
+}
+public struct GetGeofenceInput {
+  public var collectionName: Swift.String?
+  public var geofenceId: Swift.String?
+  public init(collectionName: Swift.String? = nil, geofenceId: Swift.String? = nil)
+}
+public struct GetGeofenceOutput {
+  public var createTime: Foundation.Date?
+  public var geofenceId: Swift.String?
+  public var geofenceProperties: [Swift.String : Swift.String]?
+  public var geometry: AWSLocation.LocationClientTypes.GeofenceGeometry?
+  public var status: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(createTime: Foundation.Date? = nil, geofenceId: Swift.String? = nil, geofenceProperties: [Swift.String : Swift.String]? = nil, geometry: AWSLocation.LocationClientTypes.GeofenceGeometry? = nil, status: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+extension AWSLocation.GetGeofenceOutput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ListGeofenceCollectionsInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListGeofenceCollectionsResponseEntry {
+    public var collectionName: Swift.String?
+    public var createTime: Foundation.Date?
+    public var description: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(collectionName: Swift.String? = nil, createTime: Foundation.Date? = nil, description: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListGeofenceCollectionsOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListGeofenceCollectionsResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListGeofenceCollectionsResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListGeofencesInput {
+  public var collectionName: Swift.String?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(collectionName: Swift.String? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListGeofenceResponseEntry {
+    public var createTime: Foundation.Date?
+    public var geofenceId: Swift.String?
+    public var geofenceProperties: [Swift.String : Swift.String]?
+    public var geometry: AWSLocation.LocationClientTypes.GeofenceGeometry?
+    public var status: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, geofenceId: Swift.String? = nil, geofenceProperties: [Swift.String : Swift.String]? = nil, geometry: AWSLocation.LocationClientTypes.GeofenceGeometry? = nil, status: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.ListGeofenceResponseEntry : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ListGeofencesOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListGeofenceResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListGeofenceResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct PutGeofenceInput {
+  public var collectionName: Swift.String?
+  public var geofenceId: Swift.String?
+  public var geofenceProperties: [Swift.String : Swift.String]?
+  public var geometry: AWSLocation.LocationClientTypes.GeofenceGeometry?
+  public init(collectionName: Swift.String? = nil, geofenceId: Swift.String? = nil, geofenceProperties: [Swift.String : Swift.String]? = nil, geometry: AWSLocation.LocationClientTypes.GeofenceGeometry? = nil)
+}
+extension AWSLocation.PutGeofenceInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct PutGeofenceOutput {
+  public var createTime: Foundation.Date?
+  public var geofenceId: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(createTime: Foundation.Date? = nil, geofenceId: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct UpdateGeofenceCollectionInput {
+  public var collectionName: Swift.String?
+  public var description: Swift.String?
+  public init(collectionName: Swift.String? = nil, description: Swift.String? = nil)
+}
+public struct UpdateGeofenceCollectionOutput {
+  public var collectionArn: Swift.String?
+  public var collectionName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(collectionArn: Swift.String? = nil, collectionName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct GetDevicePositionInput {
+  public var deviceId: Swift.String?
+  public var trackerName: Swift.String?
+  public init(deviceId: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+public struct GetDevicePositionOutput {
+  public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+  public var deviceId: Swift.String?
+  public var position: [Swift.Double]?
+  public var positionProperties: [Swift.String : Swift.String]?
+  public var receivedTime: Foundation.Date?
+  public var sampleTime: Foundation.Date?
+  public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, deviceId: Swift.String? = nil, position: [Swift.Double]? = nil, positionProperties: [Swift.String : Swift.String]? = nil, receivedTime: Foundation.Date? = nil, sampleTime: Foundation.Date? = nil)
+}
+extension AWSLocation.GetDevicePositionOutput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GetDevicePositionHistoryInput {
+  public var deviceId: Swift.String?
+  public var endTimeExclusive: Foundation.Date?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public var startTimeInclusive: Foundation.Date?
+  public var trackerName: Swift.String?
+  public init(deviceId: Swift.String? = nil, endTimeExclusive: Foundation.Date? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil, startTimeInclusive: Foundation.Date? = nil, trackerName: Swift.String? = nil)
+}
+public struct GetDevicePositionHistoryOutput {
+  public var devicePositions: [AWSLocation.LocationClientTypes.DevicePosition]?
+  public var nextToken: Swift.String?
+  public init(devicePositions: [AWSLocation.LocationClientTypes.DevicePosition]? = nil, nextToken: Swift.String? = nil)
+}
+public struct GetMapGlyphsInput {
+  public var fontStack: Swift.String?
+  public var fontUnicodeRange: Swift.String?
+  public var key: Swift.String?
+  public var mapName: Swift.String?
+  public init(fontStack: Swift.String? = nil, fontUnicodeRange: Swift.String? = nil, key: Swift.String? = nil, mapName: Swift.String? = nil)
+}
+extension AWSLocation.GetMapGlyphsInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GetMapGlyphsOutput {
+  public var blob: Foundation.Data?
+  public var cacheControl: Swift.String?
+  public var contentType: Swift.String?
+  public init(blob: Foundation.Data? = nil, cacheControl: Swift.String? = nil, contentType: Swift.String? = nil)
+}
+public struct GetMapSpritesInput {
+  public var fileName: Swift.String?
+  public var key: Swift.String?
+  public var mapName: Swift.String?
+  public init(fileName: Swift.String? = nil, key: Swift.String? = nil, mapName: Swift.String? = nil)
+}
+extension AWSLocation.GetMapSpritesInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GetMapSpritesOutput {
+  public var blob: Foundation.Data?
+  public var cacheControl: Swift.String?
+  public var contentType: Swift.String?
+  public init(blob: Foundation.Data? = nil, cacheControl: Swift.String? = nil, contentType: Swift.String? = nil)
+}
+public struct GetMapStyleDescriptorInput {
+  public var key: Swift.String?
+  public var mapName: Swift.String?
+  public init(key: Swift.String? = nil, mapName: Swift.String? = nil)
+}
+extension AWSLocation.GetMapStyleDescriptorInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GetMapStyleDescriptorOutput {
+  public var blob: Foundation.Data?
+  public var cacheControl: Swift.String?
+  public var contentType: Swift.String?
+  public init(blob: Foundation.Data? = nil, cacheControl: Swift.String? = nil, contentType: Swift.String? = nil)
+}
+public struct GetMapTileInput {
+  public var key: Swift.String?
+  public var mapName: Swift.String?
+  public var x: Swift.String?
+  public var y: Swift.String?
+  public var z: Swift.String?
+  public init(key: Swift.String? = nil, mapName: Swift.String? = nil, x: Swift.String? = nil, y: Swift.String? = nil, z: Swift.String? = nil)
+}
+extension AWSLocation.GetMapTileInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GetMapTileOutput {
+  public var blob: Foundation.Data?
+  public var cacheControl: Swift.String?
+  public var contentType: Swift.String?
+  public init(blob: Foundation.Data? = nil, cacheControl: Swift.String? = nil, contentType: Swift.String? = nil)
+}
+public struct GetPlaceInput {
+  public var indexName: Swift.String?
+  public var key: Swift.String?
+  public var language: Swift.String?
+  public var placeId: Swift.String?
+  public init(indexName: Swift.String? = nil, key: Swift.String? = nil, language: Swift.String? = nil, placeId: Swift.String? = nil)
+}
+extension AWSLocation.GetPlaceInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct PlaceGeometry {
+    public var point: [Swift.Double]?
+    public init(point: [Swift.Double]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.PlaceGeometry : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct TimeZone {
+    public var name: Swift.String?
+    public var offset: Swift.Int?
+    public init(name: Swift.String? = nil, offset: Swift.Int? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct Place {
+    public var addressNumber: Swift.String?
+    public var categories: [Swift.String]?
+    public var country: Swift.String?
+    public var geometry: AWSLocation.LocationClientTypes.PlaceGeometry?
+    public var interpolated: Swift.Bool?
+    public var label: Swift.String?
+    public var municipality: Swift.String?
+    public var neighborhood: Swift.String?
+    public var postalCode: Swift.String?
+    public var region: Swift.String?
+    public var street: Swift.String?
+    public var subMunicipality: Swift.String?
+    public var subRegion: Swift.String?
+    public var supplementalCategories: [Swift.String]?
+    public var timeZone: AWSLocation.LocationClientTypes.TimeZone?
+    public var unitNumber: Swift.String?
+    public var unitType: Swift.String?
+    public init(addressNumber: Swift.String? = nil, categories: [Swift.String]? = nil, country: Swift.String? = nil, geometry: AWSLocation.LocationClientTypes.PlaceGeometry? = nil, interpolated: Swift.Bool? = nil, label: Swift.String? = nil, municipality: Swift.String? = nil, neighborhood: Swift.String? = nil, postalCode: Swift.String? = nil, region: Swift.String? = nil, street: Swift.String? = nil, subMunicipality: Swift.String? = nil, subRegion: Swift.String? = nil, supplementalCategories: [Swift.String]? = nil, timeZone: AWSLocation.LocationClientTypes.TimeZone? = nil, unitNumber: Swift.String? = nil, unitType: Swift.String? = nil)
+  }
+}
+public struct GetPlaceOutput {
+  public var place: AWSLocation.LocationClientTypes.Place?
+  public init(place: AWSLocation.LocationClientTypes.Place? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct InferredState {
+    public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+    public var deviationDistance: Swift.Double?
+    public var position: [Swift.Double]?
+    public var proxyDetected: Swift.Bool?
+    public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, deviationDistance: Swift.Double? = nil, position: [Swift.Double]? = nil, proxyDetected: Swift.Bool? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.InferredState : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct TrackingFilterGeometry {
+    public var polygon: [[[Swift.Double]]]?
+    public init(polygon: [[[Swift.Double]]]? = nil)
+  }
+}
+public struct ListDevicePositionsInput {
+  public var filterGeometry: AWSLocation.LocationClientTypes.TrackingFilterGeometry?
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public var trackerName: Swift.String?
+  public init(filterGeometry: AWSLocation.LocationClientTypes.TrackingFilterGeometry? = nil, maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListDevicePositionsResponseEntry {
+    public var accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy?
+    public var deviceId: Swift.String?
+    public var position: [Swift.Double]?
+    public var positionProperties: [Swift.String : Swift.String]?
+    public var sampleTime: Foundation.Date?
+    public init(accuracy: AWSLocation.LocationClientTypes.PositionalAccuracy? = nil, deviceId: Swift.String? = nil, position: [Swift.Double]? = nil, positionProperties: [Swift.String : Swift.String]? = nil, sampleTime: Foundation.Date? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.ListDevicePositionsResponseEntry : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ListDevicePositionsOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListDevicePositionsResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListDevicePositionsResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListMapsInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListMapsResponseEntry {
+    public var createTime: Foundation.Date?
+    public var dataSource: Swift.String?
+    public var description: Swift.String?
+    public var mapName: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, mapName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListMapsOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListMapsResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListMapsResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListPlaceIndexesInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListPlaceIndexesResponseEntry {
+    public var createTime: Foundation.Date?
+    public var dataSource: Swift.String?
+    public var description: Swift.String?
+    public var indexName: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, indexName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListPlaceIndexesOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListPlaceIndexesResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListPlaceIndexesResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListRouteCalculatorsInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListRouteCalculatorsResponseEntry {
+    public var calculatorName: Swift.String?
+    public var createTime: Foundation.Date?
+    public var dataSource: Swift.String?
+    public var description: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(calculatorName: Swift.String? = nil, createTime: Foundation.Date? = nil, dataSource: Swift.String? = nil, description: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListRouteCalculatorsOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListRouteCalculatorsResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListRouteCalculatorsResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListTrackerConsumersInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public var trackerName: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil, trackerName: Swift.String? = nil)
+}
+public struct ListTrackerConsumersOutput {
+  public var consumerArns: [Swift.String]?
+  public var nextToken: Swift.String?
+  public init(consumerArns: [Swift.String]? = nil, nextToken: Swift.String? = nil)
+}
+public struct ListTrackersInput {
+  public var maxResults: Swift.Int?
+  public var nextToken: Swift.String?
+  public init(maxResults: Swift.Int? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct ListTrackersResponseEntry {
+    public var createTime: Foundation.Date?
+    public var description: Swift.String?
+    public var trackerName: Swift.String?
+    public var updateTime: Foundation.Date?
+    public init(createTime: Foundation.Date? = nil, description: Swift.String? = nil, trackerName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+  }
+}
+public struct ListTrackersOutput {
+  public var entries: [AWSLocation.LocationClientTypes.ListTrackersResponseEntry]?
+  public var nextToken: Swift.String?
+  public init(entries: [AWSLocation.LocationClientTypes.ListTrackersResponseEntry]? = nil, nextToken: Swift.String? = nil)
+}
+extension AWSLocation.LocationClientTypes {
+  public struct MapConfigurationUpdate {
+    public var customLayers: [Swift.String]?
+    public var politicalView: Swift.String?
+    public init(customLayers: [Swift.String]? = nil, politicalView: Swift.String? = nil)
+  }
+}
+public struct UpdateMapInput {
+  public var configurationUpdate: AWSLocation.LocationClientTypes.MapConfigurationUpdate?
+  public var description: Swift.String?
+  public var mapName: Swift.String?
+  public init(configurationUpdate: AWSLocation.LocationClientTypes.MapConfigurationUpdate? = nil, description: Swift.String? = nil, mapName: Swift.String? = nil)
+}
+public struct UpdateMapOutput {
+  public var mapArn: Swift.String?
+  public var mapName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(mapArn: Swift.String? = nil, mapName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct SearchPlaceIndexForPositionInput {
+  public var indexName: Swift.String?
+  public var key: Swift.String?
+  public var language: Swift.String?
+  public var maxResults: Swift.Int?
+  public var position: [Swift.Double]?
+  public init(indexName: Swift.String? = nil, key: Swift.String? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, position: [Swift.Double]? = nil)
+}
+extension AWSLocation.SearchPlaceIndexForPositionInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchForPositionResult {
+    public var distance: Swift.Double?
+    public var place: AWSLocation.LocationClientTypes.Place?
+    public var placeId: Swift.String?
+    public init(distance: Swift.Double? = nil, place: AWSLocation.LocationClientTypes.Place? = nil, placeId: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchPlaceIndexForPositionSummary {
+    public var dataSource: Swift.String?
+    public var language: Swift.String?
+    public var maxResults: Swift.Int?
+    public var position: [Swift.Double]?
+    public init(dataSource: Swift.String? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, position: [Swift.Double]? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.SearchPlaceIndexForPositionSummary : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct SearchPlaceIndexForPositionOutput {
+  public var results: [AWSLocation.LocationClientTypes.SearchForPositionResult]?
+  public var summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForPositionSummary?
+  public init(results: [AWSLocation.LocationClientTypes.SearchForPositionResult]? = nil, summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForPositionSummary? = nil)
+}
+public struct SearchPlaceIndexForSuggestionsInput {
+  public var biasPosition: [Swift.Double]?
+  public var filterBBox: [Swift.Double]?
+  public var filterCategories: [Swift.String]?
+  public var filterCountries: [Swift.String]?
+  public var indexName: Swift.String?
+  public var key: Swift.String?
+  public var language: Swift.String?
+  public var maxResults: Swift.Int?
+  public var text: Swift.String?
+  public init(biasPosition: [Swift.Double]? = nil, filterBBox: [Swift.Double]? = nil, filterCategories: [Swift.String]? = nil, filterCountries: [Swift.String]? = nil, indexName: Swift.String? = nil, key: Swift.String? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, text: Swift.String? = nil)
+}
+extension AWSLocation.SearchPlaceIndexForSuggestionsInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchForSuggestionsResult {
+    public var categories: [Swift.String]?
+    public var placeId: Swift.String?
+    public var supplementalCategories: [Swift.String]?
+    public var text: Swift.String?
+    public init(categories: [Swift.String]? = nil, placeId: Swift.String? = nil, supplementalCategories: [Swift.String]? = nil, text: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchPlaceIndexForSuggestionsSummary {
+    public var biasPosition: [Swift.Double]?
+    public var dataSource: Swift.String?
+    public var filterBBox: [Swift.Double]?
+    public var filterCategories: [Swift.String]?
+    public var filterCountries: [Swift.String]?
+    public var language: Swift.String?
+    public var maxResults: Swift.Int?
+    public var text: Swift.String?
+    public init(biasPosition: [Swift.Double]? = nil, dataSource: Swift.String? = nil, filterBBox: [Swift.Double]? = nil, filterCategories: [Swift.String]? = nil, filterCountries: [Swift.String]? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, text: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.SearchPlaceIndexForSuggestionsSummary : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct SearchPlaceIndexForSuggestionsOutput {
+  public var results: [AWSLocation.LocationClientTypes.SearchForSuggestionsResult]?
+  public var summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForSuggestionsSummary?
+  public init(results: [AWSLocation.LocationClientTypes.SearchForSuggestionsResult]? = nil, summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForSuggestionsSummary? = nil)
+}
+public struct SearchPlaceIndexForTextInput {
+  public var biasPosition: [Swift.Double]?
+  public var filterBBox: [Swift.Double]?
+  public var filterCategories: [Swift.String]?
+  public var filterCountries: [Swift.String]?
+  public var indexName: Swift.String?
+  public var key: Swift.String?
+  public var language: Swift.String?
+  public var maxResults: Swift.Int?
+  public var text: Swift.String?
+  public init(biasPosition: [Swift.Double]? = nil, filterBBox: [Swift.Double]? = nil, filterCategories: [Swift.String]? = nil, filterCountries: [Swift.String]? = nil, indexName: Swift.String? = nil, key: Swift.String? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, text: Swift.String? = nil)
+}
+extension AWSLocation.SearchPlaceIndexForTextInput : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchForTextResult {
+    public var distance: Swift.Double?
+    public var place: AWSLocation.LocationClientTypes.Place?
+    public var placeId: Swift.String?
+    public var relevance: Swift.Double?
+    public init(distance: Swift.Double? = nil, place: AWSLocation.LocationClientTypes.Place? = nil, placeId: Swift.String? = nil, relevance: Swift.Double? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes {
+  public struct SearchPlaceIndexForTextSummary {
+    public var biasPosition: [Swift.Double]?
+    public var dataSource: Swift.String?
+    public var filterBBox: [Swift.Double]?
+    public var filterCategories: [Swift.String]?
+    public var filterCountries: [Swift.String]?
+    public var language: Swift.String?
+    public var maxResults: Swift.Int?
+    public var resultBBox: [Swift.Double]?
+    public var text: Swift.String?
+    public init(biasPosition: [Swift.Double]? = nil, dataSource: Swift.String? = nil, filterBBox: [Swift.Double]? = nil, filterCategories: [Swift.String]? = nil, filterCountries: [Swift.String]? = nil, language: Swift.String? = nil, maxResults: Swift.Int? = nil, resultBBox: [Swift.Double]? = nil, text: Swift.String? = nil)
+  }
+}
+extension AWSLocation.LocationClientTypes.SearchPlaceIndexForTextSummary : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct SearchPlaceIndexForTextOutput {
+  public var results: [AWSLocation.LocationClientTypes.SearchForTextResult]?
+  public var summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForTextSummary?
+  public init(results: [AWSLocation.LocationClientTypes.SearchForTextResult]? = nil, summary: AWSLocation.LocationClientTypes.SearchPlaceIndexForTextSummary? = nil)
+}
+public struct UpdatePlaceIndexInput {
+  public var dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration?
+  public var description: Swift.String?
+  public var indexName: Swift.String?
+  public init(dataSourceConfiguration: AWSLocation.LocationClientTypes.DataSourceConfiguration? = nil, description: Swift.String? = nil, indexName: Swift.String? = nil)
+}
+public struct UpdatePlaceIndexOutput {
+  public var indexArn: Swift.String?
+  public var indexName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(indexArn: Swift.String? = nil, indexName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct UpdateRouteCalculatorInput {
+  public var calculatorName: Swift.String?
+  public var description: Swift.String?
+  public init(calculatorName: Swift.String? = nil, description: Swift.String? = nil)
+}
+public struct UpdateRouteCalculatorOutput {
+  public var calculatorArn: Swift.String?
+  public var calculatorName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(calculatorArn: Swift.String? = nil, calculatorName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct UpdateTrackerInput {
+  public var description: Swift.String?
+  public var eventBridgeEnabled: Swift.Bool?
+  public var kmsKeyEnableGeospatialQueries: Swift.Bool?
+  public var positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering?
+  public var trackerName: Swift.String?
+  public init(description: Swift.String? = nil, eventBridgeEnabled: Swift.Bool? = nil, kmsKeyEnableGeospatialQueries: Swift.Bool? = nil, positionFiltering: AWSLocation.LocationClientTypes.PositionFiltering? = nil, trackerName: Swift.String? = nil)
+}
+public struct UpdateTrackerOutput {
+  public var trackerArn: Swift.String?
+  public var trackerName: Swift.String?
+  public var updateTime: Foundation.Date?
+  public init(trackerArn: Swift.String? = nil, trackerName: Swift.String? = nil, updateTime: Foundation.Date? = nil)
+}
+public struct VerifyDevicePositionInput {
+  public var deviceState: AWSLocation.LocationClientTypes.DeviceState?
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var trackerName: Swift.String?
+  public init(deviceState: AWSLocation.LocationClientTypes.DeviceState? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, trackerName: Swift.String? = nil)
+}
+public struct VerifyDevicePositionOutput {
+  public var deviceId: Swift.String?
+  public var distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit?
+  public var inferredState: AWSLocation.LocationClientTypes.InferredState?
+  public var receivedTime: Foundation.Date?
+  public var sampleTime: Foundation.Date?
+  public init(deviceId: Swift.String? = nil, distanceUnit: AWSLocation.LocationClientTypes.DistanceUnit? = nil, inferredState: AWSLocation.LocationClientTypes.InferredState? = nil, receivedTime: Foundation.Date? = nil, sampleTime: Foundation.Date? = nil)
+}
+public enum LocationClientTypes {
+}
+public class LocationClientEndpointPlugin : ClientRuntime.Plugin {
+  public init(endpointResolver: any AWSLocation.EndpointResolver)
+  convenience public init() throws
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}
+public class DefaultAWSAuthSchemePlugin : ClientRuntime.Plugin {
+  public init()
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}
+public class LocationClientAuthSchemePlugin : ClientRuntime.Plugin {
+  public init(authSchemes: SmithyHTTPAuthAPI.AuthSchemes? = nil, authSchemeResolver: (any AWSLocation.LocationAuthSchemeResolver)? = nil, awsCredentialIdentityResolver: (any SmithyIdentity.AWSCredentialIdentityResolver)? = nil)
+  public func configureClient(clientConfiguration: any ClientRuntime.ClientConfiguration) throws
+  @objc deinit
+}

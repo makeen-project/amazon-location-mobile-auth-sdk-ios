@@ -1,0 +1,1198 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "NodeInfo",
+        "printedName": "NodeInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SmithyFormURL8NodeInfoV4nameSSvp",
+            "mangledName": "$s13SmithyFormURL8NodeInfoV4nameSSvp",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SmithyFormURL8NodeInfoV4nameSSvg",
+                "mangledName": "$s13SmithyFormURL8NodeInfoV4nameSSvg",
+                "moduleName": "SmithyFormURL",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SmithyFormURL8NodeInfoVyACSScfc",
+            "mangledName": "$s13SmithyFormURL8NodeInfoVyACSScfc",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL8NodeInfoV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13SmithyFormURL8NodeInfoV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyFormURL",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SmithyFormURL8NodeInfoV13stringLiteralACSS_tcfc",
+            "mangledName": "$s13SmithyFormURL8NodeInfoV13stringLiteralACSS_tcfc",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SmithyFormURL8NodeInfoV",
+        "mangledName": "$s13SmithyFormURL8NodeInfoV",
+        "moduleName": "SmithyFormURL",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyReadWrite",
+        "printedName": "SmithyReadWrite",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyTimestamps",
+        "printedName": "SmithyTimestamps",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyFormURL"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Writer",
+        "printedName": "Writer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nodeInfoPath",
+            "printedName": "nodeInfoPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyFormURL.NodeInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyFormURL.NodeInfo",
+                    "usr": "s:13SmithyFormURL8NodeInfoV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SmithyFormURL6WriterC12nodeInfoPathSayAA04NodeF0VGvp",
+            "mangledName": "$s13SmithyFormURL6WriterC12nodeInfoPathSayAA04NodeF0VGvp",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyFormURL.NodeInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NodeInfo",
+                        "printedName": "SmithyFormURL.NodeInfo",
+                        "usr": "s:13SmithyFormURL8NodeInfoV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SmithyFormURL6WriterC12nodeInfoPathSayAA04NodeF0VGvg",
+                "mangledName": "$s13SmithyFormURL6WriterC12nodeInfoPathSayAA04NodeF0VGvg",
+                "moduleName": "SmithyFormURL",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nodeInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyFormURL.Writer",
+                "usr": "s:13SmithyFormURL6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SmithyFormURL6WriterC8nodeInfoAcA04NodeF0V_tcfc",
+            "mangledName": "$s13SmithyFormURL6WriterC8nodeInfoAcA04NodeF0V_tcfc",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC4data10Foundation4DataVyKF",
+            "mangledName": "$s13SmithyFormURL6WriterC4data10Foundation4DataVyKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Writer",
+                "printedName": "SmithyFormURL.Writer",
+                "usr": "s:13SmithyFormURL6WriterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:13SmithyFormURL6WriterCyAcA8NodeInfoVcip",
+            "mangledName": "$s13SmithyFormURL6WriterCyAcA8NodeInfoVcip",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Writer",
+                    "printedName": "SmithyFormURL.Writer",
+                    "usr": "s:13SmithyFormURL6WriterC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyFormURL.NodeInfo",
+                    "usr": "s:13SmithyFormURL8NodeInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SmithyFormURL6WriterCyAcA8NodeInfoVcig",
+                "mangledName": "$s13SmithyFormURL6WriterCyAcA8NodeInfoVcig",
+                "moduleName": "SmithyFormURL",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyySbSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyySbSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyySSSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyySSSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyySdSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyySdSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Float?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyySfSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyySfSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyySiSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyySiSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyys4Int8VSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyys4Int8VSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int16?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int16",
+                    "printedName": "Swift.Int16",
+                    "usr": "s:s5Int16V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyys5Int16VSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyys5Int16VSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt8?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyys5UInt8VSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyys5UInt8VSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyy10Foundation4DataVSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyy10Foundation4DataVSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyReadWrite.Document?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Document",
+                    "printedName": "SmithyReadWrite.Document",
+                    "usr": "s:15SmithyReadWrite8DocumentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyy0A9ReadWrite8DocumentOSgKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeTimestamp",
+            "printedName": "writeTimestamp(_:format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0F6FormatOtKF",
+            "mangledName": "$s13SmithyFormURL6WriterC14writeTimestamp_6formaty10Foundation4DateVSg_0A10Timestamps0F6FormatOtKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyyxSgKSYRzSi8RawValueRtzlF",
+            "moduleName": "SmithyFormURL",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.Int>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.Int>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "mangledName": "$s13SmithyFormURL6WriterC5writeyyxSgKSYRzSS8RawValueRtzlF",
+            "moduleName": "SmithyFormURL",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+            "sugared_genericSig": "<T where T : Swift.RawRepresentable, T.RawValue == Swift.String>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeMap",
+            "printedName": "writeMap(_:valueWritingClosure:keyNodeInfo:valueNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyFormURL.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyFormURL.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyFormURL.Writer",
+                        "usr": "s:13SmithyFormURL6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0gkL011isFlattenedySDySSxGSg_yx_ACtKXEAA0kL0VALSbtKlF",
+            "mangledName": "$s13SmithyFormURL6WriterC8writeMap_19valueWritingClosure11keyNodeInfo0gkL011isFlattenedySDySSxGSg_yx_ACtKXEAA0kL0VALSbtKlF",
+            "moduleName": "SmithyFormURL",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeList",
+            "printedName": "writeList(_:memberWritingClosure:memberNodeInfo:isFlattened:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[τ_0_0]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(τ_0_0, SmithyFormURL.Writer) throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(τ_0_0, SmithyFormURL.Writer)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Writer",
+                        "printedName": "SmithyFormURL.Writer",
+                        "usr": "s:13SmithyFormURL6WriterC"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "SmithyFormURL.NodeInfo",
+                "usr": "s:13SmithyFormURL8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC9writeList_20memberWritingClosure0G8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0jK0VSbtKlF",
+            "mangledName": "$s13SmithyFormURL6WriterC9writeList_20memberWritingClosure0G8NodeInfo11isFlattenedySayxGSg_yx_ACtKXEAA0jK0VSbtKlF",
+            "moduleName": "SmithyFormURL",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeNull",
+            "printedName": "writeNull()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SmithyFormURL6WriterC9writeNullyyKF",
+            "mangledName": "$s13SmithyFormURL6WriterC9writeNullyyKF",
+            "moduleName": "SmithyFormURL",
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13SmithyFormURL6WriterC",
+        "mangledName": "$s13SmithyFormURL6WriterC",
+        "moduleName": "SmithyFormURL",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SmithyWriter",
+            "printedName": "SmithyWriter",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "NodeInfo",
+                "printedName": "NodeInfo",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NodeInfo",
+                    "printedName": "SmithyFormURL.NodeInfo",
+                    "usr": "s:13SmithyFormURL8NodeInfoV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15SmithyReadWrite0A6WriterP",
+            "mangledName": "$s15SmithyReadWrite0A6WriterP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyFormURL\/Writer.swift",
+      "kind": "Array",
+      "offset": 576,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyFormURL\/Writer.swift",
+      "kind": "StringLiteral",
+      "offset": 5896,
+      "length": 6,
+      "value": "\"_-.~\""
+    }
+  ]
+}

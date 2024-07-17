@@ -1,0 +1,529 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyTimestamps"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TimestampFormat",
+        "printedName": "TimestampFormat",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "epochSeconds",
+            "printedName": "epochSeconds",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyTimestamps.TimestampFormat.Type) -> SmithyTimestamps.TimestampFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimestampFormat",
+                    "printedName": "SmithyTimestamps.TimestampFormat",
+                    "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyTimestamps.TimestampFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TimestampFormat",
+                        "printedName": "SmithyTimestamps.TimestampFormat",
+                        "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO12epochSecondsyA2CmF",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO12epochSecondsyA2CmF",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dateTime",
+            "printedName": "dateTime",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyTimestamps.TimestampFormat.Type) -> SmithyTimestamps.TimestampFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimestampFormat",
+                    "printedName": "SmithyTimestamps.TimestampFormat",
+                    "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyTimestamps.TimestampFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TimestampFormat",
+                        "printedName": "SmithyTimestamps.TimestampFormat",
+                        "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO8dateTimeyA2CmF",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO8dateTimeyA2CmF",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "httpDate",
+            "printedName": "httpDate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyTimestamps.TimestampFormat.Type) -> SmithyTimestamps.TimestampFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimestampFormat",
+                    "printedName": "SmithyTimestamps.TimestampFormat",
+                    "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyTimestamps.TimestampFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TimestampFormat",
+                        "printedName": "SmithyTimestamps.TimestampFormat",
+                        "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO8httpDateyA2CmF",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO8httpDateyA2CmF",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyTimestamps",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO9hashValueSivp",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO9hashValueSivp",
+            "moduleName": "SmithyTimestamps",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO9hashValueSivg",
+                "mangledName": "$s16SmithyTimestamps15TimestampFormatO9hashValueSivg",
+                "moduleName": "SmithyTimestamps",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyTimestamps",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyTimestamps.TimestampFormat]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimestampFormat",
+                    "printedName": "SmithyTimestamps.TimestampFormat",
+                    "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyTimestamps15TimestampFormatO8allCasesSayACGvpZ",
+            "mangledName": "$s16SmithyTimestamps15TimestampFormatO8allCasesSayACGvpZ",
+            "moduleName": "SmithyTimestamps",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyTimestamps.TimestampFormat]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TimestampFormat",
+                        "printedName": "SmithyTimestamps.TimestampFormat",
+                        "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO8allCasesSayACGvgZ",
+                "mangledName": "$s16SmithyTimestamps15TimestampFormatO8allCasesSayACGvgZ",
+                "moduleName": "SmithyTimestamps",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16SmithyTimestamps15TimestampFormatO",
+        "mangledName": "$s16SmithyTimestamps15TimestampFormatO",
+        "moduleName": "SmithyTimestamps",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SmithyTimestamps.TimestampFormat]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TimestampFormat",
+                        "printedName": "SmithyTimestamps.TimestampFormat",
+                        "usr": "s:16SmithyTimestamps15TimestampFormatO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TimestampFormatter",
+        "printedName": "TimestampFormatter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormatter",
+                "printedName": "SmithyTimestamps.TimestampFormatter",
+                "usr": "s:16SmithyTimestamps18TimestampFormatterV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TimestampFormat",
+                "printedName": "SmithyTimestamps.TimestampFormat",
+                "usr": "s:16SmithyTimestamps15TimestampFormatO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16SmithyTimestamps18TimestampFormatterV6formatAcA0C6FormatO_tcfc",
+            "mangledName": "$s16SmithyTimestamps18TimestampFormatterV6formatAcA0C6FormatO_tcfc",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "string",
+            "printedName": "string(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyTimestamps18TimestampFormatterV6string4fromSS10Foundation4DateV_tF",
+            "mangledName": "$s16SmithyTimestamps18TimestampFormatterV6string4fromSS10Foundation4DateV_tF",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "date",
+            "printedName": "date(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyTimestamps18TimestampFormatterV4date4from10Foundation4DateVSgSS_tF",
+            "mangledName": "$s16SmithyTimestamps18TimestampFormatterV4date4from10Foundation4DateVSgSS_tF",
+            "moduleName": "SmithyTimestamps",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16SmithyTimestamps18TimestampFormatterV",
+        "mangledName": "$s16SmithyTimestamps18TimestampFormatterV",
+        "moduleName": "SmithyTimestamps",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyTimestamps\/DateFormatters.swift",
+      "kind": "StringLiteral",
+      "offset": 674,
+      "length": 34,
+      "value": "\"EE, dd MMM yyyy HH:mm:ss.SSS zzz\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyTimestamps\/DateFormatters.swift",
+      "kind": "StringLiteral",
+      "offset": 1049,
+      "length": 30,
+      "value": "\"EE, dd MMM yyyy HH:mm:ss zzz\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyTimestamps\/DateFormatters.swift",
+      "kind": "StringLiteral",
+      "offset": 1485,
+      "length": 32,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyTimestamps\/DateFormatters.swift",
+      "kind": "StringLiteral",
+      "offset": 1931,
+      "length": 28,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ssZZZZZ\""
+    }
+  ]
+}

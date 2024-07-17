@@ -55,12 +55,12 @@ import Foundation
         return region
     }
     
-    internal func setAPIKey(apiKey: String) {
+    public func setAPIKey(apiKey: String) {
         self.apiProvider?.apiKey = apiKey
         KeyChainHelper.save(value: apiKey, key: .AmazonLocationAPIKey)
     }
     
-    internal func setRegion(region: String) {
+    public func setRegion(region: String) {
         self.apiProvider?.region = region
         self.cognitoProvider?.region = region
         self.region = region

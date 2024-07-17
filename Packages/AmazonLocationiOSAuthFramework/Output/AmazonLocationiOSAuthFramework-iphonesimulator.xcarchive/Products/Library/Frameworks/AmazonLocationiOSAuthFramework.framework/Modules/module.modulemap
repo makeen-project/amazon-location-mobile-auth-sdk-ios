@@ -4,3 +4,8 @@ framework module AmazonLocationiOSAuthFramework {
 
   module * { export * }
 }
+
+module AmazonLocationiOSAuthFramework.Swift {
+  header "AmazonLocationiOSAuthFramework-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4484 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthOption",
+        "printedName": "AuthOption",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "schemeID",
+            "printedName": "schemeID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV8schemeIDSSvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV8schemeIDSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV8schemeIDSSvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV8schemeIDSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "identityProperties",
+            "printedName": "identityProperties",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvs",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvM",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV18identityProperties0A010AttributesVvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signingProperties",
+            "printedName": "signingProperties",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvs",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvM",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV17signingProperties0A010AttributesVvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(schemeID:identityProperties:signingProperties:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthOption",
+                "printedName": "SmithyHTTPAuthAPI.AuthOption",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "hasDefaultArg": true,
+                "usr": "s:6Smithy10AttributesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "hasDefaultArg": true,
+                "usr": "s:6Smithy10AttributesV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV8schemeID18identityProperties07signingI0ACSS_0A010AttributesVAItcfc",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV8schemeID18identityProperties07signingI0ACSS_0A010AttributesVAItcfc",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV",
+        "mangledName": "$s17SmithyHTTPAuthAPI10AuthOptionV",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyIdentityAPI",
+        "printedName": "SmithyIdentityAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthScheme",
+        "printedName": "AuthScheme",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "schemeID",
+            "printedName": "schemeID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP8schemeIDSSvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP8schemeIDSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP8schemeIDSSvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP8schemeIDSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthScheme>",
+                "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthScheme>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signer",
+            "printedName": "signer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Signer",
+                "printedName": "any SmithyHTTPAuthAPI.Signer",
+                "usr": "s:17SmithyHTTPAuthAPI6SignerP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP6signerAA6Signer_pvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP6signerAA6Signer_pvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Signer",
+                    "printedName": "any SmithyHTTPAuthAPI.Signer",
+                    "usr": "s:17SmithyHTTPAuthAPI6SignerP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP6signerAA6Signer_pvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP6signerAA6Signer_pvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthScheme>",
+                "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthScheme>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "customizeSigningProperties",
+            "printedName": "customizeSigningProperties(signingProperties:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "Smithy.Context",
+                "usr": "s:6Smithy7ContextC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP26customizeSigningProperties07signingH07context0A010AttributesVAI_AG7ContextCtKF",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP26customizeSigningProperties07signingH07context0A010AttributesVAI_AG7ContextCtKF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthScheme>",
+            "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthScheme>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "identityResolver",
+            "printedName": "identityResolver(config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyIdentityAPI.IdentityResolver)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IdentityResolver",
+                    "printedName": "any SmithyIdentityAPI.IdentityResolver",
+                    "usr": "s:17SmithyIdentityAPI0B8ResolverP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IdentityResolverConfiguration",
+                "printedName": "any SmithyHTTPAuthAPI.IdentityResolverConfiguration",
+                "usr": "s:17SmithyHTTPAuthAPI29IdentityResolverConfigurationP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI10AuthSchemePAAE16identityResolver6config0a8IdentityC00iG0_pSgAA0iG13Configuration_p_tKF",
+            "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemePAAE16identityResolver6config0a8IdentityC00iG0_pSgAA0iG13Configuration_p_tKF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthScheme>",
+            "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthScheme>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP",
+        "mangledName": "$s17SmithyHTTPAuthAPI10AuthSchemeP",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthSchemeResolver",
+        "printedName": "AuthSchemeResolver",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "resolveAuthScheme",
+            "printedName": "resolveAuthScheme(params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SmithyHTTPAuthAPI.AuthOption]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthOption",
+                    "printedName": "SmithyHTTPAuthAPI.AuthOption",
+                    "usr": "s:17SmithyHTTPAuthAPI10AuthOptionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AuthSchemeResolverParameters",
+                "printedName": "any SmithyHTTPAuthAPI.AuthSchemeResolverParameters",
+                "usr": "s:17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI18AuthSchemeResolverP07resolvedE06paramsSayAA0D6OptionVGAA0deF10Parameters_p_tKF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AuthSchemeResolverP07resolvedE06paramsSayAA0D6OptionVGAA0deF10Parameters_p_tKF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthSchemeResolver>",
+            "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthSchemeResolver>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "constructParameters",
+            "printedName": "constructParameters(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthSchemeResolverParameters",
+                "printedName": "any SmithyHTTPAuthAPI.AuthSchemeResolverParameters",
+                "usr": "s:17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Context",
+                "printedName": "Smithy.Context",
+                "usr": "s:6Smithy7ContextC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI18AuthSchemeResolverP19constructParameters7contextAA0defH0_p0A07ContextC_tKF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AuthSchemeResolverP19constructParameters7contextAA0defH0_p0A07ContextC_tKF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthSchemeResolver>",
+            "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthSchemeResolver>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SmithyHTTPAuthAPI18AuthSchemeResolverP",
+        "mangledName": "$s17SmithyHTTPAuthAPI18AuthSchemeResolverP",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthSchemeResolverParameters",
+        "printedName": "AuthSchemeResolverParameters",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "operation",
+            "printedName": "operation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP9operationSSvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP9operationSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP9operationSSvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP9operationSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.AuthSchemeResolverParameters>",
+                "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.AuthSchemeResolverParameters>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP",
+        "mangledName": "$s17SmithyHTTPAuthAPI28AuthSchemeResolverParametersP",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningPropertyKeys",
+        "printedName": "SigningPropertyKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "signingName",
+            "printedName": "signingName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO11signingName0A012AttributeKeyVySSGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO11signingName0A012AttributeKeyVySSGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO11signingName0A012AttributeKeyVySSGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO11signingName0A012AttributeKeyVySSGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signingRegion",
+            "printedName": "signingRegion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO13signingRegion0A012AttributeKeyVySSGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO13signingRegion0A012AttributeKeyVySSGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO13signingRegion0A012AttributeKeyVySSGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO13signingRegion0A012AttributeKeyVySSGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bidirectionalStreaming",
+            "printedName": "bidirectionalStreaming",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO22bidirectionalStreaming0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO22bidirectionalStreaming0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO22bidirectionalStreaming0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO22bidirectionalStreaming0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "checksum",
+            "printedName": "checksum",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO8checksum0A012AttributeKeyVySSGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO8checksum0A012AttributeKeyVySSGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO8checksum0A012AttributeKeyVySSGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO8checksum0A012AttributeKeyVySSGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expiration",
+            "printedName": "expiration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Double>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO10expiration0A012AttributeKeyVySdGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO10expiration0A012AttributeKeyVySdGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Double>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO10expiration0A012AttributeKeyVySdGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO10expiration0A012AttributeKeyVySdGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isChunkedEligibleStream",
+            "printedName": "isChunkedEligibleStream",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO23isChunkedEligibleStream0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO23isChunkedEligibleStream0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO23isChunkedEligibleStream0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO23isChunkedEligibleStream0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "omitSessionToken",
+            "printedName": "omitSessionToken",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16omitSessionToken0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16omitSessionToken0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16omitSessionToken0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16omitSessionToken0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shouldNormalizeURIPath",
+            "printedName": "shouldNormalizeURIPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO22shouldNormalizeURIPath0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO22shouldNormalizeURIPath0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO22shouldNormalizeURIPath0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO22shouldNormalizeURIPath0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signatureType",
+            "printedName": "signatureType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.AWSSignatureType>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO13signatureType0A012AttributeKeyVyAA012AWSSignatureH0OGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO13signatureType0A012AttributeKeyVyAA012AWSSignatureH0OGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.AWSSignatureType>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO13signatureType0A012AttributeKeyVyAA012AWSSignatureH0OGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO13signatureType0A012AttributeKeyVyAA012AWSSignatureH0OGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signedBodyHeader",
+            "printedName": "signedBodyHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.AWSSignedBodyHeader>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyHeader",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                    "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16signedBodyHeader0A012AttributeKeyVyAA09AWSSignedhI0OGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16signedBodyHeader0A012AttributeKeyVyAA09AWSSignedhI0OGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.AWSSignedBodyHeader>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyHeader",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                        "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16signedBodyHeader0A012AttributeKeyVyAA09AWSSignedhI0OGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16signedBodyHeader0A012AttributeKeyVyAA09AWSSignedhI0OGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signingAlgorithm",
+            "printedName": "signingAlgorithm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.SigningAlgorithm>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningAlgorithm",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                    "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16signingAlgorithm0A012AttributeKeyVyAA0dH0OGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16signingAlgorithm0A012AttributeKeyVyAA0dH0OGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<SmithyHTTPAuthAPI.SigningAlgorithm>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningAlgorithm",
+                        "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO16signingAlgorithm0A012AttributeKeyVyAA0dH0OGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO16signingAlgorithm0A012AttributeKeyVyAA0dH0OGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unsignedBody",
+            "printedName": "unsignedBody",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO12unsignedBody0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO12unsignedBody0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO12unsignedBody0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO12unsignedBody0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "useDoubleURIEncode",
+            "printedName": "useDoubleURIEncode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO18useDoubleURIEncode0A012AttributeKeyVySbGvpZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO18useDoubleURIEncode0A012AttributeKeyVySbGvpZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AttributeKey",
+                    "printedName": "Smithy.AttributeKey<Swift.Bool>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:6Smithy12AttributeKeyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO18useDoubleURIEncode0A012AttributeKeyVySbGvgZ",
+                "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO18useDoubleURIEncode0A012AttributeKeyVySbGvgZ",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17SmithyHTTPAuthAPI19SigningPropertyKeysO",
+        "mangledName": "$s17SmithyHTTPAuthAPI19SigningPropertyKeysO",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyIdentityAPI",
+        "printedName": "SmithyIdentityAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IdentityResolverConfiguration",
+        "printedName": "IdentityResolverConfiguration",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getIdentityResolver",
+            "printedName": "getIdentityResolver(schemeID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyIdentityAPI.IdentityResolver)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IdentityResolver",
+                    "printedName": "any SmithyIdentityAPI.IdentityResolver",
+                    "usr": "s:17SmithyIdentityAPI0B8ResolverP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI29IdentityResolverConfigurationP03getdE08schemeID0adC00dE0_pSgSS_tKF",
+            "mangledName": "$s17SmithyHTTPAuthAPI29IdentityResolverConfigurationP03getdE08schemeID0adC00dE0_pSgSS_tKF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyHTTPAuthAPI.IdentityResolverConfiguration>",
+            "sugared_genericSig": "<Self where Self : SmithyHTTPAuthAPI.IdentityResolverConfiguration>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SmithyHTTPAuthAPI29IdentityResolverConfigurationP",
+        "mangledName": "$s17SmithyHTTPAuthAPI29IdentityResolverConfigurationP",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyIdentityAPI",
+        "printedName": "SmithyIdentityAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelectedAuthScheme",
+        "printedName": "SelectedAuthScheme",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "schemeID",
+            "printedName": "schemeID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeIDSSvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeIDSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeIDSSvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeIDSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "identity",
+            "printedName": "identity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyIdentityAPI.Identity)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Identity",
+                    "printedName": "any SmithyIdentityAPI.Identity",
+                    "usr": "s:17SmithyIdentityAPI0B0P"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV8identity0a8IdentityC00H0_pSgvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV8identity0a8IdentityC00H0_pSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyIdentityAPI.Identity)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Identity",
+                        "printedName": "any SmithyIdentityAPI.Identity",
+                        "usr": "s:17SmithyIdentityAPI0B0P"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV8identity0a8IdentityC00H0_pSgvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV8identity0a8IdentityC00H0_pSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signingProperties",
+            "printedName": "signingProperties",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Smithy.Attributes?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV17signingProperties0A010AttributesVSgvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV17signingProperties0A010AttributesVSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Smithy.Attributes?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Attributes",
+                        "printedName": "Smithy.Attributes",
+                        "usr": "s:6Smithy10AttributesV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV17signingProperties0A010AttributesVSgvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV17signingProperties0A010AttributesVSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signer",
+            "printedName": "signer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyHTTPAuthAPI.Signer)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Signer",
+                    "printedName": "any SmithyHTTPAuthAPI.Signer",
+                    "usr": "s:17SmithyHTTPAuthAPI6SignerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV6signerAA6Signer_pSgvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV6signerAA6Signer_pSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any SmithyHTTPAuthAPI.Signer)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Signer",
+                        "printedName": "any SmithyHTTPAuthAPI.Signer",
+                        "usr": "s:17SmithyHTTPAuthAPI6SignerP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV6signerAA6Signer_pSgvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV6signerAA6Signer_pSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(schemeID:identity:signingProperties:signer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelectedAuthScheme",
+                "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyIdentityAPI.Identity)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Identity",
+                    "printedName": "any SmithyIdentityAPI.Identity",
+                    "usr": "s:17SmithyIdentityAPI0B0P"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Smithy.Attributes?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyHTTPAuthAPI.Signer)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Signer",
+                    "printedName": "any SmithyHTTPAuthAPI.Signer",
+                    "usr": "s:17SmithyHTTPAuthAPI6SignerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeID8identity17signingProperties6signerACSS_0a8IdentityC00M0_pSg0A010AttributesVSgAA6Signer_pSgtcfc",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV8schemeID8identity17signingProperties6signerACSS_0a8IdentityC00M0_pSg0A010AttributesVSgAA6Signer_pSgtcfc",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getCopyWithUpdatedSigningProperty",
+            "printedName": "getCopyWithUpdatedSigningProperty(key:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelectedAuthScheme",
+                "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AttributeKey",
+                "printedName": "Smithy.AttributeKey<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:6Smithy12AttributeKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV33getCopyWithUpdatedSigningProperty3key5valueAC0A012AttributeKeyVyxG_xtlF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV33getCopyWithUpdatedSigningProperty3key5valueAC0A012AttributeKeyVyxG_xtlF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV",
+        "mangledName": "$s17SmithyHTTPAuthAPI18SelectedAuthSchemeV",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyHTTPAPI",
+        "printedName": "SmithyHTTPAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SmithyIdentityAPI",
+        "printedName": "SmithyIdentityAPI",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "Import",
+        "name": "Smithy",
+        "printedName": "Smithy",
+        "declKind": "Import",
+        "moduleName": "SmithyHTTPAuthAPI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Signer",
+        "printedName": "Signer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "signRequest",
+            "printedName": "signRequest(requestBuilder:identity:signingProperties:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkHttpRequestBuilder",
+                "printedName": "SmithyHTTPAPI.SdkHttpRequestBuilder",
+                "usr": "s:13SmithyHTTPAPI21SdkHttpRequestBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SdkHttpRequestBuilder",
+                "printedName": "SmithyHTTPAPI.SdkHttpRequestBuilder",
+                "usr": "s:13SmithyHTTPAPI21SdkHttpRequestBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Attributes",
+                "printedName": "Smithy.Attributes",
+                "usr": "s:6Smithy10AttributesV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI6SignerP11signRequest14requestBuilder8identity17signingProperties0A7HTTPAPI07SdkHttpfH0CAJ_qd__0A010AttributesVtYaK0a8IdentityC00P0Rd__lF",
+            "mangledName": "$s17SmithyHTTPAuthAPI6SignerP11signRequest14requestBuilder8identity17signingProperties0A7HTTPAPI07SdkHttpfH0CAJ_qd__0A010AttributesVtYaK0a8IdentityC00P0Rd__lF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : SmithyHTTPAuthAPI.Signer, τ_1_0 : SmithyIdentityAPI.Identity>",
+            "sugared_genericSig": "<Self, IdentityT where Self : SmithyHTTPAuthAPI.Signer, IdentityT : SmithyIdentityAPI.Identity>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17SmithyHTTPAuthAPI6SignerP",
+        "mangledName": "$s17SmithyHTTPAuthAPI6SignerP",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AWSSignatureType",
+        "printedName": "AWSSignatureType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "requestHeaders",
+            "printedName": "requestHeaders",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignatureType.Type) -> SmithyHTTPAuthAPI.AWSSignatureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO14requestHeadersyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO14requestHeadersyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "requestQueryParams",
+            "printedName": "requestQueryParams",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignatureType.Type) -> SmithyHTTPAuthAPI.AWSSignatureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO18requestQueryParamsyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO18requestQueryParamsyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "requestChunk",
+            "printedName": "requestChunk",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignatureType.Type) -> SmithyHTTPAuthAPI.AWSSignatureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO12requestChunkyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO12requestChunkyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "requestTrailingHeaders",
+            "printedName": "requestTrailingHeaders",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignatureType.Type) -> SmithyHTTPAuthAPI.AWSSignatureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO22requestTrailingHeadersyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO22requestTrailingHeadersyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "requestEvent",
+            "printedName": "requestEvent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignatureType.Type) -> SmithyHTTPAuthAPI.AWSSignatureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignatureType",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                    "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignatureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignatureType",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO12requestEventyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO12requestEventyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignatureType",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignatureType",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignatureType",
+                "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO9hashValueSivp",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO9hashValueSivp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO9hashValueSivg",
+                "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO9hashValueSivg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17SmithyHTTPAuthAPI16AWSSignatureTypeO",
+        "mangledName": "$s17SmithyHTTPAuthAPI16AWSSignatureTypeO",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AWSSignedBodyHeader",
+        "printedName": "AWSSignedBodyHeader",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyHeader.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyHeader",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                    "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyHeader",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                        "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO4noneyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO4noneyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "contentSha256",
+            "printedName": "contentSha256",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyHeader.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyHeader",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                    "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyHeader",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                        "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO13contentSha256yA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO13contentSha256yA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignedBodyHeader",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignedBodyHeader",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyHeader",
+                "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO9hashValueSivp",
+            "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO9hashValueSivp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO9hashValueSivg",
+                "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO9hashValueSivg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO",
+        "mangledName": "$s17SmithyHTTPAuthAPI19AWSSignedBodyHeaderO",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AWSSignedBodyValue",
+        "printedName": "AWSSignedBodyValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "empty",
+            "printedName": "empty",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO5emptyyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO5emptyyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "emptySha256",
+            "printedName": "emptySha256",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO11emptySha256yA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO11emptySha256yA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "unsignedPayload",
+            "printedName": "unsignedPayload",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO15unsignedPayloadyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO15unsignedPayloadyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "streamingSha256Payload",
+            "printedName": "streamingSha256Payload",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO22streamingSha256PayloadyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO22streamingSha256PayloadyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "streamingSha256Events",
+            "printedName": "streamingSha256Events",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO21streamingSha256EventsyA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO21streamingSha256EventsyA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "streamingSha256PayloadTrailer",
+            "printedName": "streamingSha256PayloadTrailer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO29streamingSha256PayloadTraileryA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO29streamingSha256PayloadTraileryA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Var",
+            "name": "streamingUnsignedPayloadTrailer",
+            "printedName": "streamingUnsignedPayloadTrailer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.AWSSignedBodyValue.Type) -> SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AWSSignedBodyValue",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                    "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AWSSignedBodyValue",
+                        "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO31streamingUnsignedPayloadTraileryA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO31streamingUnsignedPayloadTraileryA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignedBodyValue",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AWSSignedBodyValue",
+                "printedName": "SmithyHTTPAuthAPI.AWSSignedBodyValue",
+                "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO04hashF0Sivp",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO04hashF0Sivp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO04hashF0Sivg",
+                "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO04hashF0Sivg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17SmithyHTTPAuthAPI18AWSSignedBodyValueO",
+        "mangledName": "$s17SmithyHTTPAuthAPI18AWSSignedBodyValueO",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningAlgorithm",
+        "printedName": "SigningAlgorithm",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sigv4",
+            "printedName": "sigv4",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.SigningAlgorithm.Type) -> SmithyHTTPAuthAPI.SigningAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningAlgorithm",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                    "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningAlgorithm",
+                        "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO5sigv4yA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO5sigv4yA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sigv4a",
+            "printedName": "sigv4a",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyHTTPAuthAPI.SigningAlgorithm.Type) -> SmithyHTTPAuthAPI.SigningAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningAlgorithm",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                    "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningAlgorithm",
+                        "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO6sigv4ayA2CmF",
+            "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO6sigv4ayA2CmF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningAlgorithm",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                    "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueACSgSS_tcfc",
+            "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueACSgSS_tcfc",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueSSvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueSSvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO8rawValueSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO",
+        "mangledName": "$s17SmithyHTTPAuthAPI16SigningAlgorithmO",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningFlags",
+        "printedName": "SigningFlags",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "useDoubleURIEncode",
+            "printedName": "useDoubleURIEncode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncodeSbvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncodeSbvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncodeSbvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncodeSbvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shouldNormalizeURIPath",
+            "printedName": "shouldNormalizeURIPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV22shouldNormalizeURIPathSbvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV22shouldNormalizeURIPathSbvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV22shouldNormalizeURIPathSbvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV22shouldNormalizeURIPathSbvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "omitSessionToken",
+            "printedName": "omitSessionToken",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV16omitSessionTokenSbvp",
+            "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV16omitSessionTokenSbvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV16omitSessionTokenSbvg",
+                "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV16omitSessionTokenSbvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(useDoubleURIEncode:shouldNormalizeURIPath:omitSessionToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningFlags",
+                "printedName": "SmithyHTTPAuthAPI.SigningFlags",
+                "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncode22shouldNormalizeURIPath16omitSessionTokenACSb_S2btcfc",
+            "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV18useDoubleURIEncode22shouldNormalizeURIPath16omitSessionTokenACSb_S2btcfc",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17SmithyHTTPAuthAPI12SigningFlagsV",
+        "mangledName": "$s17SmithyHTTPAuthAPI12SigningFlagsV",
+        "moduleName": "SmithyHTTPAuthAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Context",
+        "printedName": "Context",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isChunkedEligibleStream",
+            "printedName": "isChunkedEligibleStream",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE23isChunkedEligibleStreamSbSgvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "estimatedSkew",
+            "printedName": "estimatedSkew",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13estimatedSkewSdSgvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "socketTimeout",
+            "printedName": "socketTimeout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE13socketTimeoutSdSgvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getAuthSchemes",
+            "printedName": "getAuthSchemes()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Smithy.Attributes?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Attributes",
+                    "printedName": "Smithy.Attributes",
+                    "usr": "s:6Smithy10AttributesV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE14getAuthSchemesAA10AttributesVSgyF",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE14getAuthSchemesAA10AttributesVSgyF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "selectedAuthScheme",
+            "printedName": "selectedAuthScheme",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SelectedAuthScheme",
+                    "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                    "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SelectedAuthScheme",
+                        "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                        "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SelectedAuthScheme",
+                        "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                        "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE18selectedAuthSchemeAD08SelectedfG0VSgvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setSelectedAuthScheme",
+            "printedName": "setSelectedAuthScheme(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SelectedAuthScheme",
+                    "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                    "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE21setSelectedAuthSchemeyyAD0fgH0VSgF",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE21setSelectedAuthSchemeyyAD0fgH0VSgF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAuthSchemeResolver",
+            "printedName": "getAuthSchemeResolver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyHTTPAuthAPI.AuthSchemeResolver)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthSchemeResolver",
+                    "printedName": "any SmithyHTTPAuthAPI.AuthSchemeResolver",
+                    "usr": "s:17SmithyHTTPAuthAPI18AuthSchemeResolverP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE21getAuthSchemeResolverAD0fgH0_pSgyF",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE21getAuthSchemeResolverAD0fgH0_pSgyF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "signingAlgorithm",
+            "printedName": "signingAlgorithm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningAlgorithm",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                    "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningAlgorithm",
+                        "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningAlgorithm",
+                        "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                        "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16signingAlgorithmAD07SigningF0OSgvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestSignature",
+            "printedName": "requestSignature",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvp",
+            "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvp",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvg",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvg",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvs",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvs",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvM",
+                "mangledName": "$s6Smithy7ContextC0A11HTTPAuthAPIE16requestSignatureSSvM",
+                "moduleName": "SmithyHTTPAuthAPI",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Smithy7ContextC",
+        "mangledName": "$s6Smithy7ContextC",
+        "moduleName": "Smithy",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "HasAttributes",
+            "printedName": "HasAttributes",
+            "usr": "s:6Smithy13HasAttributesP",
+            "mangledName": "$s6Smithy13HasAttributesP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ContextBuilder",
+        "printedName": "ContextBuilder",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "withSocketTimeout",
+            "printedName": "withSocketTimeout(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE17withSocketTimeout5valueACXDSd_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE17withSocketTimeout5valueACXDSd_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withAuthSchemeResolver",
+            "printedName": "withAuthSchemeResolver(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ContextBuilder",
+                "printedName": "Smithy.ContextBuilder",
+                "usr": "s:6Smithy14ContextBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SmithyHTTPAuthAPI.AuthSchemeResolver)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthSchemeResolver",
+                    "printedName": "any SmithyHTTPAuthAPI.AuthSchemeResolver",
+                    "usr": "s:17SmithyHTTPAuthAPI18AuthSchemeResolverP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE22withAuthSchemeResolver5valueAcD0ghI0_pSg_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE22withAuthSchemeResolver5valueAcD0ghI0_pSg_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withAuthScheme",
+            "printedName": "withAuthScheme(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ContextBuilder",
+                "printedName": "Smithy.ContextBuilder",
+                "usr": "s:6Smithy14ContextBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AuthScheme",
+                "printedName": "any SmithyHTTPAuthAPI.AuthScheme",
+                "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE14withAuthScheme5valueAcD0gH0_p_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE14withAuthScheme5valueAcD0gH0_p_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withAuthSchemes",
+            "printedName": "withAuthSchemes(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ContextBuilder",
+                "printedName": "Smithy.ContextBuilder",
+                "usr": "s:6Smithy14ContextBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any SmithyHTTPAuthAPI.AuthScheme]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthScheme",
+                    "printedName": "any SmithyHTTPAuthAPI.AuthScheme",
+                    "usr": "s:17SmithyHTTPAuthAPI10AuthSchemeP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE15withAuthSchemes5valueACSayAD0G6Scheme_pG_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE15withAuthSchemes5valueACSayAD0G6Scheme_pG_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withSelectedAuthScheme",
+            "printedName": "withSelectedAuthScheme(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ContextBuilder",
+                "printedName": "Smithy.ContextBuilder",
+                "usr": "s:6Smithy14ContextBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelectedAuthScheme",
+                "printedName": "SmithyHTTPAuthAPI.SelectedAuthScheme",
+                "usr": "s:17SmithyHTTPAuthAPI18SelectedAuthSchemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE22withSelectedAuthScheme5valueAcD0ghI0V_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE22withSelectedAuthScheme5valueAcD0ghI0V_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withSigningAlgorithm",
+            "printedName": "withSigningAlgorithm(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningAlgorithm",
+                "printedName": "SmithyHTTPAuthAPI.SigningAlgorithm",
+                "usr": "s:17SmithyHTTPAuthAPI16SigningAlgorithmO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE20withSigningAlgorithm5valueACXDAD0gH0O_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE20withSigningAlgorithm5valueACXDAD0gH0O_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "withRequestSignature",
+            "printedName": "withRequestSignature(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Smithy14ContextBuilderC0A11HTTPAuthAPIE20withRequestSignature5valueACXDSS_tF",
+            "mangledName": "$s6Smithy14ContextBuilderC0A11HTTPAuthAPIE20withRequestSignature5valueACXDSS_tF",
+            "moduleName": "SmithyHTTPAuthAPI",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6Smithy14ContextBuilderC",
+        "mangledName": "$s6Smithy14ContextBuilderC",
+        "moduleName": "Smithy",
+        "isExternal": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+Chunked.swift",
+      "kind": "StringLiteral",
+      "offset": 472,
+      "length": 28,
+      "value": "\"isChunkedEligibleStreamKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+EstimatedSkew.swift",
+      "kind": "StringLiteral",
+      "offset": 909,
+      "length": 18,
+      "value": "\"estimatedSkewKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+EstimatedSkew.swift",
+      "kind": "StringLiteral",
+      "offset": 993,
+      "length": 18,
+      "value": "\"socketTimeoutKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+HTTPAuth.swift",
+      "kind": "StringLiteral",
+      "offset": 2297,
+      "length": 13,
+      "value": "\"AuthSchemes\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+HTTPAuth.swift",
+      "kind": "StringLiteral",
+      "offset": 2387,
+      "length": 20,
+      "value": "\"AuthSchemeResolver\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+HTTPAuth.swift",
+      "kind": "StringLiteral",
+      "offset": 2484,
+      "length": 20,
+      "value": "\"SelectedAuthScheme\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+HTTPAuth.swift",
+      "kind": "StringLiteral",
+      "offset": 2577,
+      "length": 21,
+      "value": "\"SigningAlgorithmKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/Context+RequestSignature.swift",
+      "kind": "StringLiteral",
+      "offset": 699,
+      "length": 21,
+      "value": "\"requestSignatureKey\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 291,
+      "length": 13,
+      "value": "\"SigningName\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 371,
+      "length": 15,
+      "value": "\"SigningRegion\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 570,
+      "length": 24,
+      "value": "\"BidirectionalStreaming\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 656,
+      "length": 10,
+      "value": "\"checksum\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 12,
+      "value": "\"Expiration\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 823,
+      "length": 25,
+      "value": "\"isChunkedEligibleStream\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 916,
+      "length": 18,
+      "value": "\"OmitSessionToken\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1008,
+      "length": 24,
+      "value": "\"ShouldNormalizeURIPath\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1109,
+      "length": 15,
+      "value": "\"SignatureType\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1207,
+      "length": 18,
+      "value": "\"SignedBodyHeader\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1305,
+      "length": 18,
+      "value": "\"signingAlgorithm\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1387,
+      "length": 14,
+      "value": "\"UnsignedBody\""
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyHTTPAuthAPI\/Context\/SigningPropertyKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1471,
+      "length": 20,
+      "value": "\"UseDoubleURIEncode\""
+    }
+  ]
+}

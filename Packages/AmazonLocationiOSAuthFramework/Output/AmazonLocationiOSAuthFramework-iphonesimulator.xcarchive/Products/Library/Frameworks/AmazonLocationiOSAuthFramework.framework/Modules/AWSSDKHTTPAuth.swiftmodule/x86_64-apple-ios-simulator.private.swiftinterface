@@ -1,0 +1,71 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name aws_sdk_swift -module-name AWSSDKHTTPAuth
+import AWSSDKChecksums
+import AwsCommonRuntimeKit/*.CommonRunTimeError*/
+import AwsCommonRuntimeKit/*.HTTPRequestBase*/
+import AwsCommonRuntimeKit/*.Signer*/
+import AwsCommonRuntimeKit/*.SigningConfig*/
+import ClientRuntime/*.Date*/
+import Foundation/*.Date*/
+import Foundation/*.TimeInterval*/
+import Foundation/*.URL*/
+import Smithy/*.AttributeKey*/
+import Smithy/*.Attributes*/
+import Smithy/*.ClientError*/
+import Smithy/*.Context*/
+import Smithy/*.SwiftLogger*/
+import SmithyHTTPAPI/*.SdkHttpRequest*/
+import SmithyHTTPAPI/*.SdkHttpRequestBuilder*/
+import SmithyHTTPAuth/*.AWSSigningConfig*/
+import SmithyHTTPAuthAPI/*.AWSSignatureType*/
+import SmithyHTTPAuthAPI/*.AWSSignedBodyHeader*/
+import SmithyHTTPAuthAPI/*.AWSSignedBodyValue*/
+import SmithyHTTPAuthAPI/*.AuthScheme*/
+import SmithyHTTPAuthAPI/*.Signer*/
+import SmithyHTTPAuthAPI/*.SigningAlgorithm*/
+import SmithyHTTPAuthAPI/*.SigningFlags*/
+import SmithyHTTPAuthAPI/*.SigningPropertyKeys*/
+import SmithyIdentity/*.AWSCredentialIdentity*/
+import SmithyIdentity/*.AWSCredentialIdentityResolver*/
+import SmithyIdentityAPI/*.FlowType*/
+import SmithyIdentityAPI/*.Identity*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class AWSSigV4Signer : SmithyHTTPAuthAPI.Signer {
+  public init()
+  #if compiler(>=5.3) && $AsyncAwait
+  public func signRequest<IdentityT>(requestBuilder: SmithyHTTPAPI.SdkHttpRequestBuilder, identity: IdentityT, signingProperties: Smithy.Attributes) async throws -> SmithyHTTPAPI.SdkHttpRequestBuilder where IdentityT : SmithyIdentityAPI.Identity
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sigV4SignedURL(requestBuilder: SmithyHTTPAPI.SdkHttpRequestBuilder, awsCredentialIdentityResolver: any SmithyIdentity.AWSCredentialIdentityResolver, signingName: Swift.String, signingRegion: Swift.String, date: ClientRuntime.Date, expiration: Foundation.TimeInterval, signingAlgorithm: SmithyHTTPAuthAPI.SigningAlgorithm) async -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sigV4SignedRequest(requestBuilder: SmithyHTTPAPI.SdkHttpRequestBuilder, signingConfig: SmithyHTTPAuth.AWSSigningConfig) async -> SmithyHTTPAPI.SdkHttpRequest?
+  #endif
+  @objc deinit
+}
+extension AwsCommonRuntimeKit.SigningConfig {
+  public var useAwsChunkedEncoding: Swift.Bool {
+    get
+  }
+}
+public class CustomSigningPropertiesSetter {
+  public init()
+  public func setServiceSpecificSigningProperties(signingProperties: inout Smithy.Attributes, context: Smithy.Context) throws
+  @objc deinit
+}
+public struct SigV4AAuthScheme : SmithyHTTPAuthAPI.AuthScheme {
+  public let schemeID: Swift.String
+  public let signer: any SmithyHTTPAuthAPI.Signer
+  public init()
+  public func customizeSigningProperties(signingProperties: Smithy.Attributes, context: Smithy.Context) throws -> Smithy.Attributes
+}
+public struct SigV4AuthScheme : SmithyHTTPAuthAPI.AuthScheme {
+  public let schemeID: Swift.String
+  public let signer: any SmithyHTTPAuthAPI.Signer
+  public init()
+  public func customizeSigningProperties(signingProperties: Smithy.Attributes, context: Smithy.Context) throws -> Smithy.Attributes
+}

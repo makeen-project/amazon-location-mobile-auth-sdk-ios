@@ -1,0 +1,1701 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryBackoffStrategy",
+        "printedName": "RetryBackoffStrategy",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "computeNextBackoffDelay",
+            "printedName": "computeNextBackoffDelay(attempt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP011computeNextE5Delay7attemptSdSi_tF",
+            "mangledName": "$s16SmithyRetriesAPI20RetryBackoffStrategyP011computeNextE5Delay7attemptSdSi_tF",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryBackoffStrategy>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryBackoffStrategy>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP",
+        "mangledName": "$s16SmithyRetriesAPI20RetryBackoffStrategyP",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryError",
+        "printedName": "RetryError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "maxAttemptsReached",
+            "printedName": "maxAttemptsReached",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetriesAPI.RetryError.Type) -> SmithyRetriesAPI.RetryError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryError",
+                    "printedName": "SmithyRetriesAPI.RetryError",
+                    "usr": "s:16SmithyRetriesAPI10RetryErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetriesAPI.RetryError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RetryError",
+                        "printedName": "SmithyRetriesAPI.RetryError",
+                        "usr": "s:16SmithyRetriesAPI10RetryErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyRetriesAPI10RetryErrorO18maxAttemptsReachedyA2CmF",
+            "mangledName": "$s16SmithyRetriesAPI10RetryErrorO18maxAttemptsReachedyA2CmF",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryError",
+                "printedName": "SmithyRetriesAPI.RetryError",
+                "usr": "s:16SmithyRetriesAPI10RetryErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryError",
+                "printedName": "SmithyRetriesAPI.RetryError",
+                "usr": "s:16SmithyRetriesAPI10RetryErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI10RetryErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16SmithyRetriesAPI10RetryErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyRetriesAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI10RetryErrorO9hashValueSivp",
+            "mangledName": "$s16SmithyRetriesAPI10RetryErrorO9hashValueSivp",
+            "moduleName": "SmithyRetriesAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI10RetryErrorO9hashValueSivg",
+                "mangledName": "$s16SmithyRetriesAPI10RetryErrorO9hashValueSivg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI10RetryErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16SmithyRetriesAPI10RetryErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyRetriesAPI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16SmithyRetriesAPI10RetryErrorO",
+        "mangledName": "$s16SmithyRetriesAPI10RetryErrorO",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryErrorInfo",
+        "printedName": "RetryErrorInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "errorType",
+            "printedName": "errorType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorType",
+                "printedName": "SmithyRetriesAPI.RetryErrorType",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovp",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovg",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovs",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0Ovs",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0OvM",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9errorTypeAA0deH0OvM",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "retryAfterHint",
+            "printedName": "retryAfterHint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV14retryAfterHintSdSgvp",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV14retryAfterHintSdSgvp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV14retryAfterHintSdSgvg",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV14retryAfterHintSdSgvg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isTimeout",
+            "printedName": "isTimeout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvp",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvg",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvs",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvs",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvM",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9isTimeoutSbvM",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(errorType:retryAfterHint:isTimeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorInfo",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorType",
+                "printedName": "SmithyRetriesAPI.RetryErrorType",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV9errorType14retryAfterHint9isTimeoutAcA0deH0O_SdSgSbtcfc",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV9errorType14retryAfterHint9isTimeoutAcA0deH0O_SdSgSbtcfc",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorInfo",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorInfo",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyRetriesAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV",
+        "mangledName": "$s16SmithyRetriesAPI14RetryErrorInfoV",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryErrorInfoProvider",
+        "printedName": "RetryErrorInfoProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "errorInfo",
+            "printedName": "errorInfo(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorInfo",
+                    "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI22RetryErrorInfoProviderP05errorF03forAA0deF0VSgs0E0_p_tFZ",
+            "mangledName": "$s16SmithyRetriesAPI22RetryErrorInfoProviderP05errorF03forAA0deF0VSgs0E0_p_tFZ",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryErrorInfoProvider>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryErrorInfoProvider>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16SmithyRetriesAPI22RetryErrorInfoProviderP",
+        "mangledName": "$s16SmithyRetriesAPI22RetryErrorInfoProviderP",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryErrorType",
+        "printedName": "RetryErrorType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "transient",
+            "printedName": "transient",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetriesAPI.RetryErrorType.Type) -> SmithyRetriesAPI.RetryErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RetryErrorType",
+                        "printedName": "SmithyRetriesAPI.RetryErrorType",
+                        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO9transientyA2CmF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO9transientyA2CmF",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "throttling",
+            "printedName": "throttling",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetriesAPI.RetryErrorType.Type) -> SmithyRetriesAPI.RetryErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RetryErrorType",
+                        "printedName": "SmithyRetriesAPI.RetryErrorType",
+                        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO10throttlingyA2CmF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO10throttlingyA2CmF",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serverError",
+            "printedName": "serverError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetriesAPI.RetryErrorType.Type) -> SmithyRetriesAPI.RetryErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RetryErrorType",
+                        "printedName": "SmithyRetriesAPI.RetryErrorType",
+                        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO06serverE0yA2CmF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO06serverE0yA2CmF",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "clientError",
+            "printedName": "clientError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SmithyRetriesAPI.RetryErrorType.Type) -> SmithyRetriesAPI.RetryErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryErrorType",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType",
+                    "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SmithyRetriesAPI.RetryErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RetryErrorType",
+                        "printedName": "SmithyRetriesAPI.RetryErrorType",
+                        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO06clientE0yA2CmF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO06clientE0yA2CmF",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO9hashValueSivp",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO9hashValueSivp",
+            "moduleName": "SmithyRetriesAPI",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO9hashValueSivg",
+                "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO9hashValueSivg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "SmithyRetriesAPI",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorType",
+                "printedName": "SmithyRetriesAPI.RetryErrorType",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorType",
+                "printedName": "SmithyRetriesAPI.RetryErrorType",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "SmithyRetriesAPI",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16SmithyRetriesAPI14RetryErrorTypeO",
+        "mangledName": "$s16SmithyRetriesAPI14RetryErrorTypeO",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryStrategy",
+        "printedName": "RetryStrategy",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Token",
+            "printedName": "Token",
+            "declKind": "AssociatedType",
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP5TokenQa",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP5TokenQa",
+            "moduleName": "SmithyRetriesAPI",
+            "protocolReq": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryStrategyOptions",
+                "printedName": "SmithyRetriesAPI.RetryStrategyOptions",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP7optionsxAA0dE7OptionsV_tcfc",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP7optionsxAA0dE7OptionsV_tcfc",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryStrategy>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryStrategy>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "acquireInitialRetryToken",
+            "printedName": "acquireInitialRetryToken(tokenScope:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Token"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP014acquireInitialD5Token10tokenScope0H0QzSS_tYaKF",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP014acquireInitialD5Token10tokenScope0H0QzSS_tYaKF",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryStrategy>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryStrategy>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshRetryTokenForRetry",
+            "printedName": "refreshRetryTokenForRetry(tokenToRenew:errorInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Token"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryErrorInfo",
+                "printedName": "SmithyRetriesAPI.RetryErrorInfo",
+                "usr": "s:16SmithyRetriesAPI14RetryErrorInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP07refreshd8TokenForD012tokenToRenew9errorInfoy0G0Qz_AA0d5ErrorM0VtYaKF",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP07refreshd8TokenForD012tokenToRenew9errorInfoy0G0Qz_AA0d5ErrorM0VtYaKF",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryStrategy>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryStrategy>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "recordSuccess",
+            "printedName": "recordSuccess(token:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Token"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SmithyRetriesAPI13RetryStrategyP13recordSuccess5tokeny5TokenQz_tYaF",
+            "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP13recordSuccess5tokeny5TokenQz_tYaF",
+            "moduleName": "SmithyRetriesAPI",
+            "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryStrategy>",
+            "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryStrategy>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16SmithyRetriesAPI13RetryStrategyP",
+        "mangledName": "$s16SmithyRetriesAPI13RetryStrategyP",
+        "moduleName": "SmithyRetriesAPI",
+        "genericSig": "<τ_0_0.Token : SmithyRetriesAPI.RetryToken>",
+        "sugared_genericSig": "<Self.Token : SmithyRetriesAPI.RetryToken>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryStrategyOptions",
+        "printedName": "RetryStrategyOptions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "backoffStrategy",
+            "printedName": "backoffStrategy",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RetryBackoffStrategy",
+                "printedName": "any SmithyRetriesAPI.RetryBackoffStrategy",
+                "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE0AA0d7BackoffE0_pvp",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE0AA0d7BackoffE0_pvp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RetryBackoffStrategy",
+                    "printedName": "any SmithyRetriesAPI.RetryBackoffStrategy",
+                    "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE0AA0d7BackoffE0_pvg",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE0AA0d7BackoffE0_pvg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxRetriesBase",
+            "printedName": "maxRetriesBase",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV03maxB4BaseSivp",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV03maxB4BaseSivp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV03maxB4BaseSivg",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV03maxB4BaseSivg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "RateLimitingMode",
+            "printedName": "RateLimitingMode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "standard",
+                "printedName": "standard",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode.Type) -> SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateLimitingMode",
+                        "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                        "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RateLimitingMode",
+                            "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO8standardyA2EmF",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO8standardyA2EmF",
+                "moduleName": "SmithyRetriesAPI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "adaptive",
+                "printedName": "adaptive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode.Type) -> SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateLimitingMode",
+                        "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                        "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RateLimitingMode",
+                            "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO8adaptiveyA2EmF",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO8adaptiveyA2EmF",
+                "moduleName": "SmithyRetriesAPI",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateLimitingMode",
+                    "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                    "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateLimitingMode",
+                    "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                    "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO2eeoiySbAE_AEtFZ",
+                "moduleName": "SmithyRetriesAPI",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO9hashValueSivp",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO9hashValueSivp",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO9hashValueSivg",
+                    "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO9hashValueSivg",
+                    "moduleName": "SmithyRetriesAPI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO4hash4intoys6HasherVz_tF",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rateLimitingMode",
+            "printedName": "rateLimitingMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RateLimitingMode",
+                "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16rateLimitingModeAC04RatehI0Ovp",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16rateLimitingModeAC04RatehI0Ovp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateLimitingMode",
+                    "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                    "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16rateLimitingModeAC04RatehI0Ovg",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV16rateLimitingModeAC04RatehI0Ovg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "availableCapacity",
+            "printedName": "availableCapacity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV17availableCapacitySivp",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV17availableCapacitySivp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV17availableCapacitySivg",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV17availableCapacitySivg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxCapacity",
+            "printedName": "maxCapacity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV11maxCapacitySivp",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV11maxCapacitySivp",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV11maxCapacitySivg",
+                "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV11maxCapacitySivg",
+                "moduleName": "SmithyRetriesAPI",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(backoffStrategy:maxRetriesBase:availableCapacity:maxCapacity:rateLimitingMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RetryStrategyOptions",
+                "printedName": "SmithyRetriesAPI.RetryStrategyOptions",
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RetryBackoffStrategy",
+                "printedName": "any SmithyRetriesAPI.RetryBackoffStrategy",
+                "usr": "s:16SmithyRetriesAPI20RetryBackoffStrategyP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RateLimitingMode",
+                "printedName": "SmithyRetriesAPI.RetryStrategyOptions.RateLimitingMode",
+                "hasDefaultArg": true,
+                "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV16RateLimitingModeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE003maxB4Base17availableCapacity0hK016rateLimitingModeAcA0d7BackoffE0_p_S3iAC04RatemN0Otcfc",
+            "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV07backoffE003maxB4Base17availableCapacity0hK016rateLimitingModeAcA0d7BackoffE0_p_S3iAC04RatemN0Otcfc",
+            "moduleName": "SmithyRetriesAPI",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16SmithyRetriesAPI20RetryStrategyOptionsV",
+        "mangledName": "$s16SmithyRetriesAPI20RetryStrategyOptionsV",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SmithyRetriesAPI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RetryToken",
+        "printedName": "RetryToken",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "retryCount",
+            "printedName": "retryCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SmithyRetriesAPI10RetryTokenP10retryCountSivp",
+            "mangledName": "$s16SmithyRetriesAPI10RetryTokenP10retryCountSivp",
+            "moduleName": "SmithyRetriesAPI",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SmithyRetriesAPI10RetryTokenP10retryCountSivg",
+                "mangledName": "$s16SmithyRetriesAPI10RetryTokenP10retryCountSivg",
+                "moduleName": "SmithyRetriesAPI",
+                "genericSig": "<τ_0_0 where τ_0_0 : SmithyRetriesAPI.RetryToken>",
+                "sugared_genericSig": "<Self where Self : SmithyRetriesAPI.RetryToken>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16SmithyRetriesAPI10RetryTokenP",
+        "mangledName": "$s16SmithyRetriesAPI10RetryTokenP",
+        "moduleName": "SmithyRetriesAPI",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetriesAPI\/RetryStrategyOptions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2319,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetriesAPI\/RetryStrategyOptions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2355,
+      "length": 3,
+      "value": "500"
+    },
+    {
+      "filePath": "\/Users\/zeeshansheikh\/Documents\/GitHub\/amazon-location-mobile-auth-sdk-ios\/build\/SourcePackages\/checkouts\/smithy-swift\/Sources\/SmithyRetriesAPI\/RetryStrategyOptions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2387,
+      "length": 3,
+      "value": "500"
+    }
+  ]
+}

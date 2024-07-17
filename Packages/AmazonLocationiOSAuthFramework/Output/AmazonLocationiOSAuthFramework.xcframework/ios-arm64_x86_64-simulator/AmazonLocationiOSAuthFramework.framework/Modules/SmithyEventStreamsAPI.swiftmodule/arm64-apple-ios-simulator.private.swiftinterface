@@ -1,0 +1,87 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyEventStreamsAPI
+import Foundation
+import Foundation/*.Data*/
+import Smithy/*.AttributeKey*/
+import Smithy/*.Context*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Smithy.Context {
+  public var messageEncoder: (any SmithyEventStreamsAPI.MessageEncoder)? {
+    get
+    set
+  }
+}
+public enum EventStreamError : Swift.Error {
+  case decoding(Swift.String)
+  case invalidMessage(Swift.String)
+}
+extension _Concurrency.AsyncThrowingStream : Swift.Equatable where Element : Swift.Equatable {
+  public static func == (lhs: _Concurrency.AsyncThrowingStream<Element, Failure>, rhs: _Concurrency.AsyncThrowingStream<Element, Failure>) -> Swift.Bool
+}
+public struct Header : Swift.Equatable {
+  public let name: Swift.String
+  public let value: SmithyEventStreamsAPI.HeaderValue
+  public init(name: Swift.String, value: SmithyEventStreamsAPI.HeaderValue)
+  public static func == (a: SmithyEventStreamsAPI.Header, b: SmithyEventStreamsAPI.Header) -> Swift.Bool
+}
+public enum HeaderValue : Swift.Equatable {
+  case bool(Swift.Bool)
+  case byte(Swift.Int8)
+  case int16(Swift.Int16)
+  case int32(Swift.Int32)
+  case int64(Swift.Int64)
+  case byteArray(Foundation.Data)
+  case string(Swift.String)
+  case timestamp(Foundation.Date)
+  case uuid(Foundation.UUID)
+  public static func == (a: SmithyEventStreamsAPI.HeaderValue, b: SmithyEventStreamsAPI.HeaderValue) -> Swift.Bool
+}
+public typealias MarshalClosure<T> = (T) throws -> (SmithyEventStreamsAPI.Message)
+public struct Message : Swift.Equatable {
+  public let headers: [SmithyEventStreamsAPI.Header]
+  public let payload: Foundation.Data
+  public init(headers: [SmithyEventStreamsAPI.Header] = [], payload: Foundation.Data = .init())
+  public static func == (a: SmithyEventStreamsAPI.Message, b: SmithyEventStreamsAPI.Message) -> Swift.Bool
+}
+extension SmithyEventStreamsAPI.Message : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension Swift.Array where Element == SmithyEventStreamsAPI.Header {
+  public func value(name: Swift.String) -> SmithyEventStreamsAPI.HeaderValue?
+}
+public protocol MessageDecoder {
+  func feed(data: Foundation.Data) throws
+  func endOfStream() throws
+  func message() throws -> SmithyEventStreamsAPI.Message?
+}
+public protocol MessageEncoder {
+  func encode(message: SmithyEventStreamsAPI.Message) throws -> Foundation.Data
+}
+public enum MessageType {
+  case event(SmithyEventStreamsAPI.MessageType.EventParams)
+  case exception(SmithyEventStreamsAPI.MessageType.ExceptionParams)
+  case error(SmithyEventStreamsAPI.MessageType.ErrorParams)
+  case unknown(messageType: Swift.String)
+  public struct EventParams {
+    public let eventType: Swift.String
+    public let contentType: Swift.String?
+    public init(eventType: Swift.String, contentType: Swift.String?)
+  }
+  public struct ExceptionParams {
+    public let exceptionType: Swift.String
+    public let contentType: Swift.String?
+    public init(exceptionType: Swift.String, contentType: Swift.String?)
+  }
+  public struct ErrorParams {
+    public let errorCode: Swift.String
+    public let message: Swift.String?
+    public init(errorCode: Swift.String, message: Swift.String?)
+  }
+}
+public typealias UnmarshalClosure<T> = (SmithyEventStreamsAPI.Message) throws -> T

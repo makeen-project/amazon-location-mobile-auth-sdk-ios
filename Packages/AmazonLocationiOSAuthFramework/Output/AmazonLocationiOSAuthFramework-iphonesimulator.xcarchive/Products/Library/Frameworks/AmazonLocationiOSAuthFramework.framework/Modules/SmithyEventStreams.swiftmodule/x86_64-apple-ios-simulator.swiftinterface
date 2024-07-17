@@ -1,0 +1,79 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name smithy_swift -module-name SmithyEventStreams
+import AwsCommonRuntimeKit
+import Foundation
+import Foundation/*.Data*/
+import Smithy
+import SmithyEventStreamsAPI
+import SmithyEventStreamsAPI/*.EventStreamError*/
+import SmithyEventStreamsAPI/*.Header*/
+import SmithyEventStreamsAPI/*.HeaderValue*/
+import SmithyEventStreamsAPI/*.Message*/
+import SmithyEventStreamsAPI/*.MessageDecoder*/
+import SmithyEventStreamsAPI/*.MessageEncoder*/
+import SmithyEventStreamsAPI/*.MessageType*/
+import SmithyEventStreamsAuthAPI
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class DefaultMessageDecoder : SmithyEventStreamsAPI.MessageDecoder {
+  public init()
+  public func feed(data: Foundation.Data) throws
+  public func endOfStream() throws
+  public func message() throws -> SmithyEventStreamsAPI.Message?
+  #if compiler(>=5.3) && $AsyncAwait
+  public func awaitInitialResponse() async -> Foundation.Data?
+  #endif
+  @objc deinit
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+public struct DefaultMessageDecoderStream<Event> : SmithyEventStreamsAuthAPI.MessageDecoderStream {
+  public typealias Element = Event
+  public init(stream: any Smithy.ReadableStream, messageDecoder: any SmithyEventStreamsAPI.MessageDecoder, unmarshalClosure: @escaping SmithyEventStreamsAPI.UnmarshalClosure<Event>)
+  public struct AsyncIterator : _Concurrency.AsyncIteratorProtocol {
+    #if compiler(>=5.3) && $AsyncAwait
+    public mutating func next() async throws -> Event?
+    #endif
+    public typealias Element = Event
+  }
+  public func makeAsyncIterator() -> SmithyEventStreams.DefaultMessageDecoderStream<Event>.AsyncIterator
+}
+#endif
+public struct DefaultMessageEncoder : SmithyEventStreamsAPI.MessageEncoder {
+  public init()
+  public func encode(message: SmithyEventStreamsAPI.Message) throws -> Foundation.Data
+}
+#if compiler(>=5.3) && $RethrowsProtocol
+public class DefaultMessageEncoderStream<Event> : SmithyEventStreamsAuthAPI.MessageEncoderStream, Smithy.Stream {
+  required public init(stream: _Concurrency.AsyncThrowingStream<Event, any Swift.Error>, messageEncoder: any SmithyEventStreamsAPI.MessageEncoder, marshalClosure: @escaping SmithyEventStreamsAPI.MarshalClosure<Event>, messageSigner: any SmithyEventStreamsAuthAPI.MessageSigner, initialRequestMessage: SmithyEventStreamsAPI.Message? = nil)
+  public struct AsyncIterator : _Concurrency.AsyncIteratorProtocol {
+    #if compiler(>=5.3) && $AsyncAwait
+    public mutating func next() async throws -> Foundation.Data?
+    #endif
+    public typealias Element = Foundation.Data
+  }
+  public func makeAsyncIterator() -> SmithyEventStreams.DefaultMessageEncoderStream<Event>.AsyncIterator
+  public var position: Swift.Int
+  public var length: Swift.Int?
+  public var isEmpty: Swift.Bool
+  public var isSeekable: Swift.Bool
+  public func read(upToCount count: Swift.Int) throws -> Foundation.Data?
+  public func readToEnd() throws -> Foundation.Data?
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readToEndAsync() async throws -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readAsync(upToCount count: Swift.Int) async throws -> Foundation.Data?
+  #endif
+  public func write(contentsOf data: Foundation.Data) throws
+  public func close()
+  public func closeWithError(_ error: any Swift.Error)
+  public typealias Element = Foundation.Data
+  @objc deinit
+}
+#endif
+extension SmithyEventStreamsAPI.Message {
+  public func type() throws -> SmithyEventStreamsAPI.MessageType
+}

@@ -1,0 +1,63 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name aws_sdk_swift -module-name AWSSDKEventStreamsAuth
+import AWSSDKHTTPAuth
+import AwsCommonRuntimeKit
+import ClientRuntime
+import Foundation/*.Data*/
+import Foundation/*.Date*/
+import Foundation/*.TimeInterval*/
+import Smithy
+import Smithy/*.AttributeKey*/
+import Smithy/*.Attributes*/
+import SmithyEventStreams
+import SmithyEventStreamsAPI
+import SmithyEventStreamsAPI/*.Message*/
+import SmithyEventStreamsAPI/*.MessageEncoder*/
+import SmithyEventStreamsAuthAPI
+import SmithyEventStreamsAuthAPI/*.MessageDataSigner*/
+import SmithyEventStreamsAuthAPI/*.MessageSigner*/
+import SmithyHTTPAPI
+import SmithyHTTPAuth
+import SmithyHTTPAuth/*.AWSSigningConfig*/
+import SmithyHTTPAuthAPI
+import SmithyHTTPAuthAPI/*.Signer*/
+import SmithyIdentity
+import SmithyIdentityAPI
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class AWSMessageSigner : SmithyEventStreamsAuthAPI.MessageSigner {
+  #if compiler(>=5.3) && $AsyncAwait
+  public init(encoder: any SmithyEventStreamsAPI.MessageEncoder, signer: @escaping () async throws -> any SmithyEventStreamsAuthAPI.MessageDataSigner, signingConfig: @escaping () async throws -> SmithyHTTPAuth.AWSSigningConfig, requestSignature: @escaping () -> Swift.String)
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func sign(message: SmithyEventStreamsAPI.Message) async throws -> SmithyEventStreamsAPI.Message
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func signEmpty() async throws -> SmithyEventStreamsAPI.Message
+  #endif
+  @objc deinit
+}
+extension AWSSDKHTTPAuth.AWSSigV4Signer : SmithyEventStreamsAuthAPI.MessageDataSigner {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func signEvent(payload: Foundation.Data, previousSignature: Swift.String, signingProperties: Smithy.Attributes) async throws -> SmithyEventStreamsAuthAPI.SigningResult<SmithyEventStreamsAPI.Message>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func signEvent(payload: Foundation.Data, previousSignature: Swift.String, signingConfig: SmithyHTTPAuth.AWSSigningConfig) async throws -> SmithyEventStreamsAuthAPI.SigningResult<SmithyEventStreamsAPI.Message>
+  #endif
+}
+public func setupBidirectionalStreaming(context: Smithy.Context)
+extension Smithy.Context {
+  #if compiler(>=5.3) && $EffectfulProp
+  public var fetchMessageDataSigner: any SmithyEventStreamsAuthAPI.MessageDataSigner {
+    get throws
+  }
+  #endif
+}
+extension Smithy.Context {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func makeEventStreamSigningConfig(date: Foundation.Date = Date().withoutFractionalSeconds()) async throws -> SmithyHTTPAuth.AWSSigningConfig
+  #endif
+}
