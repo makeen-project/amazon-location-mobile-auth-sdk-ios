@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.platform = :ios, "13.0"
-  s.name  = "AmazonLocationiOSAuthSDK"
+  s.name  = "AmazonLocationiOSAuthFramework"
 
   s.version      = '0.2.2'
   s.summary      = 'These utilities help you authenticate when making Amazon Location Service API calls.'
