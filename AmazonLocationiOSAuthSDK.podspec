@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.platform = :ios, "13.0"
-  s.name  = "AmazonLocationiOSAuthFramework"
+  s.name  = "AmazonLocationiOSAuthSDK"
 
   s.version      = '0.2.2'
   s.summary      = 'These utilities help you authenticate when making Amazon Location Service API calls.'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
 
-  s.vendored_frameworks = 'Packages/AmazonLocationiOSAuthFramework/Output/AmazonLocationiOSAuthFramework.xcframework'
+  s.vendored_frameworks = 'amazon-location-mobile-auth-sdk-ios/.packages/AmazonLocationiOSAuthSDK.xcframework'
   s.requires_arc = true
 
 end

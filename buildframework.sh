@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PROJECT_NAME="AmazonLocationiOSAuthFramework"
-PRODUCT_MODULE_NAME="AmazonLocationiOSAuthFramework"
-SCHEME="AmazonLocationiOSAuthFramework"
+PROJECT_NAME="AmazonLocationiOSAuthSDK"
+PRODUCT_MODULE_NAME="AmazonLocationiOSAuthSDK"
+SCHEME="AmazonLocationiOSAuthSDK"
 WORKSPACE="AmazonLocationiOSAuthWorkspace.xcworkspace"
 PROJECT_DIR="./Packages/${PROJECT_NAME}" # Relative path to the directory containing the `Package.swift` file
 BUILD_FOLDER="./build"

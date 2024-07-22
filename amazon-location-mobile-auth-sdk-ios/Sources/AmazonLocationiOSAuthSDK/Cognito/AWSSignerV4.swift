@@ -1,14 +1,7 @@
 // AWSSignerV4.swift
 
 import CryptoKit
-import struct Foundation.CharacterSet
-import struct Foundation.Data
-import struct Foundation.Date
-import class Foundation.DateFormatter
-import struct Foundation.Locale
-import struct Foundation.TimeZone
-import struct Foundation.URL
-import struct Foundation.URLComponents
+import Foundation
 
 public struct TimeAmount: Hashable {
     @available(*, deprecated, message: "This typealias doesn't serve any purpose. Please use Int64 directly.")

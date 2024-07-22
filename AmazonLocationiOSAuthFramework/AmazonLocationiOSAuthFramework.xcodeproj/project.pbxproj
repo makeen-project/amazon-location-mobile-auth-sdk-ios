@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F132D24B2C4AB7A600359CDB /* AmazonLocationiOSAuthSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F132D24A2C4AB7A600359CDB /* AmazonLocationiOSAuthSDK */; };
+		F132D24F2C4AB93F00359CDB /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F132D24E2C4AB93F00359CDB /* AuthHelper.swift */; };
+		F132D2512C4AC31600359CDB /* AmazonLocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F132D2502C4AC31600359CDB /* AmazonLocationClient.swift */; };
 		F1AA4BCB2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = F1AA4BCA2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.docc */; };
 		F1AA4BCC2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F1AA4BC92C41348A0029DCDA /* AmazonLocationiOSAuthFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1BE2E442C47F7A6006D1A72 /* AmazonLocationiOSAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE2E432C47F7A6006D1A72 /* AmazonLocationiOSAuth.swift */; };
-		F1BE326C2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F1BE326B2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK */; };
-		F1BE326D2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F1BE326B2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F1BE32712C4823CC006D1A72 /* AmazonLocationiOSAuthWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F1BE326E2C4822D1006D1A72 /* AmazonLocationiOSAuthWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F1BE326D2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,12 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F132D24E2C4AB93F00359CDB /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		F132D2502C4AC31600359CDB /* AmazonLocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonLocationClient.swift; sourceTree = "<group>"; };
 		F1AA4BC62C41348A0029DCDA /* AmazonLocationiOSAuthFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazonLocationiOSAuthFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA4BC92C41348A0029DCDA /* AmazonLocationiOSAuthFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazonLocationiOSAuthFramework.h; sourceTree = "<group>"; };
 		F1AA4BCA2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AmazonLocationiOSAuthFramework.docc; sourceTree = "<group>"; };
 		F1AA4BEB2C4166540029DCDA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		F1BE2E432C47F7A6006D1A72 /* AmazonLocationiOSAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonLocationiOSAuth.swift; sourceTree = "<group>"; };
-		F1BE326E2C4822D1006D1A72 /* AmazonLocationiOSAuthWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazonLocationiOSAuthWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BE326C2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK in Frameworks */,
+				F132D24B2C4AB7A600359CDB /* AmazonLocationiOSAuthSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,11 +68,11 @@
 		F1AA4BC82C41348A0029DCDA /* AmazonLocationiOSAuthFramework */ = {
 			isa = PBXGroup;
 			children = (
-				F1BE326E2C4822D1006D1A72 /* AmazonLocationiOSAuthWrapper.h */,
+				F132D24E2C4AB93F00359CDB /* AuthHelper.swift */,
+				F132D2502C4AC31600359CDB /* AmazonLocationClient.swift */,
 				F1AA4BC92C41348A0029DCDA /* AmazonLocationiOSAuthFramework.h */,
 				F1AA4BCA2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.docc */,
 				F1AA4BEB2C4166540029DCDA /* module.modulemap */,
-				F1BE2E432C47F7A6006D1A72 /* AmazonLocationiOSAuth.swift */,
 			);
 			path = AmazonLocationiOSAuthFramework;
 			sourceTree = "<group>";
@@ -94,7 +92,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1AA4BCC2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.h in Headers */,
-				F1BE32712C4823CC006D1A72 /* AmazonLocationiOSAuthWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +114,7 @@
 			);
 			name = AmazonLocationiOSAuthFramework;
 			packageProductDependencies = (
-				F1BE326B2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK */,
+				F132D24A2C4AB7A600359CDB /* AmazonLocationiOSAuthSDK */,
 			);
 			productName = AmazonLocationiOSAuthFramework;
 			productReference = F1AA4BC62C41348A0029DCDA /* AmazonLocationiOSAuthFramework.framework */;
@@ -148,6 +145,7 @@
 			);
 			mainGroup = F1AA4BBC2C41348A0029DCDA;
 			packageReferences = (
+				F132D2492C4AB7A600359CDB /* XCLocalSwiftPackageReference "../amazon-location-mobile-auth-sdk-ios" */,
 			);
 			productRefGroup = F1AA4BC72C41348A0029DCDA /* Products */;
 			projectDirPath = "";
@@ -173,8 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BE2E442C47F7A6006D1A72 /* AmazonLocationiOSAuth.swift in Sources */,
 				F1AA4BCB2C41348A0029DCDA /* AmazonLocationiOSAuthFramework.docc in Sources */,
+				F132D24F2C4AB93F00359CDB /* AuthHelper.swift in Sources */,
+				F132D2512C4AC31600359CDB /* AmazonLocationClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +322,7 @@
 				ENABLE_MODULE_VERIFIER = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,6 +344,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
@@ -363,6 +364,7 @@
 				ENABLE_MODULE_VERIFIER = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,6 +385,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};
@@ -409,8 +412,15 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		F132D2492C4AB7A600359CDB /* XCLocalSwiftPackageReference "../amazon-location-mobile-auth-sdk-ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../amazon-location-mobile-auth-sdk-ios";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		F1BE326B2C481C0F006D1A72 /* AmazonLocationiOSAuthSDK */ = {
+		F132D24A2C4AB7A600359CDB /* AmazonLocationiOSAuthSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AmazonLocationiOSAuthSDK;
 		};

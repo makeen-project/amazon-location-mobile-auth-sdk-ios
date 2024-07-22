@@ -1,0 +1,17 @@
+
+// Link Core Foundation framework
+OTHER_LDFLAGS = $(inherited) -framework CoreFoundation -framework Security
+
+// Ensure architectures include arm64
+ARCHS = $(ARCHS_STANDARD)
+
+// Set minimum deployment target for iOS
+IPHONEOS_DEPLOYMENT_TARGET = 13.0
+
+SKIP_INSTALL=NO
+BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+OTHER_SWIFT_FLAGS=-no-verify-emitted-module-interface
+USE_HEADER_MAPS=YES
+DEFINES_MODULE=YES
+SWIFT_INSTALL_OBJC_HEADER=YES 
+

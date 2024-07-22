@@ -1,7 +1,7 @@
 import Foundation
-import AWSLocation
-import SmithyIdentity
-import SmithyIdentityAPI
+@_exported import AWSLocation
+@_exported import SmithyIdentity
+@_exported import SmithyIdentityAPI
 
 public enum HTTPMethod: String {
     case GET
