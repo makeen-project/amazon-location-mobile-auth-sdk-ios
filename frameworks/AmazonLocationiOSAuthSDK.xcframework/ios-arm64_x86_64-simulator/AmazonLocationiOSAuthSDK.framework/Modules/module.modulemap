@@ -1,0 +1,6 @@
+framework module AmazonLocationiOSAuthSDK {
+umbrella "Headers"
+export *
+
+module * { export * }
+}

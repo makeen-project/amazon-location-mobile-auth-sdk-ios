@@ -4,6 +4,10 @@
 
 # Xcode
 #
+.swiftpm
+.swiftpm/
+.packages
+.packages/
 .build
 build/
 *.pbxuser

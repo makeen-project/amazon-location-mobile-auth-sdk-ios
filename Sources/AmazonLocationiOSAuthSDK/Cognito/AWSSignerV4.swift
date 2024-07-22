@@ -1,14 +1,7 @@
 // AWSSignerV4.swift
 
 import CryptoKit
-import struct Foundation.CharacterSet
-import struct Foundation.Data
-import struct Foundation.Date
-import class Foundation.DateFormatter
-import struct Foundation.Locale
-import struct Foundation.TimeZone
-import struct Foundation.URL
-import struct Foundation.URLComponents
+import Foundation
 
 public struct TimeAmount: Hashable {
     @available(*, deprecated, message: "This typealias doesn't serve any purpose. Please use Int64 directly.")
@@ -17,7 +10,7 @@ public struct TimeAmount: Hashable {
     /// The nanoseconds representation of the `TimeAmount`.
     public let nanoseconds: Int64
 
-    /* private but */ @inlinable
+    //@inlinable
     init(_ nanoseconds: Int64) {
         self.nanoseconds = nanoseconds
     }
@@ -27,7 +20,7 @@ public struct TimeAmount: Hashable {
     /// - parameters:
     ///     - amount: the amount of nanoseconds this `TimeAmount` represents.
     /// - returns: the `TimeAmount` for the given amount.
-    @inlinable
+    //@inlinable
     public static func nanoseconds(_ amount: Int64) -> TimeAmount {
         return TimeAmount(amount)
     }
@@ -39,7 +32,7 @@ public struct TimeAmount: Hashable {
     /// - returns: the `TimeAmount` for the given amount.
     ///
     /// - note: returns `TimeAmount(.max)` if the amount overflows when converted to nanoseconds and `TimeAmount(.min)` if it underflows.
-    @inlinable
+    //@inlinable
     public static func microseconds(_ amount: Int64) -> TimeAmount {
         return TimeAmount(_cappedNanoseconds(amount: amount, multiplier: 1000))
     }
@@ -51,7 +44,7 @@ public struct TimeAmount: Hashable {
     /// - returns: the `TimeAmount` for the given amount.
     ///
     /// - note: returns `TimeAmount(.max)` if the amount overflows when converted to nanoseconds and `TimeAmount(.min)` if it underflows.
-    @inlinable
+    //@inlinable
     public static func milliseconds(_ amount: Int64) -> TimeAmount {
         return TimeAmount(_cappedNanoseconds(amount: amount, multiplier: 1000 * 1000))
     }
@@ -63,7 +56,7 @@ public struct TimeAmount: Hashable {
     /// - returns: the `TimeAmount` for the given amount.
     ///
     /// - note: returns `TimeAmount(.max)` if the amount overflows when converted to nanoseconds and `TimeAmount(.min)` if it underflows.
-    @inlinable
+    //@inlinable
     public static func seconds(_ amount: Int64) -> TimeAmount {
         return TimeAmount(_cappedNanoseconds(amount: amount, multiplier: 1000 * 1000 * 1000))
     }
@@ -75,7 +68,7 @@ public struct TimeAmount: Hashable {
     /// - returns: the `TimeAmount` for the given amount.
     ///
     /// - note: returns `TimeAmount(.max)` if the amount overflows when converted to nanoseconds and `TimeAmount(.min)` if it underflows.
-    @inlinable
+    //@inlinable
     public static func minutes(_ amount: Int64) -> TimeAmount {
         return TimeAmount(_cappedNanoseconds(amount: amount, multiplier: 1000 * 1000 * 1000 * 60))
     }
@@ -87,7 +80,7 @@ public struct TimeAmount: Hashable {
     /// - returns: the `TimeAmount` for the given amount.
     ///
     /// - note: returns `TimeAmount(.max)` if the amount overflows when converted to nanoseconds and `TimeAmount(.min)` if it underflows.
-    @inlinable
+    //@inlinable
     public static func hours(_ amount: Int64) -> TimeAmount {
         return TimeAmount(_cappedNanoseconds(amount: amount, multiplier: 1000 * 1000 * 1000 * 60 * 60))
     }
@@ -98,7 +91,7 @@ public struct TimeAmount: Hashable {
     ///     - amount: the amount to be converted to nanoseconds.
     ///     - multiplier: the multiplier that converts the given amount to nanoseconds.
     ///  - returns: the amount converted to nanoseconds within [Int64.min, Int64.max].
-    @inlinable
+    //@inlinable
     static func _cappedNanoseconds(amount: Int64, multiplier: Int64) -> Int64 {
         let nanosecondsMultiplication = amount.multipliedReportingOverflow(by: multiplier)
         if nanosecondsMultiplication.overflow {
